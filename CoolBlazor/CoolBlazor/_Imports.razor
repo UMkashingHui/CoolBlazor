@@ -8,4 +8,31 @@
 @using Microsoft.JSInterop
 @using CoolBlazor
 @using CoolBlazor.Shared
+@using MudBlazor
+@using Blazored.LocalStorage
+@using Cropper.Blazor.Components
 
+@using CoolBlazor.Infrastructure.Managers.Identity.Authentication
+@using CoolBlazor.Infrastructure.Managers.Identity.Users
+@using CoolBlazor.Infrastructure.Managers.Preferences
+@using CoolBlazor.Infrastructure.Managers.Interceptors
+@using CoolBlazor.Infrastructure.Managers.Identity.Account
+@using CoolBlazor.Infrastructure.Managers.File
+
+@inject CoolBlazorStateProvider _stateProvider
+@inject IAuthenticationManager _authenticationManager
+@inject ISnackbar _snackBar
+@inject NavigationManager _navigationManager
+@inject IDialogService _dialogService
+@inject HttpClient _httpClient
+@inject ClientPreferenceManager _clientPreferenceManager
+@inject IHttpInterceptorManager _interceptor
+@inject AuthenticationHeaderHandler _authenticationHeaderHandler
+@inject IHttpClientFactory _httpClientFactory
+@inject IAuthorizationService _authorizationService
+@inject IUserManager _userManager
+@inject ILocalStorageService _localStorage
+@inject IAccountManager _accountManager
+@inject IJSRuntime _jsRuntime
+@inject IJSRuntime jsRuntime
+@inject ImageManager _imageManager

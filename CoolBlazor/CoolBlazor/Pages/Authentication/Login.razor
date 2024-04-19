@@ -1,0 +1,81 @@
+﻿@page "/login"
+@layout MainLayout
+@using Microsoft.AspNetCore.Authorization
+@using CoolBlazor.Static.Icons
+@attribute [AllowAnonymous]
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Login> _localizer
+
+<PageTitle>Login</PageTitle>
+<EditForm Model="@_tokenModel" OnValidSubmit="SubmitAsync">
+    <Blazored.FluentValidation.FluentValidationValidator @ref="_fluentValidationValidator" />
+
+    <MudGrid>
+        <MudItem xs="12">
+            <div class="d-flex justify-center">
+                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large" ViewBox="0 0 500 500"
+                    Style="width: 100px; height: 100px;" />
+            </div>
+        </MudItem>
+        <MudItem xs="12">
+            <div class="d-flex justify-center">
+                <MudText Typo="Typo.h4">@_localizer["Sign In"]</MudText>
+            </div>
+        </MudItem>
+        <MudItem xs="12">
+            <div class="d-flex justify-center">
+                <MudText>@_localizer["Description"]</MudText>
+            </div>
+        </MudItem>
+        <MudItem xs="12">
+            <div class="d-flex justify-center">
+                <MudText>@_localizer["Don't have an account?"] <MudLink Href="/register">@_localizer["Register here"]
+                    </MudLink>
+                </MudText>
+            </div>
+        </MudItem>
+        <MudItem xs="12">
+            <MudTextField T="string" Label="@_localizer["E-mail"]" Variant="Variant.Outlined"
+                @bind-Value="_tokenModel.Email" For="@(() => _tokenModel.Email)" />
+        </MudItem>
+        <MudItem xs="12">
+            <MudTextField Label="@_localizer["Password"]" Variant="Variant.Outlined" @bind-Value="_tokenModel.Password"
+                For="@(() => _tokenModel.Password)" InputType="@_passwordInput" Adornment="Adornment.End"
+                AdornmentIcon="@_passwordInputIcon" OnAdornmentClick="TogglePasswordVisibility" />
+        </MudItem>
+        <MudItem xs="12" Class="d-flex justify-space-between align-center">
+            <MudCheckBox T="bool" Label="@_localizer["Remember me?"]" Color="Color.Primary" Class="ml-n1"></MudCheckBox>
+            <MudLink Href="/account/forgot-password">@_localizer["Forgot password?"]</MudLink>
+        </MudItem>
+        <MudItem xs="12" Class="d-flex justify-center">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Disabled="@(!Validated)"
+                Color="Color.Primary" Size="Size.Large" Style="width: 100%;">@_localizer["Sign In"]</MudButton>
+        </MudItem>
+    </MudGrid>
+
+</EditForm>
+@* <MudContainer Class="mt-16">
+<MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Login</MudText>
+<MudGrid>
+<MudItem xs="12" Class="d-flex justify-center">
+<MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+
+<MudTextField InputType="@AccountInput" @bind-Value="Text" Label="Account" Variant="Variant.Outlined"
+Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.AccountCircle"
+RequiredError="User name is required!" class="mt-8" />
+<MudTextField InputType="@PasswordInput" @bind-Value="Password" Label="Password"
+Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon"
+OnAdornmentClick="ButtonTestclick" AdornmentAriaLabel="Show Password"
+RequiredError="Password is required!" class="mt-8" />
+<MudItem xs="12" Class="d-flex justify-center">
+<MudButton Href="/Login" Variant="Variant.Filled" DisableElevation="true"
+StartIcon="@Icons.Material.Filled.Login" Color="Color.Primary" Class="mt-8" Size="Size.Large">
+Login</MudButton>
+</MudItem>
+
+
+<MudText class="mt-8">If you have no account, click <MudLink Href="/Register">Here</MudLink> to
+Register!</MudText>
+</MudForm>
+</MudItem>
+</MudGrid>
+</MudContainer> *@

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/kevin/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/kevin/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.7.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/kevin/.nuget/packages/" />
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)mudblazor/6.11.1/buildTransitive/MudBlazor.props" Condition="Exists('$(NuGetPackageRoot)mudblazor/6.11.1/buildTransitive/MudBlazor.props')" />
+    <Import Project="$(NuGetPackageRoot)cropper.blazor/1.3.2/buildTransitive/Cropper.Blazor.props" Condition="Exists('$(NuGetPackageRoot)cropper.blazor/1.3.2/buildTransitive/Cropper.Blazor.props')" />
+    <Import Project="$(NuGetPackageRoot)bootstrapblazor.viewer/8.0.1/buildTransitive/BootstrapBlazor.Viewer.props" Condition="Exists('$(NuGetPackageRoot)bootstrapblazor.viewer/8.0.1/buildTransitive/BootstrapBlazor.Viewer.props')" />
+  </ImportGroup>
+</Project>

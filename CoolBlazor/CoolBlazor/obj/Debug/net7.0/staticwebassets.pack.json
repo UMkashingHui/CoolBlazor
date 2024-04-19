@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets/CoolBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Dom.png",
+      "PackagePath": "staticwebassets/images/Dom.png"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png",
+      "PackagePath": "staticwebassets/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png",
+      "PackagePath": "staticwebassets/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp",
+      "PackagePath": "staticwebassets/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.CoolBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.CoolBlazor.props",
+      "PackagePath": "build\\CoolBlazor.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.CoolBlazor.props",
+      "PackagePath": "buildMultiTargeting\\CoolBlazor.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.CoolBlazor.props",
+      "PackagePath": "buildTransitive\\CoolBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
