@@ -1,26 +1,47 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using CoolWebApi.Utils.Contexts;
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+namespace CoolWebApi
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+
+            // var host = CreateHostBuilder(args).Build();
+
+            // using (var scope = host.Services.CreateScope())
+            // {
+            //     var services = scope.ServiceProvider;
+
+            //     try
+            //     {
+            //         var context = services.GetRequiredService<BlazorToolBoxDbContext>();
+
+            //         // if (context.Database.IsSqlServer())
+            //         // {
+            //         //     context.Database.Migrate();
+            //         // }
+            //     }
+            //     catch (Exception ex)
+            //     {
+            //         var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+
+            //         logger.LogError(ex, "An error occurred while migrating or seeding the database.");
+
+            //         throw;
+            //     }
+            // }
+
+            // await host.RunAsync();
+        }
+
+        public static IHostBuilder CreateHostBuilder
+    (string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
-

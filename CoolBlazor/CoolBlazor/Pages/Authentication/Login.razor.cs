@@ -2,7 +2,6 @@ using Blazored.FluentValidation;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using CoolBlazor.Infrastructure.Models.Requests.Identity;
 
@@ -24,13 +23,13 @@ namespace CoolBlazor.Pages.Authentication
             if (firstRender)
             {
                 var state = await _stateProvider.GetAuthenticationStateAsync();
-                // var authenticationState = new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
+                var authenticationState = new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
                 if (state.User.Identity.Name != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())).User.Identity.Name)
                 // if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
                 {
                     _navigationManager.NavigateTo("/home");
                 }
-                StateHasChanged();
+                // StateHasChanged();
 
             }
         }
@@ -39,8 +38,8 @@ namespace CoolBlazor.Pages.Authentication
         // {
         //     var state = await _stateProvider.GetAuthenticationStateAsync();
         //     // var authenticationState = new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
-        //     if (state.User.Identity.Name != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())).User.Identity.Name)
-        //     // if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
+        //     // if (state.User.Identity.Name != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())).User.Identity.Name)
+        //     if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
         //     {
         //         _navigationManager.NavigateTo("/home");
         //     }

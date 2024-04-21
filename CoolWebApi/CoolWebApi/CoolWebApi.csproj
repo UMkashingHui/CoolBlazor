@@ -11,6 +11,26 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="MediatR" Version="12.2.0"/>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    <PackageReference Include="AspNetCore.Identity.Mongo" Version="8.3.3"/>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.10.0"/>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.0"/>
+    <PackageReference Include="AutoMapper" Version="12.0.1"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.17"/>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1"/>
+    <PackageReference Include="MailKit" Version="4.4.0"/>
+    <PackageReference Include="LazyCache.AspNetCore" Version="2.4.0"/>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6"/>
+    <PackageReference Include="Hangfire.Mongo" Version="1.10.4"/>
+    <PackageReference Include="Hangfire.Core" Version="1.8.11"/>
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.11"/>
+    <PackageReference Include="EPPlus" Version="7.0.10"/>
+    <PackageReference Include="MongoDB.EntityFrameworkCore" Version="7.0.0-preview.1"/>
   </ItemGroup>
 
 </Project>

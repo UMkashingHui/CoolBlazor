@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2ZqnyzZ+36Z+xSU/EGsT4xuugt51j/kI2+Tfh8/HVmM=",
+  "Hash": "w6Wmo8cWTOYcO9dQqgd1R4WAMKd+dFXeICIis7ab360=",
   "Source": "CoolBlazor",
   "BasePath": "_content/CoolBlazor",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CoolBlazor/wwwroot",
       "Source": "CoolBlazor",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/BootstrapBlazor.Viewer.bundle.scp.css",
+      "Identity": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/BootstrapBlazor.Viewer.bundle.scp.css",
       "SourceId": "BootstrapBlazor.Viewer",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
       "BasePath": "_content/BootstrapBlazor.Viewer",
       "RelativePath": "BootstrapBlazor.Viewer.bundle.scp.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/BootstrapBlazor.Viewer.bundle.scp.css"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/BootstrapBlazor.Viewer.bundle.scp.css"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.css",
+      "Identity": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.css",
       "SourceId": "BootstrapBlazor.Viewer",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
       "BasePath": "_content/BootstrapBlazor.Viewer",
       "RelativePath": "lib/viewerjs/viewer.min.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.css"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.css"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.js",
+      "Identity": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.js",
       "SourceId": "BootstrapBlazor.Viewer",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
       "BasePath": "_content/BootstrapBlazor.Viewer",
       "RelativePath": "lib/viewerjs/viewer.min.js",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.js"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewer.min.js"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewerjs.js",
+      "Identity": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewerjs.js",
       "SourceId": "BootstrapBlazor.Viewer",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
       "BasePath": "_content/BootstrapBlazor.Viewer",
       "RelativePath": "lib/viewerjs/viewerjs.js",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewerjs.js"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/lib/viewerjs/viewerjs.js"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/logo.png",
+      "Identity": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/logo.png",
       "SourceId": "BootstrapBlazor.Viewer",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/",
       "BasePath": "_content/BootstrapBlazor.Viewer",
       "RelativePath": "logo.png",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/logo.png"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/bootstrapblazor.viewer/8.0.1/staticwebassets/logo.png"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/background.png",
+      "Identity": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/background.png",
       "SourceId": "Cropper.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
       "BasePath": "_content/Cropper.Blazor",
       "RelativePath": "background.png",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/background.png"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/background.png"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.css",
+      "Identity": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.css",
       "SourceId": "Cropper.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
       "BasePath": "_content/Cropper.Blazor",
       "RelativePath": "cropper.min.css",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.css"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.css"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.js",
+      "Identity": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.js",
       "SourceId": "Cropper.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
       "BasePath": "_content/Cropper.Blazor",
       "RelativePath": "cropper.min.js",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.js"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropper.min.js"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.js",
+      "Identity": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.js",
       "SourceId": "Cropper.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
       "BasePath": "_content/Cropper.Blazor",
       "RelativePath": "cropperJsInterop.js",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.js"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.js"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.min.js",
+      "Identity": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.min.js",
       "SourceId": "Cropper.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/",
       "BasePath": "_content/Cropper.Blazor",
       "RelativePath": "cropperJsInterop.min.js",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.min.js"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/cropper.blazor/1.3.2/staticwebassets/cropperJsInterop.min.js"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.css",
+      "Identity": "/Users/kevinhui/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/mudblazor/6.11.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/mudblazor/6.11.1/staticwebassets/",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.css"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.css"
     },
     {
-      "Identity": "/Users/kevin/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.js",
+      "Identity": "/Users/kevinhui/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "/Users/kevin/.nuget/packages/mudblazor/6.11.1/staticwebassets/",
+      "ContentRoot": "/Users/kevinhui/.nuget/packages/mudblazor/6.11.1/staticwebassets/",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.js"
+      "OriginalItemSpec": "/Users/kevinhui/.nuget/packages/mudblazor/6.11.1/staticwebassets/MudBlazor.min.js"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/bundle/CoolBlazor.styles.css",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/bundle/CoolBlazor.styles.css",
       "SourceId": "CoolBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/bundle/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "CoolBlazor.styles.css",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/bundle/CoolBlazor.styles.css"
+      "OriginalItemSpec": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/bundle/CoolBlazor.styles.css"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css",
       "SourceId": "CoolBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "CoolBlazor.bundle.scp.css",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css"
+      "OriginalItemSpec": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css.map",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/FONT-LICENSE",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/ICON-LICENSE",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/README.md",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/README.md",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/site.css",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/site.css",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/favicon.png",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/favicon.png",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Dom.png",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Dom.png",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "images/Dom.png",
       "AssetKind": "All",
@@ -493,10 +493,61 @@
       "OriginalItemSpec": "wwwroot/images/Dom.png"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-12e5a10f-b3ee-48b4-a1aa-0bfe538742c2.jpg",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-12e5a10f-b3ee-48b4-a1aa-0bfe538742c2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-12e5a10f-b3ee-48b4-a1aa-0bfe538742c2.jpg"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-351c8f4d-5fe2-4206-92ed-e3b8d9411395.png",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-351c8f4d-5fe2-4206-92ed-e3b8d9411395.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-351c8f4d-5fe2-4206-92ed-e3b8d9411395.png"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png",
       "AssetKind": "All",
@@ -510,10 +561,78 @@
       "OriginalItemSpec": "wwwroot/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-4fce564c-2325-4bb4-bd0b-b0b7fcdebd80.jpeg",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-4fce564c-2325-4bb4-bd0b-b0b7fcdebd80.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-4fce564c-2325-4bb4-bd0b-b0b7fcdebd80.jpeg"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-56e7736e-22ba-4982-8b51-5335061ff6a6.jpg",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-56e7736e-22ba-4982-8b51-5335061ff6a6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-56e7736e-22ba-4982-8b51-5335061ff6a6.jpg"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-5789447e-7938-4888-8bf5-68233a97e454.jpg",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-5789447e-7938-4888-8bf5-68233a97e454.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-5789447e-7938-4888-8bf5-68233a97e454.jpg"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-89efa453-d70c-45e0-8eea-9edf17ccaa8e.jpg",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/ProfilePictures/-89efa453-d70c-45e0-8eea-9edf17ccaa8e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ProfilePictures/-89efa453-d70c-45e0-8eea-9edf17ccaa8e.jpg"
+    },
+    {
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png",
       "AssetKind": "All",
@@ -527,10 +646,10 @@
       "OriginalItemSpec": "wwwroot/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp",
+      "Identity": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "ContentRoot": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
       "RelativePath": "images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp",
       "AssetKind": "All",

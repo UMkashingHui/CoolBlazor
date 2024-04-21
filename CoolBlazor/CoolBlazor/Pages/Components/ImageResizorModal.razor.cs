@@ -1,18 +1,9 @@
-
-using System.Security.Claims;
-using AutoMapper;
-using CoolBlazor.Infrastructure.Constants.Storage;
 using CoolBlazor.Infrastructure.Extensions;
-using CoolBlazor.Infrastructure.Models.Requests.Identity;
 using CoolBlazor.Infrastructure.Models.Requests.Upload;
-using CoolBlazor.Infrastructure.Utils.Extensions;
-using CoolBlazor.Pages.Identity;
 using Cropper.Blazor.Components;
 using Cropper.Blazor.Extensions;
 using Cropper.Blazor.Models;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.JSInterop;
 using MudBlazor;
 
 namespace CoolBlazor.Pages.Components
@@ -24,13 +15,7 @@ namespace CoolBlazor.Pages.Components
         [Parameter] public string CropImageUrl { get; set; }
 
         public string UserId { get; set; }
-
-
-        // Crop
         private CropperComponent? cropperComponent = null!;
-        private string croppedCanvasDataURL;
-        [Inject] private IJSRuntime? JSRuntime { get; set; }
-
         // Minimum relative sizes
         private static decimal minCropBoxWidth = 200;
         private static decimal minCropBoxHeight = 200;
@@ -77,10 +62,8 @@ namespace CoolBlazor.Pages.Components
             };
             // Get a reference to a JavaScript cropped canvas object.
             CroppedCanvas croppedCanvas = await cropperComponent!.GetCroppedCanvasAsync(getCroppedCanvasOptions);
-            // Invoke toDataURL JavaScript function from the canvas object.
-            croppedCanvasDataURL = await JSRuntime!.InvokeAsync<string>("window.getEllipseImage",
-            croppedCanvas!.JSRuntimeObjectRef);
-            request.FileData = croppedCanvasDataURL.Decode().base64ImageData;
+            string croppedData = await cropperComponent.GetCroppedCanvasDataURLAsync(getCroppedCanvasOptions);
+            request.FileData = croppedData.Decode().base64ImageData;
             request.FileName = CropImageName;
             request.UserId = UserId;
             var result = await _imageManager.UploadImageByData(request);
@@ -101,8 +84,6 @@ namespace CoolBlazor.Pages.Components
             }
         }
         void Cancel() => MudDialog.Cancel();
-
     }
-
 }
 

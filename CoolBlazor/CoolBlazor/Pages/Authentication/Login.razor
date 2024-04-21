@@ -12,8 +12,8 @@
     <MudGrid>
         <MudItem xs="12">
             <div class="d-flex justify-center">
-                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large" ViewBox="0 0 500 500"
-                    Style="width: 100px; height: 100px;" />
+                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large"
+                    ViewBox="0 0 500 500" Style="width: 100px; height: 100px;" />
             </div>
         </MudItem>
         <MudItem xs="12">
@@ -51,31 +51,4 @@
                 Color="Color.Primary" Size="Size.Large" Style="width: 100%;">@_localizer["Sign In"]</MudButton>
         </MudItem>
     </MudGrid>
-
 </EditForm>
-@* <MudContainer Class="mt-16">
-<MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Login</MudText>
-<MudGrid>
-<MudItem xs="12" Class="d-flex justify-center">
-<MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
-
-<MudTextField InputType="@AccountInput" @bind-Value="Text" Label="Account" Variant="Variant.Outlined"
-Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.AccountCircle"
-RequiredError="User name is required!" class="mt-8" />
-<MudTextField InputType="@PasswordInput" @bind-Value="Password" Label="Password"
-Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon"
-OnAdornmentClick="ButtonTestclick" AdornmentAriaLabel="Show Password"
-RequiredError="Password is required!" class="mt-8" />
-<MudItem xs="12" Class="d-flex justify-center">
-<MudButton Href="/Login" Variant="Variant.Filled" DisableElevation="true"
-StartIcon="@Icons.Material.Filled.Login" Color="Color.Primary" Class="mt-8" Size="Size.Large">
-Login</MudButton>
-</MudItem>
-
-
-<MudText class="mt-8">If you have no account, click <MudLink Href="/Register">Here</MudLink> to
-Register!</MudText>
-</MudForm>
-</MudItem>
-</MudGrid>
-</MudContainer> *@
