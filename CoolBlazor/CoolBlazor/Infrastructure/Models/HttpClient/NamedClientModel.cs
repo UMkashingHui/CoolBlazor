@@ -11,7 +11,7 @@ namespace CoolBlazor.Infrastructure.Models.HttpClient
 
         public async Task<Stream> OnGet()
         {
-            var httpClient = _httpClientFactory.CreateClient("ToolBoxApi");
+            var httpClient = _httpClientFactory.CreateClient("CoolWebApi");
             var httpResponseMessage = await httpClient.GetAsync(
                 "HealthCheck");
 

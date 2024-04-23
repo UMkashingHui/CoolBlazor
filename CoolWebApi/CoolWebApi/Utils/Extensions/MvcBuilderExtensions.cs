@@ -4,7 +4,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using CoolWebApi.Config;
 
-namespace BlazorHero.CleanArchitecture.Server.Extensions
+namespace CoolWebApi.Utils.Extensions
 {
     internal static class MvcBuilderExtensions
     {

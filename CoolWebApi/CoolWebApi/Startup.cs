@@ -1,6 +1,5 @@
 ﻿using System.Security.Claims;
 using AspNetCore.Identity.Mongo;
-using BlazorHero.CleanArchitecture.Server.Extensions;
 using Hangfire;
 using Hangfire.Mongo;
 using Hangfire.Mongo.Migration.Strategies;

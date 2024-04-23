@@ -10,7 +10,6 @@ using CoolWebApi.Services.Identity;
 using CoolWebApi.Utils.Constants.Permission;
 using Microsoft.AspNetCore.Components.Server;
 using CoolWebApi.Models.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
 
 namespace CoolWebApi.Controllers.Identity
 {

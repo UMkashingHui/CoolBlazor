@@ -13,7 +13,6 @@ using IResult = CoolWebApi.Utils.Wrapper.IResult;
 using CoolWebApi.Utils.Constants.Role;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
 using CoolWebApi.Utils.Exceptions;
 using CoolWebApi.Models.Requests.Mail;
 using System.Text.Encodings.Web;

@@ -15,7 +15,6 @@ using Newtonsoft.Json;
 using System.Net;
 using CoolWebApi.Utils.Wrapper;
 using CoolWebApi.Utils.Data;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Identity;
 using CoolWebApi.Utils.Contexts;
 using CoolWebApi.Utils.Constants.Application;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -25,7 +24,6 @@ using CoolWebApi.Utils.Repositories.impl;
 using AspNetCore.Identity.Mongo;
 using CoolWebApi.Models.Identity;
 using CoolWebApi.Services.Mail;
-using BlazorHero.CleanArchitecture.Infrastructure.Shared.Services;
 using Microsoft.OpenApi.Models;
 using CoolWebApi.Services.Content;
 using CoolWebApi.Services.Content.impl;
@@ -37,6 +35,7 @@ using CoolWebApi.Services.Account;
 using CoolWebApi.Services.Account.impl;
 using CoolWebApi.Services.FileOperation.impl;
 using CoolWebApi.Services.FileOperation;
+using CoolWebApi.Services.Mail.impl;
 
 namespace CoolWebApi.Utils.Extensions
 {
@@ -135,7 +134,7 @@ namespace CoolWebApi.Utils.Extensions
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "BlazorHero.CleanArchitecture",
+                    Title = "CoolWebApi",
                     License = new OpenApiLicense
                     {
                         Name = "MIT License",

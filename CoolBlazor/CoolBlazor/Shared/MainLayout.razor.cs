@@ -25,7 +25,7 @@ namespace CoolBlazor.Shared
         // {
         // await jsRuntime.InvokeAsync<string>("console.log", "hello world");
 
-        // var _toolBoxApiConfig = _configuration.GetSection("ToolBoxApi").Get<ToolBoxApiConfig>() ?? throw new InvalidOperationException("Connection string 'ToolBoxApi' not found.");
+        // var _toolBoxApiConfig = _configuration.GetSection("CoolWebApi").Get<ToolBoxApiConfig>() ?? throw new InvalidOperationException("Connection string 'CoolWebApi' not found.");
         // string? httpClientName = _toolBoxApiConfig.Name;
         // // ArgumentException.ThrowIfNullOrEmpty(httpClientName);
         // using HttpClient client = _httpClientFactory.CreateClient(httpClientName ?? "");
@@ -53,7 +53,7 @@ namespace CoolBlazor.Shared
                 _currentTheme = await _clientPreferenceManager.GetCurrentThemeAsync();
                 _rightToLeft = await _clientPreferenceManager.IsRTL();
                 _interceptor.RegisterEvent();
-                StateHasChanged();
+                // StateHasChanged();
             }
         }
 

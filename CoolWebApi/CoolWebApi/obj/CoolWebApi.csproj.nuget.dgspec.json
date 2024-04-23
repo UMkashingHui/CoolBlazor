@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj": {}
+    "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj": {}
   },
   "projects": {
-    "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj": {
+    "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj",
+        "projectUniqueName": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj",
         "projectName": "CoolWebApi",
-        "projectPath": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj",
-        "packagesPath": "/Users/kevinhui/.nuget/packages/",
-        "outputPath": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/obj/",
+        "projectPath": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/CoolWebApi.csproj",
+        "packagesPath": "/Users/kevin/.nuget/packages/",
+        "outputPath": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kevinhui/.nuget/NuGet/NuGet.Config"
+          "/Users/kevin/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

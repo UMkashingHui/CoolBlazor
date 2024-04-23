@@ -16,7 +16,7 @@ using CoolWebApi.Utils.Extensions;
 using CoolWebApi.Utils.Constants.Permission;
 using MongoDB.Bson;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace CoolWebApi.Services.Identity.impl
 {
     public class RoleService : IRoleService
     {

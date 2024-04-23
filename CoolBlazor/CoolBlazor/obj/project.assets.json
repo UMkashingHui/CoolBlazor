@@ -1326,19 +1326,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/kevinhui/.nuget/packages/": {}
+    "/Users/kevin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/CoolBlazor.csproj",
+      "projectUniqueName": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/CoolBlazor.csproj",
       "projectName": "CoolBlazor",
-      "projectPath": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/CoolBlazor.csproj",
-      "packagesPath": "/Users/kevinhui/.nuget/packages/",
-      "outputPath": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/",
+      "projectPath": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/CoolBlazor.csproj",
+      "packagesPath": "/Users/kevin/.nuget/packages/",
+      "outputPath": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kevinhui/.nuget/NuGet/NuGet.Config"
+        "/Users/kevin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

@@ -8,7 +8,7 @@ using CoolWebApi.Config;
 using CoolWebApi.Models.Requests.Mail;
 using CoolWebApi.Services.Mail;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Shared.Services
+namespace CoolWebApi.Services.Mail.impl
 {
     public class SMTPMailService : IMailService
     {

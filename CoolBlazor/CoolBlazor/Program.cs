@@ -104,13 +104,13 @@ builder.Services.AddMudServices();
 
 builder.Services.AddHttpContextAccessor();
 // Get Web Api Setting
-var _toolBoxApiConfig = builder.Configuration.GetSection("ToolBoxApi").Get<ToolBoxApiConfig>() ?? throw new InvalidOperationException("Connection string 'ToolBoxApi' not found."); ;
+var _toolBoxApiConfig = builder.Configuration.GetSection("CoolWebApi").Get<ToolBoxApiConfig>() ?? throw new InvalidOperationException("Connection string 'CoolWebApi' not found."); ;
 string? httpClientName = _toolBoxApiConfig.Name;
 // ArgumentException.ThrowIfNullOrEmpty(httpClientName);
 builder.Services.AddScoped(sp =>
     new HttpClient
     {
-        BaseAddress = new Uri(builder.Configuration["ToolBoxApi"] ?? "http://localhost:5232")
+        BaseAddress = new Uri(builder.Configuration["CoolWebApi"] ?? "http://localhost:5232")
     });
 
 builder.Services
