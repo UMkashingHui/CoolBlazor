@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "97L9hkuhPzQCIP3sUuWTr4L1Ugd4t+KHhBjULXoMjYA=",
+  "Hash": "r5WDuhNe0sCdULb+qe7662UB8p+ujwjGPT26MMHgaEY=",
   "Source": "CoolBlazor",
   "BasePath": "_content/CoolBlazor",
   "Mode": "Default",
@@ -255,6 +255,23 @@
       "OriginalItemSpec": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css"
     },
     {
+      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/.DS_Store",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
       "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
@@ -476,12 +493,12 @@
       "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Dom.png",
+      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/.DS_Store",
       "SourceId": "CoolBlazor",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
       "BasePath": "_content/CoolBlazor",
-      "RelativePath": "images/Dom.png",
+      "RelativePath": "images/.DS_Store",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -490,7 +507,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/Dom.png"
+      "OriginalItemSpec": "wwwroot/images/.DS_Store"
+    },
+    {
+      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/.DS_Store",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/Logos/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Logos/.DS_Store"
+    },
+    {
+      "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/CoolBlazor-logo-no-background.png",
+      "SourceId": "CoolBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/",
+      "BasePath": "_content/CoolBlazor",
+      "RelativePath": "images/Logos/CoolBlazor-logo-no-background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Logos/CoolBlazor-logo-no-background.png"
     },
     {
       "Identity": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg",

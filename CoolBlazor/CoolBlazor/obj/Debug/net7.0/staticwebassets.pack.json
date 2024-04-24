@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/CoolBlazor.bundle.scp.css"
     },
     {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
     },
@@ -57,8 +61,16 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Dom.png",
-      "PackagePath": "staticwebassets/images/Dom.png"
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/.DS_Store",
+      "PackagePath": "staticwebassets/images/.DS_Store"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/.DS_Store",
+      "PackagePath": "staticwebassets/images/Logos/.DS_Store"
+    },
+    {
+      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/CoolBlazor-logo-no-background.png",
+      "PackagePath": "staticwebassets/images/Logos/CoolBlazor-logo-no-background.png"
     },
     {
       "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg",
