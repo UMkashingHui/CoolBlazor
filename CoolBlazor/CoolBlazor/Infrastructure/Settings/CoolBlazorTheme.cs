@@ -114,11 +114,15 @@ namespace CoolBlazor.Infrastructure.Settings
             Palette = new Palette()
             {
                 Primary = "#1E88E5",
-                AppbarBackground = "#1E88E5",
+                Secondary = "#634E9B",
+                Info = "#978AB1",
+                Success = "#007E33",
+                Warning = "#CC2E16",
+                Error = "#CC2E16",
+                AppbarBackground = "#634E9B",
                 Background = Colors.Grey.Lighten5,
                 DrawerBackground = "#FFF",
                 DrawerText = "rgba(0,0,0, 0.7)",
-                Success = "#007E33"
             },
             Typography = DefaultTypography,
             LayoutProperties = DefaultLayoutProperties
@@ -128,15 +132,19 @@ namespace CoolBlazor.Infrastructure.Settings
         {
             Palette = new Palette()
             {
-                Primary = "#1E88E5",
-                Success = "#007E33",
+                Primary = "#6585e0",
+                Secondary = "#4F6C96",
+                Info = "#a4c2dd",
+                Success = "#2ECC40",
+                Warning = "#dc2d7e",
+                Error = "#de2000",
                 Black = "#27272f",
                 Background = "#32333d",
                 BackgroundGrey = "#27272f",
                 Surface = "#373740",
                 DrawerBackground = "#27272f",
                 DrawerText = "rgba(255,255,255, 0.50)",
-                AppbarBackground = "#373740",
+                AppbarBackground = "#050908",
                 AppbarText = "rgba(255,255,255, 0.70)",
                 TextPrimary = "rgba(255,255,255, 0.70)",
                 TextSecondary = "rgba(255,255,255, 0.50)",

@@ -29,9 +29,9 @@
             <MudTextField For="@(() => _registerUserModel.ConfirmPassword)" InputType="InputType.Password"
                 @bind-Value="_registerUserModel.ConfirmPassword" Label="@_localizer["Confirm Password"]" />
             <MudCheckBox @bind-Checked="@_registerUserModel.ActivateUser" Label="@_localizer["Activate User?"]"
-                Color="Color.Primary"></MudCheckBox>
+                Color="Color.Dark"></MudCheckBox>
             <MudCheckBox @bind-Checked="@_registerUserModel.AutoConfirmEmail" Label="@_localizer["Auto Confirm Email?"]"
-                Color="Color.Primary"></MudCheckBox>
+                Color="Color.Dark"></MudCheckBox>
         </DialogContent>
         <DialogActions>
             <MudButton Variant="Variant.Filled" OnClick="Cancel">@_localizer["Cancel"]</MudButton>

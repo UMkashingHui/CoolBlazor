@@ -53,9 +53,16 @@ namespace CoolBlazor.Shared
                 _currentTheme = await _clientPreferenceManager.GetCurrentThemeAsync();
                 _rightToLeft = await _clientPreferenceManager.IsRTL();
                 _interceptor.RegisterEvent();
-                // StateHasChanged();
+                StateHasChanged();
             }
         }
+
+        protected override async Task OnInitializedAsync()
+        {
+            _currentTheme = CoolBlazorTheme.DefaultTheme;
+        }
+
+
 
         private async Task DarkMode()
         {

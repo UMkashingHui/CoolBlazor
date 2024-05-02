@@ -14,8 +14,9 @@
     <MudGrid>
         <MudItem xs="12">
             <div class="d-flex justify-center">
-                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large"
-                    ViewBox="0 0 500 500" Style="width: 100px; height: 100px;" />
+                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.CoolBlazorLogo" Size="Size.Large"
+                    ViewBox="0 0 500 500" Style="@($"color:{CoolBlazor.Static.Colors.CustomColors.LogoColor};")"
+                    class="register-logo" />
             </div>
         </MudItem>
         <MudItem xs="12">
@@ -63,8 +64,16 @@
         </MudItem>
         <MudItem xs=" 12" Class="d-flex justify-center">
             <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Disabled="@(!Validated)"
-                Color="Color.Primary" Size="Size.Large" Style="width: 100%;">@_localizer["Sign Up"]</MudButton>
+                Color="@CoolBlazor.Static.Colors.CustomColors.ButtonColor" Size="Size.Large" Style="width: 100%;">
+                @_localizer["Sign Up"]</MudButton>
         </MudItem>
     </MudGrid>
 
 </EditForm>
+
+<style>
+    .register-logo {
+        width: 100px;
+        height: 100px;
+    }
+</style>

@@ -19,15 +19,13 @@
     <CascadingAuthenticationState>
         <AuthorizeView>
             <NotAuthorized>
-                <MudAppBar Elevation="4" Color="Color.Primary">
+                <MudAppBar Elevation="4">
                     <MudSpacer />
                     <LanguageSelector />
                     <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit"
                         OnClick="@((e) => DarkMode())" />
-                    <MudButton Variant="Variant.Text" Style="color: white" Href="/Login">Login here</MudButton>
-
+                    <MudButton Variant="Variant.Text" Color="Color.Inherit" Href="/Login">Login here</MudButton>
                 </MudAppBar>
-
                 <MudContainer MaxWidth="MaxWidth.Small" Class="d-flex align-center" Style="height: 100vh;">
                     <MudPaper Elevation="25" Class="pa-8" Style="width: 500px;">
                         @Body

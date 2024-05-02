@@ -12,8 +12,8 @@
     <MudGrid>
         <MudItem xs="12">
             <div class="d-flex justify-center">
-                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large"
-                    ViewBox="0 0 500 500" Style="width: 100px; height: 100px;" />
+                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.CoolBlazorLogo" ViewBox="0 0 510 510"
+                    Style="@($"color:{CoolBlazor.Static.Colors.CustomColors.LogoColor};")" class="login-logo" />
             </div>
         </MudItem>
         <MudItem xs="12">
@@ -43,12 +43,20 @@
                 AdornmentIcon="@_passwordInputIcon" OnAdornmentClick="TogglePasswordVisibility" />
         </MudItem>
         <MudItem xs="12" Class="d-flex justify-space-between align-center">
-            <MudCheckBox T="bool" Label="@_localizer["Remember me?"]" Color="Color.Primary" Class="ml-n1"></MudCheckBox>
+            <MudCheckBox T="bool" Label="@_localizer["Remember me?"]" Color="Color.Dark" Class="ml-n1"></MudCheckBox>
             <MudLink Href="/account/forgot-password">@_localizer["Forgot password?"]</MudLink>
         </MudItem>
         <MudItem xs="12" Class="d-flex justify-center">
             <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Disabled="@(!Validated)"
-                Color="Color.Primary" Size="Size.Large" Style="width: 100%;">@_localizer["Sign In"]</MudButton>
+                Color="@CoolBlazor.Static.Colors.CustomColors.ButtonColor" Size="Size.Large" Style="width: 100%;">
+                @_localizer["Sign In"]</MudButton>
         </MudItem>
     </MudGrid>
 </EditForm>
+
+<style>
+    .login-logo {
+        width: 100px;
+        height: 100px;
+    }
+</style>

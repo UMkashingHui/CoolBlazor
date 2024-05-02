@@ -12,7 +12,7 @@
                 @* <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large" ViewBox="0 0 500 500" Style="width: 250px; height: 250px;" /> *@
                 @* <MudIcon Icon="@CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large" ViewBox="0 0 500 500" Style="width: 250px; height: 250px;" /> *@
                 @* <MudImage Src="images/Logos/CoolBlazor-logo-no-background.png" Width="332" Height="250" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4"/> *@
-                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.CoolBlazorLogo" Size="Size.Large" ViewBox="0 0 515 515" Style="width: 250px; height: 250px;" />
+                <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.CoolBlazorLogo" Size="Size.Large" ViewBox="0 0 515 515" Style="@($"color:{@CoolBlazor.Static.Colors.CustomColors.LogoColor};")" class="cool-blazor-logo"/>
             </div>
         </MudItem>
         <MudItem xs="12" sm="12" md="12">
@@ -59,3 +59,10 @@
         <div style="margin:50px"></div>
     </MudGrid>
 </MudContainer>
+
+<style>
+    .cool-blazor-logo {
+        width: 200px;
+        height: 200px;
+    }
+</style>
