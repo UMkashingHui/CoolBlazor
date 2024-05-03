@@ -124,3 +124,11 @@
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/CoolBlazor.pdb
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/CoolBlazor.genruntimeconfig.cache
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/ref/CoolBlazor.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/DynamicData.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/PSC.Blazor.Components.Common.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/PSC.Blazor.Components.MarkdownEditor.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/System.Reactive.Wasm.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/ReactiveUI.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/ReactiveUI.Blazor.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/Splat.dll
+/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/System.Reactive.dll

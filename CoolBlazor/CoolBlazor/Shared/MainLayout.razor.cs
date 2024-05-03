@@ -1,11 +1,14 @@
 using CoolBlazor.Infrastructure.Models.HttpClient;
 using CoolBlazor.Infrastructure.Settings;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using MudBlazor;
 using System;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Reactive;
+using ReactiveUI;
 
 namespace CoolBlazor.Shared
 {
@@ -62,8 +65,6 @@ namespace CoolBlazor.Shared
             _currentTheme = CoolBlazorTheme.DefaultTheme;
         }
 
-
-
         private async Task DarkMode()
         {
             bool isDarkMode = await _clientPreferenceManager.ToggleDarkModeAsync();
@@ -76,5 +77,7 @@ namespace CoolBlazor.Shared
         {
             _interceptor.DisposeEvent();
         }
+
+
     }
 }

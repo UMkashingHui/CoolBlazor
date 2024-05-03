@@ -83,6 +83,22 @@
           "buildMultiTargeting/Cropper.Blazor.props": {}
         }
       },
+      "DynamicData/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/net7.0/DynamicData.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/DynamicData.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.4.0": {
         "type": "package",
         "compile": {
@@ -518,6 +534,129 @@
           }
         }
       },
+      "PSC.Blazor.Components.Common/6.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/PSC.Blazor.Components.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PSC.Blazor.Components.Common.dll": {}
+        }
+      },
+      "PSC.Blazor.Components.MarkdownEditor/2.0.20": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.1",
+          "PSC.Blazor.Components.Common": "6.0.4"
+        },
+        "compile": {
+          "lib/net6.0/PSC.Blazor.Components.MarkdownEditor.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PSC.Blazor.Components.MarkdownEditor.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/alert.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/css/easymde.min.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/easymde.min.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/markdownEditor.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/mermaid.min.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/PSC.Blazor.Components.MarkdownEditor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/PSC.Blazor.Components.MarkdownEditor.props": {}
+        }
+      },
+      "Reactive.Wasm/1.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Splat": "7.3.5",
+          "System.Reactive": "4.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.Wasm.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Wasm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ReactiveUI/19.5.1": {
+        "type": "package",
+        "dependencies": {
+          "DynamicData": "8.0.2",
+          "Splat": "14.7.1"
+        },
+        "compile": {
+          "lib/net7.0/ReactiveUI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/ReactiveUI.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ReactiveUI.Blazor/19.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "7.0.11",
+          "Reactive.Wasm": "1.2.2",
+          "ReactiveUI": "19.5.1"
+        },
+        "compile": {
+          "lib/net7.0/ReactiveUI.Blazor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/ReactiveUI.Blazor.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Splat/14.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Splat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Splat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
@@ -527,6 +666,22 @@
         },
         "runtime": {
           "lib/net7.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -648,6 +803,28 @@
         "staticwebassets/cropper.min.js",
         "staticwebassets/cropperJsInterop.js",
         "staticwebassets/cropperJsInterop.min.js"
+      ]
+    },
+    "DynamicData/8.0.2": {
+      "sha512": "zGKeUZcaW4Nxx8T2OyrkFnb+sIc6cnfCxQr/a/5Sm+Idg9rRJruHS8KFKVUIXNxDC0yQZYwO+22XBumMznA8sg==",
+      "type": "package",
+      "path": "dynamicdata/8.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "README.md",
+        "dynamicdata.8.0.2.nupkg.sha512",
+        "dynamicdata.nuspec",
+        "lib/net462/DynamicData.dll",
+        "lib/net462/DynamicData.xml",
+        "lib/net6.0/DynamicData.dll",
+        "lib/net6.0/DynamicData.xml",
+        "lib/net7.0/DynamicData.dll",
+        "lib/net7.0/DynamicData.xml",
+        "lib/netstandard2.0/DynamicData.dll",
+        "lib/netstandard2.0/DynamicData.xml",
+        "logo.png"
       ]
     },
     "FluentValidation/11.4.0": {
@@ -1267,6 +1444,165 @@
         "polly.extensions.http.nuspec"
       ]
     },
+    "PSC.Blazor.Components.Common/6.0.4": {
+      "sha512": "rs+k9ptxMiez8/ceEkHynONqMbNnS5ib3+LT/SNZSFclKXo7DL9gWTDPei+kExskrPdXDwUf/L8/WJG+4kwNSQ==",
+      "type": "package",
+      "path": "psc.blazor.components.common/6.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/PSC.Blazor.Components.Common.dll",
+        "psc.blazor.components.common.6.0.4.nupkg.sha512",
+        "psc.blazor.components.common.nuspec",
+        "psc_logo.png"
+      ]
+    },
+    "PSC.Blazor.Components.MarkdownEditor/2.0.20": {
+      "sha512": "hTLCGd6KI0rs6b9QU/lFlgaTnE+byKSbZnqKO0OdblHbWsm4tMBSmhcLcOFGe4fId0NRXtV/ppMmRQQBJd1jew==",
+      "type": "package",
+      "path": "psc.blazor.components.markdowneditor/2.0.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/PSC.Blazor.Components.MarkdownEditor.props",
+        "buildMultiTargeting/PSC.Blazor.Components.MarkdownEditor.props",
+        "buildTransitive/PSC.Blazor.Components.MarkdownEditor.props",
+        "content/wwwroot/css/alert.css",
+        "content/wwwroot/css/easymde.min.css",
+        "content/wwwroot/js/easymde.min.js",
+        "content/wwwroot/js/markdownEditor.js",
+        "content/wwwroot/js/mermaid.min.js",
+        "contentFiles/any/net6.0/wwwroot/css/alert.css",
+        "contentFiles/any/net6.0/wwwroot/css/easymde.min.css",
+        "contentFiles/any/net6.0/wwwroot/js/easymde.min.js",
+        "contentFiles/any/net6.0/wwwroot/js/markdownEditor.js",
+        "contentFiles/any/net6.0/wwwroot/js/mermaid.min.js",
+        "lib/net6.0/PSC.Blazor.Components.MarkdownEditor.dll",
+        "psc.blazor.components.markdowneditor.2.0.20.nupkg.sha512",
+        "psc.blazor.components.markdowneditor.nuspec",
+        "psc_logo.png",
+        "staticwebassets/PSC.Blazor.Components.MarkdownEditor.bundle.scp.css",
+        "staticwebassets/css/alert.css",
+        "staticwebassets/css/easymde.min.css",
+        "staticwebassets/js/easymde.min.js",
+        "staticwebassets/js/markdownEditor.js",
+        "staticwebassets/js/mermaid.min.js"
+      ]
+    },
+    "Reactive.Wasm/1.2.2": {
+      "sha512": "dw7s6gHXuRbAZQR1sw0vr/zH4PqDp/SmxBtnG/Epiv326PkIxmN2JtJsUN6tEY8WEA8fVBGZj5ITMomRfwYS9w==",
+      "type": "package",
+      "path": "reactive.wasm/1.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/netstandard2.0/System.Reactive.Wasm.dll",
+        "lib/netstandard2.0/System.Reactive.Wasm.xml",
+        "reactive.wasm.1.2.2.nupkg.sha512",
+        "reactive.wasm.nuspec"
+      ]
+    },
+    "ReactiveUI/19.5.1": {
+      "sha512": "Ye0k68DnpS/h9BagGba2KEGsps//gcY4z7ZGr/OiWmXMJZn0z0/io4NB9tbnGFrT5sD+npo0fELJ6sambGVEFQ==",
+      "type": "package",
+      "path": "reactiveui/19.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "README.md",
+        "lib/monoandroid12.0/ReactiveUI.dll",
+        "lib/monoandroid12.0/ReactiveUI.pdb",
+        "lib/monoandroid12.0/ReactiveUI.xml",
+        "lib/monoandroid12.1/ReactiveUI.dll",
+        "lib/monoandroid12.1/ReactiveUI.pdb",
+        "lib/monoandroid12.1/ReactiveUI.xml",
+        "lib/monoandroid13.0/ReactiveUI.dll",
+        "lib/monoandroid13.0/ReactiveUI.pdb",
+        "lib/monoandroid13.0/ReactiveUI.xml",
+        "lib/net462/ReactiveUI.dll",
+        "lib/net462/ReactiveUI.xml",
+        "lib/net472/ReactiveUI.dll",
+        "lib/net472/ReactiveUI.xml",
+        "lib/net6.0-windows10.0.17763/ReactiveUI.dll",
+        "lib/net6.0-windows10.0.17763/ReactiveUI.xml",
+        "lib/net6.0-windows10.0.19041/ReactiveUI.dll",
+        "lib/net6.0-windows10.0.19041/ReactiveUI.xml",
+        "lib/net6.0/ReactiveUI.dll",
+        "lib/net6.0/ReactiveUI.xml",
+        "lib/net7.0-android33.0/ReactiveUI.dll",
+        "lib/net7.0-android33.0/ReactiveUI.xml",
+        "lib/net7.0-ios16.1/ReactiveUI.dll",
+        "lib/net7.0-ios16.1/ReactiveUI.xml",
+        "lib/net7.0-maccatalyst16.1/ReactiveUI.dll",
+        "lib/net7.0-maccatalyst16.1/ReactiveUI.xml",
+        "lib/net7.0-macos13.0/ReactiveUI.dll",
+        "lib/net7.0-macos13.0/ReactiveUI.xml",
+        "lib/net7.0-tvos16.1/ReactiveUI.dll",
+        "lib/net7.0-tvos16.1/ReactiveUI.xml",
+        "lib/net7.0-windows10.0.17763/ReactiveUI.dll",
+        "lib/net7.0-windows10.0.17763/ReactiveUI.xml",
+        "lib/net7.0-windows10.0.19041/ReactiveUI.dll",
+        "lib/net7.0-windows10.0.19041/ReactiveUI.xml",
+        "lib/net7.0/ReactiveUI.dll",
+        "lib/net7.0/ReactiveUI.xml",
+        "lib/netstandard2.0/ReactiveUI.dll",
+        "lib/netstandard2.0/ReactiveUI.xml",
+        "lib/tizen40/ReactiveUI.dll",
+        "lib/tizen40/ReactiveUI.xml",
+        "lib/xamarinios10/ReactiveUI.dll",
+        "lib/xamarinios10/ReactiveUI.xml",
+        "lib/xamarinmac20/ReactiveUI.dll",
+        "lib/xamarinmac20/ReactiveUI.xml",
+        "lib/xamarintvos10/ReactiveUI.dll",
+        "lib/xamarintvos10/ReactiveUI.xml",
+        "logo.png",
+        "reactiveui.19.5.1.nupkg.sha512",
+        "reactiveui.nuspec"
+      ]
+    },
+    "ReactiveUI.Blazor/19.5.1": {
+      "sha512": "djLJUI2Z+iPHLnzg6cUbdVgScHQ6uoR21LZJ3mtIqEHZ0F+W0CSppNz4VZH32ARzZaOaBw5nqevvQt6Jusb1Pw==",
+      "type": "package",
+      "path": "reactiveui.blazor/19.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "README.md",
+        "lib/net6.0/ReactiveUI.Blazor.dll",
+        "lib/net6.0/ReactiveUI.Blazor.xml",
+        "lib/net7.0/ReactiveUI.Blazor.dll",
+        "lib/net7.0/ReactiveUI.Blazor.xml",
+        "lib/netstandard2.0/ReactiveUI.Blazor.dll",
+        "lib/netstandard2.0/ReactiveUI.Blazor.xml",
+        "logo.png",
+        "reactiveui.blazor.19.5.1.nupkg.sha512",
+        "reactiveui.blazor.nuspec"
+      ]
+    },
+    "Splat/14.7.1": {
+      "sha512": "nWalgf4RuopEICZhMpwlFPz0MJaBYrusIbP/GxpE6x19PZnlLW4RZs84FYxlCfXLKTMsImHKHv2YoOQmM8/bPA==",
+      "type": "package",
+      "path": "splat/14.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net6.0/Splat.dll",
+        "lib/net6.0/Splat.xml",
+        "lib/net7.0/Splat.dll",
+        "lib/net7.0/Splat.xml",
+        "lib/netstandard2.0/Splat.dll",
+        "lib/netstandard2.0/Splat.xml",
+        "splat.14.7.1.nupkg.sha512",
+        "splat.nuspec"
+      ]
+    },
     "System.IO.Pipelines/7.0.0": {
       "sha512": "jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "type": "package",
@@ -1292,6 +1628,34 @@
         "system.io.pipelines.7.0.0.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Reactive/6.0.0": {
+      "sha512": "31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
+      "type": "package",
+      "path": "system.reactive/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net6.0-windows10.0.19041/_._",
+        "build/net6.0/_._",
+        "buildTransitive/net6.0-windows10.0.19041/_._",
+        "buildTransitive/net6.0/_._",
+        "icon.png",
+        "lib/net472/System.Reactive.dll",
+        "lib/net472/System.Reactive.xml",
+        "lib/net6.0-windows10.0.19041/System.Reactive.dll",
+        "lib/net6.0-windows10.0.19041/System.Reactive.xml",
+        "lib/net6.0/System.Reactive.dll",
+        "lib/net6.0/System.Reactive.xml",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.18362/System.Reactive.dll",
+        "lib/uap10.0.18362/System.Reactive.pri",
+        "lib/uap10.0.18362/System.Reactive.xml",
+        "readme.md",
+        "system.reactive.6.0.0.nupkg.sha512",
+        "system.reactive.nuspec"
       ]
     },
     "Toolbelt.Blazor.HttpClientInterceptor/10.2.0": {
@@ -1322,6 +1686,9 @@
       "Microsoft.Extensions.Http >= 8.0.0",
       "Microsoft.Extensions.Http.Polly >= 6.0.1",
       "MudBlazor >= 6.11.1",
+      "PSC.Blazor.Components.MarkdownEditor >= 2.0.20",
+      "ReactiveUI.Blazor >= 19.5.1",
+      "System.Reactive >= 6.0.0",
       "Toolbelt.Blazor.HttpClientInterceptor >= 10.2.0"
     ]
   },
@@ -1402,6 +1769,18 @@
           "MudBlazor": {
             "target": "Package",
             "version": "[6.11.1, )"
+          },
+          "PSC.Blazor.Components.MarkdownEditor": {
+            "target": "Package",
+            "version": "[2.0.20, )"
+          },
+          "ReactiveUI.Blazor": {
+            "target": "Package",
+            "version": "[19.5.1, )"
+          },
+          "System.Reactive": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           },
           "Toolbelt.Blazor.HttpClientInterceptor": {
             "target": "Package",

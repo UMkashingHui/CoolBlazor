@@ -18,6 +18,9 @@
           "Microsoft.Extensions.Http": "8.0.0",
           "Microsoft.Extensions.Http.Polly": "6.0.1",
           "MudBlazor": "6.11.1",
+          "PSC.Blazor.Components.MarkdownEditor": "2.0.20",
+          "ReactiveUI.Blazor": "19.5.1",
+          "System.Reactive": "6.0.0",
           "Toolbelt.Blazor.HttpClientInterceptor": "10.2.0"
         },
         "runtime": {
@@ -77,6 +80,17 @@
           "lib/net7.0/Cropper.Blazor.dll": {
             "assemblyVersion": "1.3.2.0",
             "fileVersion": "1.3.2.0"
+          }
+        }
+      },
+      "DynamicData/8.0.2": {
+        "dependencies": {
+          "System.Reactive": "6.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/DynamicData.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.2.45848"
           }
         }
       },
@@ -347,7 +361,83 @@
           }
         }
       },
+      "PSC.Blazor.Components.Common/6.0.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.17"
+        },
+        "runtime": {
+          "lib/net6.0/PSC.Blazor.Components.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PSC.Blazor.Components.MarkdownEditor/2.0.20": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "7.0.17",
+          "PSC.Blazor.Components.Common": "6.0.4"
+        },
+        "runtime": {
+          "lib/net6.0/PSC.Blazor.Components.MarkdownEditor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Reactive.Wasm/1.2.2": {
+        "dependencies": {
+          "Splat": "14.7.1",
+          "System.Reactive": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Wasm.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.2.9890"
+          }
+        }
+      },
+      "ReactiveUI/19.5.1": {
+        "dependencies": {
+          "DynamicData": "8.0.2",
+          "Splat": "14.7.1"
+        },
+        "runtime": {
+          "lib/net7.0/ReactiveUI.dll": {
+            "assemblyVersion": "19.5.0.0",
+            "fileVersion": "19.5.1.4944"
+          }
+        }
+      },
+      "ReactiveUI.Blazor/19.5.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "7.0.17",
+          "Reactive.Wasm": "1.2.2",
+          "ReactiveUI": "19.5.1"
+        },
+        "runtime": {
+          "lib/net7.0/ReactiveUI.Blazor.dll": {
+            "assemblyVersion": "19.5.0.0",
+            "fileVersion": "19.5.1.4944"
+          }
+        }
+      },
+      "Splat/14.7.1": {
+        "runtime": {
+          "lib/net7.0/Splat.dll": {
+            "assemblyVersion": "14.7.0.0",
+            "fileVersion": "14.7.1.58184"
+          }
+        }
+      },
       "System.IO.Pipelines/7.0.0": {},
+      "System.Reactive/6.0.0": {
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.1"
+          }
+        }
+      },
       "Toolbelt.Blazor.HttpClientInterceptor/10.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.0-preview2.20160.5"
@@ -401,6 +491,13 @@
       "sha512": "sha512-cX+LSWUbG9C7+dFb5f3MmU05jbufyhWrZJdCWq5imiya97k5AIEgRhNtdDfqVVeOMmFAx516LGnDcZtFblR6uw==",
       "path": "cropper.blazor/1.3.2",
       "hashPath": "cropper.blazor.1.3.2.nupkg.sha512"
+    },
+    "DynamicData/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zGKeUZcaW4Nxx8T2OyrkFnb+sIc6cnfCxQr/a/5Sm+Idg9rRJruHS8KFKVUIXNxDC0yQZYwO+22XBumMznA8sg==",
+      "path": "dynamicdata/8.0.2",
+      "hashPath": "dynamicdata.8.0.2.nupkg.sha512"
     },
     "FluentValidation/11.4.0": {
       "type": "package",
@@ -584,12 +681,61 @@
       "path": "polly.extensions.http/3.0.0",
       "hashPath": "polly.extensions.http.3.0.0.nupkg.sha512"
     },
+    "PSC.Blazor.Components.Common/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rs+k9ptxMiez8/ceEkHynONqMbNnS5ib3+LT/SNZSFclKXo7DL9gWTDPei+kExskrPdXDwUf/L8/WJG+4kwNSQ==",
+      "path": "psc.blazor.components.common/6.0.4",
+      "hashPath": "psc.blazor.components.common.6.0.4.nupkg.sha512"
+    },
+    "PSC.Blazor.Components.MarkdownEditor/2.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hTLCGd6KI0rs6b9QU/lFlgaTnE+byKSbZnqKO0OdblHbWsm4tMBSmhcLcOFGe4fId0NRXtV/ppMmRQQBJd1jew==",
+      "path": "psc.blazor.components.markdowneditor/2.0.20",
+      "hashPath": "psc.blazor.components.markdowneditor.2.0.20.nupkg.sha512"
+    },
+    "Reactive.Wasm/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dw7s6gHXuRbAZQR1sw0vr/zH4PqDp/SmxBtnG/Epiv326PkIxmN2JtJsUN6tEY8WEA8fVBGZj5ITMomRfwYS9w==",
+      "path": "reactive.wasm/1.2.2",
+      "hashPath": "reactive.wasm.1.2.2.nupkg.sha512"
+    },
+    "ReactiveUI/19.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ye0k68DnpS/h9BagGba2KEGsps//gcY4z7ZGr/OiWmXMJZn0z0/io4NB9tbnGFrT5sD+npo0fELJ6sambGVEFQ==",
+      "path": "reactiveui/19.5.1",
+      "hashPath": "reactiveui.19.5.1.nupkg.sha512"
+    },
+    "ReactiveUI.Blazor/19.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-djLJUI2Z+iPHLnzg6cUbdVgScHQ6uoR21LZJ3mtIqEHZ0F+W0CSppNz4VZH32ARzZaOaBw5nqevvQt6Jusb1Pw==",
+      "path": "reactiveui.blazor/19.5.1",
+      "hashPath": "reactiveui.blazor.19.5.1.nupkg.sha512"
+    },
+    "Splat/14.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nWalgf4RuopEICZhMpwlFPz0MJaBYrusIbP/GxpE6x19PZnlLW4RZs84FYxlCfXLKTMsImHKHv2YoOQmM8/bPA==",
+      "path": "splat/14.7.1",
+      "hashPath": "splat.14.7.1.nupkg.sha512"
+    },
     "System.IO.Pipelines/7.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "path": "system.io.pipelines/7.0.0",
       "hashPath": "system.io.pipelines.7.0.0.nupkg.sha512"
+    },
+    "System.Reactive/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
+      "path": "system.reactive/6.0.0",
+      "hashPath": "system.reactive.6.0.0.nupkg.sha512"
     },
     "Toolbelt.Blazor.HttpClientInterceptor/10.2.0": {
       "type": "package",

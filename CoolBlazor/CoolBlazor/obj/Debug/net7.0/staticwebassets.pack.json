@@ -1,6 +1,26 @@
 {
   "Files": [
     {
+      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/css/alert.css",
+      "PackagePath": "staticwebassets/css/alert.css"
+    },
+    {
+      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/css/easymde.min.css",
+      "PackagePath": "staticwebassets/css/easymde.min.css"
+    },
+    {
+      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/easymde.min.js",
+      "PackagePath": "staticwebassets/js/easymde.min.js"
+    },
+    {
+      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/markdownEditor.js",
+      "PackagePath": "staticwebassets/js/markdownEditor.js"
+    },
+    {
+      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/mermaid.min.js",
+      "PackagePath": "staticwebassets/js/mermaid.min.js"
+    },
+    {
       "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css",
       "PackagePath": "staticwebassets/CoolBlazor.bundle.scp.css"
     },

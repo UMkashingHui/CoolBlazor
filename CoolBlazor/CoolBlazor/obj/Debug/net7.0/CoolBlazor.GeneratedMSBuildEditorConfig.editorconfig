@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aGVudGljYXRpb24vUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Blog/BlogEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxvZy9CbG9nRWRpdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Components/ImageResizorModal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tcG9uZW50cy9JbWFnZVJlc2l6b3JNb2RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

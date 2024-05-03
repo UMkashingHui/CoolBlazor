@@ -20,6 +20,7 @@ using System.Globalization;
 using Cropper.Blazor.Extensions;
 using Cropper.Blazor.ModuleOptions;
 using CoolBlazor.Infrastructure.Managers.File;
+using MudBlazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
