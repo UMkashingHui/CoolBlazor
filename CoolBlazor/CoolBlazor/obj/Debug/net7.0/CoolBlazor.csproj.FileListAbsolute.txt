@@ -62,7 +62,6 @@
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/ref/CoolBlazor.dll
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/Pages/Content/Home.razor.rz.scp.css
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/appsettings.Development.json
-/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/appsettings.json
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/CoolBlazor.staticwebassets.runtime.json
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/CoolBlazor
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/CoolBlazor.deps.json
@@ -132,3 +131,11 @@
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/ReactiveUI.Blazor.dll
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/Splat.dll
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/System.Reactive.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/DynamicData.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/PSC.Blazor.Components.Common.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/PSC.Blazor.Components.MarkdownEditor.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/System.Reactive.Wasm.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/ReactiveUI.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/ReactiveUI.Blazor.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/Splat.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/bin/Debug/net7.0/System.Reactive.dll

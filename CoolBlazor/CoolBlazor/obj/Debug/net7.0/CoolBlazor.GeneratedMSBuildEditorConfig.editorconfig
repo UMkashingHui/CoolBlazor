@@ -9,129 +9,129 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CoolBlazor
 build_property.RootNamespace = CoolBlazor
-build_property.ProjectDir = /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/
+build_property.ProjectDir = /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor
+build_property.MSBuildProjectDirectory = /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/App.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Authentication/Login.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Authentication/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aGVudGljYXRpb24vTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Authentication/Register.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Authentication/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aGVudGljYXRpb24vUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Blog/BlogEditor.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Blog/BlogEditor.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxvZy9CbG9nRWRpdG9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Components/ImageResizorModal.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Components/ImageResizorModal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tcG9uZW50cy9JbWFnZVJlc2l6b3JNb2RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Content/Dashboard.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Content/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGVudC9EYXNoYm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Account.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Account.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvQWNjb3VudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Forgot.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Forgot.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvRm9yZ290LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Profile.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/RegisterUserModal.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/RegisterUserModal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvUmVnaXN0ZXJVc2VyTW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/RoleModal.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/RoleModal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvUm9sZU1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/RolePermissions.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/RolePermissions.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvUm9sZVBlcm1pc3Npb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Roles.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Roles.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvUm9sZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Security.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Security.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvU2VjdXJpdHkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Test.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Test.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvVGVzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/UserProfile.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/UserProfile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvVXNlclByb2ZpbGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/UserRoles.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/UserRoles.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvVXNlclJvbGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Users.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Identity/Users.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSWRlbnRpdHkvVXNlcnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/Components/ToolBoxTitle.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/Components/ToolBoxTitle.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0NvbXBvbmVudHMvVG9vbEJveFRpdGxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/Dialogs/DeleteConfirmation.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/Dialogs/DeleteConfirmation.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0RpYWxvZ3MvRGVsZXRlQ29uZmlybWF0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/Dialogs/Logout.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/Dialogs/Logout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0RpYWxvZ3MvTG9nb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/MainBody.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/MainBody.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5Cb2R5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/SurveyPrompt.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/_Imports.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Content/Home.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Content/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGVudC9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-uposgytnqw
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/MainLayout.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1stfltm53y
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/NavMenu.razor]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-liy4jv4snu
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Error.cshtml]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/_Host.cshtml]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/_Layout.cshtml]
+[/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

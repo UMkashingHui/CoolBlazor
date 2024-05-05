@@ -1,139 +1,127 @@
 {
   "Files": [
     {
-      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/css/alert.css",
+      "Id": "/Users/kevinhui/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/css/alert.css",
       "PackagePath": "staticwebassets/css/alert.css"
     },
     {
-      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/css/easymde.min.css",
+      "Id": "/Users/kevinhui/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/css/easymde.min.css",
       "PackagePath": "staticwebassets/css/easymde.min.css"
     },
     {
-      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/easymde.min.js",
+      "Id": "/Users/kevinhui/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/easymde.min.js",
       "PackagePath": "staticwebassets/js/easymde.min.js"
     },
     {
-      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/markdownEditor.js",
+      "Id": "/Users/kevinhui/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/markdownEditor.js",
       "PackagePath": "staticwebassets/js/markdownEditor.js"
     },
     {
-      "Id": "/Users/kevin/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/mermaid.min.js",
+      "Id": "/Users/kevinhui/.nuget/packages/psc.blazor.components.markdowneditor/2.0.20/contentFiles/any/net6.0/wwwroot/js/mermaid.min.js",
       "PackagePath": "staticwebassets/js/mermaid.min.js"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/obj/Debug/net7.0/scopedcss/projectbundle/CoolBlazor.bundle.scp.css",
       "PackagePath": "staticwebassets/CoolBlazor.bundle.scp.css"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/.DS_Store",
-      "PackagePath": "staticwebassets/.DS_Store"
-    },
-    {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/bootstrap/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/FONT-LICENSE",
       "PackagePath": "staticwebassets/css/open-iconic"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/ICON-LICENSE",
       "PackagePath": "staticwebassets/css/open-iconic"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/README.md",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/README.md",
       "PackagePath": "staticwebassets/css/open-iconic/README.md"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/site.css",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/favicon.png",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/.DS_Store",
-      "PackagePath": "staticwebassets/images/.DS_Store"
-    },
-    {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/.DS_Store",
-      "PackagePath": "staticwebassets/images/Logos/.DS_Store"
-    },
-    {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/CoolBlazor-logo-no-background.png",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/Logos/CoolBlazor-logo-no-background.png",
       "PackagePath": "staticwebassets/images/Logos/CoolBlazor-logo-no-background.png"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-111b30e1-9450-454a-8a72-511de195baaa.jpeg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-12e5a10f-b3ee-48b4-a1aa-0bfe538742c2.jpg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-12e5a10f-b3ee-48b4-a1aa-0bfe538742c2.jpg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-12e5a10f-b3ee-48b4-a1aa-0bfe538742c2.jpg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-351c8f4d-5fe2-4206-92ed-e3b8d9411395.png",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-351c8f4d-5fe2-4206-92ed-e3b8d9411395.png",
       "PackagePath": "staticwebassets/images/ProfilePictures/-351c8f4d-5fe2-4206-92ed-e3b8d9411395.png"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png",
       "PackagePath": "staticwebassets/images/ProfilePictures/-37b98695-a94f-47b8-8d7c-b9dec8b93b7b.png"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-4fce564c-2325-4bb4-bd0b-b0b7fcdebd80.jpeg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-4fce564c-2325-4bb4-bd0b-b0b7fcdebd80.jpeg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-4fce564c-2325-4bb4-bd0b-b0b7fcdebd80.jpeg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-56e7736e-22ba-4982-8b51-5335061ff6a6.jpg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-56e7736e-22ba-4982-8b51-5335061ff6a6.jpg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-56e7736e-22ba-4982-8b51-5335061ff6a6.jpg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-5789447e-7938-4888-8bf5-68233a97e454.jpg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-5789447e-7938-4888-8bf5-68233a97e454.jpg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-5789447e-7938-4888-8bf5-68233a97e454.jpg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-6333123a-8246-403d-8467-03255bb9a7ed.jpg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-6333123a-8246-403d-8467-03255bb9a7ed.jpg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-6333123a-8246-403d-8467-03255bb9a7ed.jpg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-89efa453-d70c-45e0-8eea-9edf17ccaa8e.jpg",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-89efa453-d70c-45e0-8eea-9edf17ccaa8e.jpg",
       "PackagePath": "staticwebassets/images/ProfilePictures/-89efa453-d70c-45e0-8eea-9edf17ccaa8e.jpg"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png",
       "PackagePath": "staticwebassets/images/ProfilePictures/-9f7a8f0a-bdda-48c1-b653-d100212acc93.png"
     },
     {
-      "Id": "/Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp",
+      "Id": "/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolBlazor/CoolBlazor/wwwroot/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp",
       "PackagePath": "staticwebassets/images/ProfilePictures/-bb76cbba-effc-406a-bb93-8dd5f8cc5d48.webp"
     },
     {

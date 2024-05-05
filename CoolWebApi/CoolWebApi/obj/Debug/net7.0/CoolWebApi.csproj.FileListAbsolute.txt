@@ -1,4 +1,3 @@
-/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/bin/Debug/net7.0/appsettings.Development.json
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/bin/Debug/net7.0/appsettings.json
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/bin/Debug/net7.0/CoolWebApi
 /Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/bin/Debug/net7.0/CoolWebApi.deps.json
@@ -208,3 +207,5 @@
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/obj/Debug/net7.0/CoolWebApi.pdb
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/obj/Debug/net7.0/CoolWebApi.genruntimeconfig.cache
 /Users/kevin/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/obj/Debug/net7.0/ref/CoolWebApi.dll
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/bin/Debug/net7.0/appsettings.Development.json
+/Users/kevinhui/WorkPlace/PersonalProjects/cool-blazor/CoolWebApi/CoolWebApi/bin/Debug/net7.0/appsettings.Production.json
