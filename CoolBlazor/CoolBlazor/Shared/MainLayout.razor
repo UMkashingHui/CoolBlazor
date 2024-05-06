@@ -1,0 +1,44 @@
+﻿@inherits LayoutComponentBase
+@inject Microsoft.Extensions.Localization.IStringLocalizer<MainLayout> _localizer
+@using Cropper.Blazor.Components
+
+<CropperComponent Class="cropper-example" Src="cropperblazor.png" Options="new Cropper.Blazor.Models.Options()" />
+
+<style>
+    .cropper-example {
+        max-height: 300px;
+        width: 100%;
+    }
+</style>
+
+<MudRTLProvider RightToLeft="@_rightToLeft">
+    @* <audio id="notification" src="/media/notification.mp3" /> *@
+    <MudThemeProvider Theme="_currentTheme" />
+    <MudDialogProvider />
+    <MudSnackbarProvider />
+    <CascadingAuthenticationState>
+        <AuthorizeView>
+            <NotAuthorized>
+                <MudAppBar Elevation="4">
+                    <MudSpacer />
+                    <LanguageSelector />
+                    <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit"
+                        OnClick="@((e) => DarkMode())" />
+                    <MudButton Variant="Variant.Text" Color="Color.Inherit" Href="/Login">Login here</MudButton>
+                </MudAppBar>
+                <MudContainer MaxWidth="MaxWidth.Small" Class="d-flex align-center" Style="height: 100vh;">
+                    <MudPaper Elevation="25" Class="pa-8" Style="width: 500px;">
+                        @Body
+                    </MudPaper>
+                </MudContainer>
+            </NotAuthorized>
+            <Authorized>
+                <MudLayout>
+                    <MainBody OnDarkModeToggle="@DarkMode" OnRightToLeftToggle="@RightToLeftToggle">
+                        @Body
+                    </MainBody>
+                </MudLayout>
+            </Authorized>
+        </AuthorizeView>
+    </CascadingAuthenticationState>
+</MudRTLProvider>

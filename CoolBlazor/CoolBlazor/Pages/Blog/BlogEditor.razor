@@ -1,0 +1,40 @@
+@page "/blog/editor"
+@using PSC.Blazor.Components.MarkdownEditor.Enums
+
+<div class="col-md-12">
+    <MarkdownEditor @bind-Value="@markdownValue" ValueHTMLChanged="@OnMarkdownValueHTMLChanged" SpellChecker="true"
+        UploadImage="true" CustomButtonClicked="@OnCustomButtonClicked">
+        <Toolbar>
+        </Toolbar>
+    </MarkdownEditor>
+
+    <hr />
+
+    <h3>Result</h3>
+    @((MarkupString)markdownHtml)
+
+</div>
+
+@code {
+    string markdownValue = "# Markdown Editor\nThis is a test";
+    string markdownHtml;
+    string buttonText;
+
+    Task OnMarkdownValueChanged(string value)
+    {
+        return Task.CompletedTask;
+    }
+
+    Task OnMarkdownValueHTMLChanged(string value)
+    {
+        markdownHtml = value;
+        return Task.CompletedTask;
+    }
+
+    Task OnCustomButtonClicked(MarkdownButtonEventArgs eventArgs)
+    {
+        Console.WriteLine("OnCustomButtonClicked -> " + eventArgs.Value);
+        buttonText += "OnCustomButtonClicked -> " + eventArgs.Value + "<br />";
+        return Task.CompletedTask;
+    }
+}
