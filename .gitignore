@@ -16,6 +16,14 @@
 # Mono auto generated files
 mono_crash.*
 
+# appsetting
+appsettings.json
+appsettings.Production.json
+appsettings.Development.json
+
+# images
+.ProfilePictures
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
