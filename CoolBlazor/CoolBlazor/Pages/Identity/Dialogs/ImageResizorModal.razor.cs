@@ -6,7 +6,7 @@ using Cropper.Blazor.Models;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 
-namespace CoolBlazor.Pages.Components
+namespace CoolBlazor.Pages.Identity.Dialogs
 {
     public partial class ImageResizorModal
     {

@@ -14,7 +14,7 @@ else
     <MudGrid>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.ViewCarousel" Color="Color.Primary" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.ViewCarousel" Color="Color.Primary" Size="Size.Large" Class="mx-4" Style="width:54px; height:54px;"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Products"]</MudText>
                     <MudText Typo="Typo.h5">@ProductCount</MudText>
@@ -23,7 +23,7 @@ else
         </MudItem>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.PanoramaPhotosphereSelect" Color="Color.Secondary" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.PanoramaPhotosphereSelect" Color="Color.Secondary" Size="Size.Large" Class="mx-4" Style="width:54px; height:54px;"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Brands"]</MudText>
                     <MudText @bind-Value="@BrandCount" Typo="Typo.h5">@BrandCount</MudText>
@@ -32,7 +32,7 @@ else
         </MudItem>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.AttachFile" Color="Color.Primary" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.AttachFile" Color="Color.Primary" Size="Size.Large" Class="mx-4" Style="width:54px; height:54px;"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Documents"]</MudText>
                     <MudText @bind-Value="@DocumentCount" Typo="Typo.h5">@DocumentCount</MudText>
@@ -41,7 +41,7 @@ else
         </MudItem>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.FileCopy" Color="Color.Secondary" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.FileCopy" Color="Color.Secondary" Size="Size.Large" Class="mx-4" Style="width:54px; height:54px;"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Document Types"]</MudText>
                     <MudText @bind-Value="@DocumentTypeCount" Typo="Typo.h5">@DocumentTypeCount</MudText>
@@ -50,7 +50,7 @@ else
         </MudItem>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.Assignment" Color="Color.Error" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.Assignment" Color="Color.Error" Class="mx-4" Size="Size.Large" Style="width:54px; height:54px;"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Document Extended Attributes"]</MudText>
                     <MudText @bind-Value="@DocumentExtendedAttributeCount" Typo="Typo.h5">@DocumentExtendedAttributeCount</MudText>
@@ -59,7 +59,7 @@ else
         </MudItem>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.Face" Color="Color.Success" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.Face" Color="Color.Success" Class="mx-4" Size="Size.Large" Style="width:54px; height:54px;" Href="/identity/users"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Registered Users"]</MudText>
                     <MudText Typo="Typo.h5">@UserCount</MudText>
@@ -68,7 +68,7 @@ else
         </MudItem>
         <MudItem xs="12" sm="6" md="3">
             <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
-                <MudIcon Icon="@Icons.Material.Filled.Groups" Color="Color.Warning" Class="mx-4" Style="width:54px; height:54px;"></MudIcon>
+                <MudIconButton Icon="@Icons.Material.Filled.Groups" Color="Color.Warning" Class="mx-4" Size="Size.Large" Style="width:54px; height:54px;" Href="/identity/roles"></MudIconButton>
                 <div>
                     <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@_localizer["Registered Roles"]</MudText>
                     <MudText Typo="Typo.h5">@RoleCount</MudText>

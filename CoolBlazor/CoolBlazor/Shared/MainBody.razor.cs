@@ -185,7 +185,10 @@ namespace CoolBlazor.Shared
                         FirstLetterOfFirstName = char.MinValue;
                         await _authenticationManager.Logout();
                     }
-                    _snackBar.Add(string.Format(_localizer["Welcome {0}"], FirstName), Severity.Success);
+                    else
+                    {
+                        _snackBar.Add(string.Format(_localizer["Welcome {0}"], FirstName), Severity.Success);
+                    }
                 }
             }
         }
