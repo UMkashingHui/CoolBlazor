@@ -4,9 +4,6 @@
    <path class="st0" d="m30.69795,19.39567c0.43007,-2.12634 1.90559,-3.89711 3.92041,-4.70217l5.70489,-2.28264c1.46981,-0.58637 2.43118,-2.00934 2.43118,-3.59044l0,-2.95516c0,-1.39714 -0.75821,-2.691 -1.98169,-3.37518c-1.2253,-0.68418 -2.72048,-0.64876 -3.91653,0.08592c0,0 -11.72034,3.74651 -13.42644,8.2942c-1.70427,4.54586 -13.63964,44.33295 -13.63964,44.33295l13.63964,0l7.26817,-35.80749l0.00001,0.00001z" fill="#000000" id="svg_3" stroke="null"/>
    <path class="st0" d="m86.67674,12.41086l5.70695,2.28264c2.01688,0.80506 3.49035,2.57583 3.92019,4.70217l7.26634,35.80794l13.64147,0c0,0 -11.93537,-39.78708 -13.64147,-44.33295c-1.70427,-4.54769 -13.42438,-8.2942 -13.42438,-8.2942c-1.19422,-0.73491 -2.69123,-0.7701 -3.91653,-0.08592c-1.2237,0.68395 -1.98397,1.9778 -1.98397,3.37518l0,2.95516c0.00023,1.58064 0.96182,3.00361 2.43141,3.58998l-0.00001,0z" fill="#000000" id="svg_4" stroke="null"/>
 </svg>
-
----
-
 This repository has two projects which are CoolBlazor and CoolWebApi. CoolBlazor is a front-end  application built with Blazor Server technology and MudBlazor UI, while CoolWebApi using .Net Core Web Api to support the back-end work of CoolBlazor. To develop web application faster, CoolWebApi uses MongoDB database instead of sql server. MongoDB is a NoSQL database which is powerful at handling lots of data and easier to maintain than traditional database. 
 
 Including:
@@ -18,9 +15,6 @@ Including:
 5. A markdown blog and article display platform. (TODO)
 
 # Development Setup
-
----
-
 - Microsoft Visual Studio Code
 - .Net 7
 - MongoDB
