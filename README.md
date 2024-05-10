@@ -11,8 +11,6 @@ Including:
 1. Register and Login with Microsoft Identity service and MongoDB.
 2. Authentication and authorization with Microsoft Identity service and MongoDB. 
 3. Modify personal information and crop photo as avatar powered by Cropper.Blazor.
-4. Microsoft AI support. (TODO)
-5. A markdown blog and article display platform. (TODO)
 
 # Development Setup
 
