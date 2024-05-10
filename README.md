@@ -1,6 +1,6 @@
-<center>
+<p align="center">
    <img src="/CoolBlazor/CoolBlazor/wwwroot/images/Logos/svglogo.svg" alt="CoolBlazor" title="CoolBlazor">
-</center>
+</p>
 
 # Description
 This repository has two projects which are CoolBlazor and CoolWebApi. CoolBlazor is a front-end  application built with Blazor Server technology and MudBlazor UI, while CoolWebApi using .Net Core Web Api to support the back-end work of CoolBlazor. To develop web application faster, CoolWebApi uses MongoDB database instead of sql server. MongoDB is a NoSQL database which is powerful at handling lots of data and easier to maintain than traditional database. 
