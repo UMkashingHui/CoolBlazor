@@ -80,8 +80,6 @@ namespace CoolWebApi.Services.Identity.impl
                 }
                 var roleClaim = _mapper.Map<CoolBlazorRoleClaim>(request);
                 await _db.RoleClaims.InsertOneAsync(roleClaim);
-                // var filter = Builders<CoolBlazorRoleClaim>.Filter.Eq("cuisine", "Pizza");
-                // await _db.RoleClaims.UpdateOneAsync(_currentUserService.UserId);
                 return await Result<string>.SuccessAsync(string.Format(_localizer["Role Claim {0} created."], request.Value));
             }
             else
@@ -95,11 +93,6 @@ namespace CoolWebApi.Services.Identity.impl
                 }
                 else
                 {
-                    // existingRoleClaim.ClaimType = request.Type;
-                    // existingRoleClaim.ClaimValue = request.Value;
-                    // existingRoleClaim.Group = request.Group;
-                    // existingRoleClaim.Description = request.Description;
-                    // existingRoleClaim.RoleId = request.RoleId;
                     var filter = Builders<CoolBlazorRoleClaim>.Filter.Eq("Id", request.Id);
                     var update = Builders<CoolBlazorRoleClaim>.Update
                         .Set(roleClaim => roleClaim.ClaimType, request.Type)
@@ -109,7 +102,6 @@ namespace CoolWebApi.Services.Identity.impl
                         .Set(roleClaim => roleClaim.RoleId.ToString(), request.RoleId);
 
                     _db.RoleClaims.UpdateOne(filter, update);
-                    // await _db.SaveChangesAsync(_currentUserService.UserId);
                     return await Result<string>.SuccessAsync(string.Format(_localizer["Role Claim {0} for Role {1} updated."], request.Value, existingRoleClaim.Role.Name));
                 }
             }
@@ -118,12 +110,10 @@ namespace CoolWebApi.Services.Identity.impl
         public async Task<Result<string>> DeleteAsync(int id)
         {
             var existingRoleClaim = await _db.RoleClaims
-                // .Include(x => x.Role)
                 .FirstOrDefaultAsync(x => x.Id.ToString() == id.ToString());
             if (existingRoleClaim != null)
             {
                 var result = _db.RoleClaims.DeleteOne(x => x.Id.ToString() == id.ToString());
-                // await _db.SaveChangesAsync(_currentUserService.UserId);
                 if (result.DeletedCount == 1)
                 {
                     return await Result<string>.SuccessAsync(string.Format(_localizer["Role Claim {0} for {1} Role deleted."], existingRoleClaim.ClaimValue, existingRoleClaim.Role.Name));

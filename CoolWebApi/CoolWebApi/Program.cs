@@ -16,7 +16,7 @@ namespace CoolWebApi
 
             //     try
             //     {
-            //         var context = services.GetRequiredService<BlazorToolBoxDbContext>();
+            //         var context = services.GetRequiredService<CoolBlazorDbContext>();
 
             //         // if (context.Database.IsSqlServer())
             //         // {

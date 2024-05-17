@@ -13,12 +13,12 @@ namespace CoolWebApi.Utils.Repositories.impl
     public class UnitOfWork<TId> : IUnitOfWork<TId>
     {
         private readonly ICurrentUserService _currentUserService;
-        private readonly BlazorToolBoxDbContext _dbContext;
+        private readonly CoolBlazorDbContext _dbContext;
         private bool disposed;
         private Hashtable _repositories;
         private readonly IAppCache _cache;
 
-        public UnitOfWork(BlazorToolBoxDbContext dbContext, ICurrentUserService currentUserService, IAppCache cache)
+        public UnitOfWork(CoolBlazorDbContext dbContext, ICurrentUserService currentUserService, IAppCache cache)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _currentUserService = currentUserService;

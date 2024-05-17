@@ -26,8 +26,6 @@ namespace CoolWebApi.Services.Identity.impl
         private readonly AppConfiguration _appConfiguration;
         private readonly SignInManager<CoolBlazorUser> _signInManager;
         private readonly IStringLocalizer<TokenService> _localizer;
-        // Current User Test
-        private readonly ICurrentUserService _currentUserService;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public TokenService(
@@ -35,7 +33,6 @@ namespace CoolWebApi.Services.Identity.impl
             RoleManager<CoolBlazorRole> roleManager,
             IOptions<AppConfiguration> appConfiguration,
             SignInManager<CoolBlazorUser> signInManager,
-            ICurrentUserService currentUserService,
             IHttpContextAccessor httpContextAccessor,
             IStringLocalizer<TokenService> localizer)
         {
@@ -43,7 +40,6 @@ namespace CoolWebApi.Services.Identity.impl
             _roleManager = roleManager;
             _appConfiguration = appConfiguration.Value;
             _signInManager = signInManager;
-            _currentUserService = currentUserService;
             _httpContextAccessor = httpContextAccessor;
             _localizer = localizer;
         }
@@ -196,21 +192,15 @@ namespace CoolWebApi.Services.Identity.impl
         }
 
         /// <summary>
-        /// 设置当前登录用户
+        /// Set Current User
         /// </summary>
         private async Task SetCurrentUser(CoolBlazorUser user, IHttpContextAccessor httpContextAccessor)
         {
             CurrentUser.Configure(httpContextAccessor);
-
-            // var user = await PSURepository.GetUserByOIDAsync(oid, context);
-            // var user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                // var roles = await _userManager.GetRolesAsync(user);
                 CurrentUser.UserId = user.Id.ToString();
                 CurrentUser.UserName = user.UserName;
-                // _currentUserService.UserId = user.Id.ToString();
-                // CurrentUser.UserRole = roles.ToString();
             }
         }
     }

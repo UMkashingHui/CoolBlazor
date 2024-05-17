@@ -13,9 +13,9 @@ namespace CoolWebApi.Utils.Repositories.impl
 {
     public class RepositoryAsync<T, TId> : IRepositoryAsync<T, TId> where T : AuditableEntity<TId>
     {
-        private readonly BlazorToolBoxDbContext _dbContext;
+        private readonly CoolBlazorDbContext _dbContext;
 
-        public RepositoryAsync(BlazorToolBoxDbContext dbContext)
+        public RepositoryAsync(CoolBlazorDbContext dbContext)
         {
             _dbContext = dbContext;
         }

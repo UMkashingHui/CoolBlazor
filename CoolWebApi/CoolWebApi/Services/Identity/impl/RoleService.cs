@@ -51,7 +51,6 @@ namespace CoolWebApi.Services.Identity.impl
             if (existingRole.Name != RoleConstants.AdministratorRole && existingRole.Name != RoleConstants.BasicRole)
             {
                 bool roleIsNotUsed = true;
-                // var allUsers = await _userManager.Users.ToListAsync();
                 var allUsers = _userManager.Users.ToList();
 
                 foreach (var user in allUsers)
@@ -79,7 +78,6 @@ namespace CoolWebApi.Services.Identity.impl
 
         public async Task<Result<List<RoleResponse>>> GetAllAsync()
         {
-            // var roles = await _roleManager.Roles.ToListAsync();
             var roles = _roleManager.Roles.ToList();
             var rolesResponse = _mapper.Map<List<RoleResponse>>(roles);
             return await Result<List<RoleResponse>>.SuccessAsync(rolesResponse);
@@ -265,9 +263,6 @@ namespace CoolWebApi.Services.Identity.impl
         public async Task<int> GetCountAsync()
         {
             return _roleManager.Roles.Count();
-
-            // var count = await _roleManager.Roles.CountAsync();
-            // return count;
         }
     }
 }

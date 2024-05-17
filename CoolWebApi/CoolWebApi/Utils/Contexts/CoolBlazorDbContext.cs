@@ -16,28 +16,17 @@ using CoolWebApi.Utils.Entities.Misc;
 
 namespace CoolWebApi.Utils.Contexts
 {
-    public class BlazorToolBoxDbContext : DbContext
+    public class CoolBlazorDbContext : DbContext
     {
         private readonly ICurrentUserService _currentUserService;
         private readonly IDateTimeService _dateTimeService;
 
-        // public BlazorToolBoxDbContext(DbContextOptions options) : base(options)
-        // {
-
-        // }
-
-        public BlazorToolBoxDbContext(DbContextOptions options, ICurrentUserService currentUserService, IDateTimeService dateTimeService)
+        public CoolBlazorDbContext(DbContextOptions options, ICurrentUserService currentUserService, IDateTimeService dateTimeService)
             : base(options)
         {
             _currentUserService = currentUserService;
             _dateTimeService = dateTimeService;
         }
-
-        // public DbSet<Product> Products { get; set; }
-        // public DbSet<Brand> Brands { get; set; }
-        // public DbSet<Document> Documents { get; set; }
-        // public DbSet<DocumentType> DocumentTypes { get; set; }
-        // public DbSet<DocumentExtendedAttribute> DocumentExtendedAttributes { get; set; }
 
         public virtual DbSet<Product> Products { get; init; }
         public virtual DbSet<Brand> Brands { get; init; }
@@ -45,17 +34,6 @@ namespace CoolWebApi.Utils.Contexts
         public virtual DbSet<DocumentType> DocumentTypes { get; init; }
         public virtual DbSet<DocumentExtendedAttribute> DocumentExtendedAttributes { get; init; }
 
-
-        // protected override void OnModelCreating(ModelBuilder modelBuilder)
-        // {
-        //     base.OnModelCreating(modelBuilder);
-        //     modelBuilder.Entity<Product>().ToCollection("product");
-        //     modelBuilder.Entity<Brand>().ToCollection("brand");
-        //     modelBuilder.Entity<Document>().ToCollection("document");
-        //     modelBuilder.Entity<DocumentType>().ToCollection("documentType");
-        //     modelBuilder.Entity<DocumentExtendedAttribute>().ToCollection("documentExtendedAttribute");
-
-        // }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {

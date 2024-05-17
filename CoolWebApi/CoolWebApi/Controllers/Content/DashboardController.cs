@@ -6,7 +6,7 @@ using CoolWebApi.Utils.Constants.Permission;
 
 namespace CoolWebApi.Controllers.Content
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/dashboard")]
     [ApiController]
     public class DashboardController : ControllerBase
@@ -22,7 +22,7 @@ namespace CoolWebApi.Controllers.Content
         /// Get Dashboard Data
         /// </summary>
         /// <returns>Status 200 OK </returns>
-        // [Authorize(Policy = Permissions.Dashboards.View)]
+        [Authorize(Policy = Permissions.Dashboards.View)]
         [HttpGet]
         public async Task<IActionResult> GetDataAsync()
         {

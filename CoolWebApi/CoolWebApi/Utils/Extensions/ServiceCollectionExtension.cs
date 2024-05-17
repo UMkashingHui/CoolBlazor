@@ -82,7 +82,7 @@ namespace CoolWebApi.Utils.Extensions
                     mongo.RolesCollection = mongoDbRolesCollection;
                 }
             )
-            .AddEntityFrameworkStores<BlazorToolBoxDbContext>()
+            .AddEntityFrameworkStores<CoolBlazorDbContext>()
             .AddDefaultTokenProviders();
 
             return services;
@@ -104,7 +104,7 @@ namespace CoolWebApi.Utils.Extensions
             this IServiceCollection services, string mongoConnection)
             => services
             .AddTransient<IDatabaseSeeder, DatabaseSeeder>()
-                .AddDbContext<BlazorToolBoxDbContext>(options => options
+                .AddDbContext<CoolBlazorDbContext>(options => options
                     .UseMongoDB(new MongoClient(mongoConnection), "my_blazor_app"));
 
 
@@ -192,7 +192,7 @@ namespace CoolWebApi.Utils.Extensions
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<IUploadService, UploadService>();
             services.AddTransient<MongoDbConfiguration>();
-            services.AddTransient<BlazorToolBoxDbContext>();
+            services.AddTransient<CoolBlazorDbContext>();
             return services;
         }
 
