@@ -9,9 +9,6 @@
     <MudGrid>
         <MudItem xs="12" sm="12" md="12">
             <div class="d-flex justify-center mt-4">
-                @* <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large" ViewBox="0 0 500 500" Style="width: 250px; height: 250px;" /> *@
-                @* <MudIcon Icon="@CustomIcons.BlazorHero" Color="Color.Primary" Size="Size.Large" ViewBox="0 0 500 500" Style="width: 250px; height: 250px;" /> *@
-                @* <MudImage Src="images/Logos/CoolBlazor-logo-no-background.png" Width="332" Height="250" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4"/> *@
                 <MudIcon Icon="@CoolBlazor.Static.Icons.CustomIcons.CoolBlazorLogo" Size="Size.Large" ViewBox="0 0 515 515" Style="@($"color:{@CoolBlazor.Static.Colors.CustomColors.LogoColor};")" class="cool-blazor-logo"/>
             </div>
         </MudItem>
@@ -19,9 +16,6 @@
             <MudText Align="Align.Center" Typo="Typo.h2">@_localizer["CoolBlazor"] v1.0</MudText>
             <MudText Align="Align.Center" Typo="Typo.h5" Class="smaller">@_localizer["Description"]</MudText>
         </MudItem>
-        @* <MudItem  xs="12" sm="12" md="12">
-            <MudAlert Style="margin-top:10px;justify-content:center" Severity="Severity.Info">@_localizer["Celebrating 1,500 Stars on Github!"] <MudLink Href="https://github.com/blazorhero/CleanArchitecture/stargazers">@_localizer["Liked BlazorHero? Star us on Github!"]</MudLink></MudAlert>
-        </MudItem> *@
         @* <MudItem xs="12" sm="12" md="12">
             <div class="pa-4 justify-center my-4 mud-text-align-center">
                 <MudButton Variant="Variant.Filled" Color="Color.Primary" Link="https://codewithmukesh.com/blazorhero" Target="_blank" Align="Align.justify-center">@_localizer["Project Page"]</MudButton>

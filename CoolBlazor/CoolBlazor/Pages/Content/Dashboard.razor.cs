@@ -8,8 +8,6 @@ namespace CoolBlazor.Pages.Content
     public partial class Dashboard
     {
         [Inject] private IDashboardManager DashboardManager { get; set; }
-
-        // [CascadingParameter] private HubConnection HubConnection { get; set; }
         [Parameter] public int ProductCount { get; set; }
         [Parameter] public int BrandCount { get; set; }
         [Parameter] public int DocumentCount { get; set; }
@@ -21,28 +19,6 @@ namespace CoolBlazor.Pages.Content
         private readonly string[] _dataEnterBarChartXAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
         private readonly List<ChartSeries> _dataEnterBarChartSeries = new();
         private bool _loaded;
-
-        // protected override async Task OnInitializedAsync()
-        // {
-        //     // _loaded = true;
-        //     // HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
-        //     // HubConnection.On(ApplicationConstants.SignalR.ReceiveUpdateDashboard, async () =>
-        //     // {
-        //     //     await LoadDataAsync();
-        //     //     StateHasChanged();
-        //     // });
-        //     // if (HubConnection.State == HubConnectionState.Disconnected)
-        //     // {
-        //     //     await HubConnection.StartAsync();
-        //     // }
-        // }
-
-        // protected override async Task OnInitializedAsync()
-        // {
-        //     await LoadDataAsync();
-        //     StateHasChanged();
-
-        // }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
