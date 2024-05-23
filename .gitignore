@@ -17,7 +17,7 @@
 mono_crash.*
 
 # appsetting
-appsettings.json
+CoolWebApi/CoolWebApi/appsettings.json
 appsettings.Production.json
 appsettings.Development.json
 
