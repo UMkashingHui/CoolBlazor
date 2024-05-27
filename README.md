@@ -16,7 +16,8 @@ Including:
 # Development Setup
 - Microsoft Visual Studio Code
 - .Net 7
-- MongoDB
+- MongoDB<br>
+     Get your Connection String! Ref:https://www.mongodb.com/docs/manual/reference/connection-string/
 - MudBlazor
 
 # Demonstrations
