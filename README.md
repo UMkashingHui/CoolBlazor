@@ -18,3 +18,13 @@ Including:
 - .Net 7
 - MongoDB
 - MudBlazor
+
+# Demonstrations
+### Login and Register
+TODO
+### Modify Personal Information (Crop Image as Avator)
+TODO
+### User Roles Control
+TODO
+### Roles Control
+TODO
