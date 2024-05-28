@@ -36,8 +36,7 @@ namespace CoolWebApi.Services.Identity.impl
         private readonly IStringLocalizer<IUserService> _localizer;
 
         private readonly IExcelService _excelService;
-        // private readonly MyMiddleware _myMiddleware;
-        // private readonly HttpContext _httpContext;
+
         private readonly ICurrentUserService _currentUserService;
 
         private readonly IMapper _mapper;
@@ -50,7 +49,6 @@ namespace CoolWebApi.Services.Identity.impl
             RoleManager<CoolBlazorRole> roleManager,
             IMailService mailService,
             IStringLocalizer<UserService> localizer,
-        // // IExcelService excelService,
             ICurrentUserService currentUserService,
             ILogger<UserService> logger)
         {
@@ -59,10 +57,8 @@ namespace CoolWebApi.Services.Identity.impl
             _roleManager = roleManager;
             _mailService = mailService;
             _localizer = localizer;
-            // // _excelService = excelService;
             _currentUserService = currentUserService;
             _logger = logger;
-
         }
 
         public async Task<Result<List<UserResponse>>> GetAllAsync()
@@ -83,22 +79,10 @@ namespace CoolWebApi.Services.Identity.impl
             var user = new CoolBlazorUser
             {
                 Email = request.Email,
-                // FirstName = request.FirstName,
-                // LastName = request.LastName,
                 UserName = request.UserName,
-                // PhoneNumber = request.PhoneNumber,
                 IsActive = request.ActivateUser,
                 EmailConfirmed = request.AutoConfirmEmail
             };
-
-            // if (!string.IsNullOrWhiteSpace(request.PhoneNumber))
-            // {
-            //     var userWithSamePhoneNumber = await _userManager.Users.FirstOrDefaultAsync(x => x.PhoneNumber == request.PhoneNumber);
-            //     if (userWithSamePhoneNumber != null)
-            //     {
-            //         return await Result.FailAsync(string.Format(_localizer["Phone number {0} is already registered."], request.PhoneNumber));
-            //     }
-            // }
 
             var userWithSameEmail = await _userManager.FindByEmailAsync(request.Email);
             if (userWithSameEmail == null)
@@ -172,7 +156,6 @@ namespace CoolWebApi.Services.Identity.impl
             var viewModel = new List<UserRoleModel>();
             var user = await _userManager.FindByIdAsync(userId);
             var roles = _roleManager.Roles.ToList();
-            // var roles = await _roleManager.Roles.ToListAsync();
             Console.WriteLine("Roles = " + roles);
 
             foreach (var role in roles)

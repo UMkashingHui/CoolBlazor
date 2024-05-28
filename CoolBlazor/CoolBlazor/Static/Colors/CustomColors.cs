@@ -15,5 +15,10 @@ namespace CoolBlazor.Static.Colors
         {
             get { return Color.Secondary; }
         }
+
+        public static string AvatarColor
+        {
+            get { return "rgb(255, 238, 88)"; }
+        }
     }
 }

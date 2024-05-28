@@ -75,7 +75,6 @@ namespace CoolWebApi.Controllers.Identity
         /// </summary>
         /// <param name="request"></param>
         /// <returns>Status 200 OK</returns>
-        /// {"firstName":"Kevin","lastName":"Xu","email":"kevinkashinghui@163.com","userName":"KevinXu","password":"XjC627468669","confirmPassword":"XjC627468669","phoneNumber":"62283578","activateUser":false,"autoConfirmEmail":false} /// 
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> RegisterAsync(RegisterRequest request)

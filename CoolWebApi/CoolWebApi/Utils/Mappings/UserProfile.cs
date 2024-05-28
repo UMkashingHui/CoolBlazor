@@ -11,8 +11,6 @@ namespace CoolWebApi.Utils.Mappings
             CreateMap<UserResponse, CoolBlazorUser>().ReverseMap();
             CreateMap<RoleResponse, CoolBlazorRole>().ReverseMap();
             CreateMap<RoleClaimResponse, CoolBlazorRoleClaim>().ReverseMap();
-            // CreateMap<ChatUserResponse, BlazorHeroUser>().ReverseMap()
-            //     .ForMember(dest => dest.EmailAddress, source => source.MapFrom(source => source.Email)); //Specific Mapping
         }
     }
 }

@@ -10,8 +10,6 @@ namespace CoolWebApi.Config
         public string ProxyIP { get; set; }
 
         public string ApplicationUrl { get; set; }
-
-
     }
 }
 

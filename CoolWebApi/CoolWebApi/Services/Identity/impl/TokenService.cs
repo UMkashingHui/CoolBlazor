@@ -72,8 +72,6 @@ namespace CoolWebApi.Services.Identity.impl
 
             var token = await GenerateJwtAsync(user, claims);
             var response = new TokenResponse { Token = token, RefreshToken = user.RefreshToken, UserImageURL = user.ProfilePictureDataUrl };
-            // Current User Test
-            // await SetCurrentUser(user, _httpContextAccessor);
             return await Result<TokenResponse>.SuccessAsync(response);
         }
 
@@ -184,7 +182,6 @@ namespace CoolWebApi.Services.Identity.impl
 
         private SigningCredentials GetSigningCredentials()
         {
-            // System.Diagnostics.Debug.WriteLine("_appConfiguration.Secret = " + _appConfiguration.Secret);
             if (string.IsNullOrEmpty(_appConfiguration.Secret))
                 throw new Exception("JWT secret not configured");
             var secret = Encoding.UTF8.GetBytes(_appConfiguration.Secret!);

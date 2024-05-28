@@ -18,6 +18,7 @@ namespace CoolWebApi.Controllers.Content
         {
             _dashBoardService = dashBoardService;
         }
+
         /// <summary>
         /// Get Dashboard Data
         /// </summary>
@@ -27,7 +28,6 @@ namespace CoolWebApi.Controllers.Content
         public async Task<IActionResult> GetDataAsync()
         {
             var result = await _dashBoardService.GetDashBoardData();
-            // var result = await _mediator.Send(new GetDashboardDataQuery());
             return Ok(result);
         }
     }

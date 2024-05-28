@@ -19,21 +19,18 @@ namespace CoolWebApi.Utils.Data
         private readonly IStringLocalizer<DatabaseSeeder> _localizer;
         private readonly UserManager<CoolBlazorUser> _userManager;
         private readonly RoleManager<CoolBlazorRole> _roleManager;
-        // private readonly RoleClaimService _roleClaimService;
 
         public DatabaseSeeder(
             UserManager<CoolBlazorUser> userManager,
             RoleManager<CoolBlazorRole> roleManager,
             ILogger<DatabaseSeeder> logger,
             IStringLocalizer<DatabaseSeeder> localizer,
-            // RoleClaimService roleClaimService,
             MongoIdentityDbContext dbContext)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _logger = logger;
             _localizer = localizer;
-            // _roleClaimService = roleClaimService;
             _dbContext = dbContext;
         }
 

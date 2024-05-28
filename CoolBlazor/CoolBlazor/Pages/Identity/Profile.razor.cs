@@ -10,10 +10,10 @@ using CoolBlazor.Infrastructure.Models.Requests.Identity;
 using CoolBlazor.Infrastructure.Constants.Storage;
 using CoolBlazor.Infrastructure.Utils.Extensions;
 using BootstrapBlazor.Components;
-using CoolBlazor.Pages.Components;
 using Blazored.LocalStorage;
 using Cropper.Blazor.Models;
 using CoolBlazor.Infrastructure.Models.Requests.Upload;
+using CoolBlazor.Pages.Identity.Dialogs;
 
 namespace CoolBlazor.Pages.Identity
 {

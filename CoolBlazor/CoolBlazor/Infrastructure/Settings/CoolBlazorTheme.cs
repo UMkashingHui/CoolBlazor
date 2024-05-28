@@ -123,6 +123,8 @@ namespace CoolBlazor.Infrastructure.Settings
                 Background = Colors.Grey.Lighten5,
                 DrawerBackground = "#FFF",
                 DrawerText = "rgba(0,0,0, 0.7)",
+                DrawerIcon = "rgb(255, 238, 88)",
+                Tertiary = "#FFEE58"
             },
             Typography = DefaultTypography,
             LayoutProperties = DefaultLayoutProperties
@@ -151,7 +153,8 @@ namespace CoolBlazor.Infrastructure.Settings
                 ActionDefault = "#adadb1",
                 ActionDisabled = "rgba(255,255,255, 0.26)",
                 ActionDisabledBackground = "rgba(255,255,255, 0.12)",
-                DrawerIcon = "rgba(255,255,255, 0.50)"
+                DrawerIcon = "rgb(255, 238, 88)",
+
             },
             Typography = DefaultTypography,
             LayoutProperties = DefaultLayoutProperties
