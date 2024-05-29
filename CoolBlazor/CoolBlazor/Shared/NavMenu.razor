@@ -4,95 +4,97 @@
 
 <UserCard />
 <MudNavMenu>
-    <MudNavLink Href="/home" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">@_localizer["Home"]
+    <MudNavLink Href="/home" Match="NavLinkMatch.All" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Home">
+        @_localizer["Home"]
     </MudNavLink>
     @if (_canViewHangfire)
     {
-            <MudNavLink Href="/jobs" Target="_blank" Icon="@Icons.Material.Outlined.Work">
+        <MudNavLink Href="/jobs" Target="_blank" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Work">
             @_localizer["Hangfire"]
-            </MudNavLink>
+        </MudNavLink>
     }
     <MudNavLink Href="https://codewithmukesh.com/blog/blazor-hero-quick-start-guide/" Target="_blank"
-        Icon="@Icons.Material.Outlined.ReadMore">
+        IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.ReadMore">
         @_localizer["Quick Start Guide"]
     </MudNavLink>
-    <MudNavLink Href="http://localhost:5232/swagger/index.html" Target="_blank"
+    <MudNavLink Href="http://localhost:5232/swagger/index.html" Target="_blank" IconColor="Color.Secondary"
         Icon="@Icons.Material.Outlined.LiveHelp">
         @_localizer["Swagger"]
     </MudNavLink>
     <MudListSubheader Class="mt-2 mb-n2">@_localizer["Personal"]</MudListSubheader>
     @if (_canViewDashboards)
     {
-            <MudNavLink Href="/dashboard" Icon="@Icons.Material.Outlined.Dashboard">
+        <MudNavLink Href="/dashboard" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Dashboard">
             @_localizer["Dashboard"]
-            </MudNavLink>
+        </MudNavLink>
     }
-    <MudNavLink Href="/account" Icon="@Icons.Material.Outlined.SupervisorAccount">
+    <MudNavLink Href="/account" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.SupervisorAccount">
         @_localizer["Account"]
     </MudNavLink>
     @if (_canViewAuditTrails)
     {
-            <MudNavLink Href="/audit-trails" Icon="@Icons.Material.Outlined.Security">
+        <MudNavLink Href="/audit-trails" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Security">
             @_localizer["Audit Trails"]
-            </MudNavLink>
+        </MudNavLink>
     }
     @if (_canViewDocuments || _canViewDocumentTypes)
     {
-            <MudListSubheader Class="mt-2 mb-n2">@_localizer["Document Management"]</MudListSubheader>
+        <MudListSubheader Class="mt-2 mb-n2">@_localizer["Document Management"]</MudListSubheader>
         @if (_canViewDocuments)
         {
-                    <MudNavLink Href="/document-store" Icon="@Icons.Material.Outlined.AttachFile">
+            <MudNavLink Href="/document-store" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.AttachFile">
                 @_localizer["Document Store"]
-                    </MudNavLink>
+            </MudNavLink>
         }
         @if (_canViewDocumentTypes)
         {
-                    <MudNavLink Href="/document-types" Icon="@Icons.Material.Outlined.FileCopy">
+            <MudNavLink Href="/document-types" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.FileCopy">
                 @_localizer["Document Types"]
-                    </MudNavLink>
+            </MudNavLink>
         }
     }
 
     @if (_canViewUsers || _canViewRoles)
     {
-            <MudListSubheader Class="mt-2 mb-n2">@_localizer["Administrator"]</MudListSubheader>
+        <MudListSubheader Class="mt-2 mb-n2">@_localizer["Administrator"]</MudListSubheader>
         @if (_canViewUsers)
         {
-                    <MudNavLink Href="/identity/users" Icon="@Icons.Material.Outlined.Person">
+            <MudNavLink Href="/identity/users" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Person">
                 @_localizer["Users"]
-                    </MudNavLink>
+            </MudNavLink>
         }
         @if (_canViewRoles)
         {
-                    <MudNavLink Href="/identity/roles" Icon="@Icons.Material.Outlined.Person">@_localizer["Roles"]</MudNavLink>
+            <MudNavLink Href="/identity/roles" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Person">
+                @_localizer["Roles"]</MudNavLink>
         }
     }
     @if (_canViewChat)
     {
-            <MudListSubheader Class="mt-2 mb-n2">@_localizer["Communication"]</MudListSubheader>
-            <MudNavLink Href="/chat" Icon="@Icons.Material.Outlined.Chat">
+        <MudListSubheader Class="mt-2 mb-n2">@_localizer["Communication"]</MudListSubheader>
+        <MudNavLink Href="/chat" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.Chat">
             @_localizer["Chat"]
-            </MudNavLink>
+        </MudNavLink>
     }
     @if (_canViewProducts || _canViewBrands)
     {
-            <MudListSubheader Class="mt-2 mb-n2">@_localizer["Catalog Management"]</MudListSubheader>
+        <MudListSubheader Class="mt-2 mb-n2">@_localizer["Catalog Management"]</MudListSubheader>
         @if (_canViewProducts)
         {
-                    <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
+            <MudNavLink Href="/catalog/products" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.CallToAction">
                 @_localizer["Products"]
-                    </MudNavLink>
+            </MudNavLink>
         }
         @if (_canViewBrands)
         {
-                    <MudNavLink Href="/catalog/brands" Icon="@Icons.Material.Outlined.CallToAction">
+            <MudNavLink Href="/catalog/brands" IconColor="Color.Secondary" Icon="@Icons.Material.Outlined.CallToAction">
                 @_localizer["Brands"]
-                    </MudNavLink>
+            </MudNavLink>
         }
     }
     </MudNavMenu>
 
-@code {
+    @code {
     private ClaimsPrincipal _authenticationStateProviderUser;
 
     private bool _canViewHangfire;

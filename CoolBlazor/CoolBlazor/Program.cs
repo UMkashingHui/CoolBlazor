@@ -105,8 +105,8 @@ builder.Services.AddMudServices();
 
 builder.Services.AddHttpContextAccessor();
 // Get Web Api Setting
-var _toolBoxApiConfig = builder.Configuration.GetSection("CoolWebApi").Get<ToolBoxApiConfig>() ?? throw new InvalidOperationException("Connection string 'CoolWebApi' not found."); ;
-string? httpClientName = _toolBoxApiConfig.Name;
+var _CoolWebApiConfig = builder.Configuration.GetSection("CoolWebApi").Get<CoolWebApiConfig>() ?? throw new InvalidOperationException("Connection string 'CoolWebApi' not found."); ;
+string? httpClientName = _CoolWebApiConfig.Name;
 // ArgumentException.ThrowIfNullOrEmpty(httpClientName);
 builder.Services.AddScoped(sp =>
     new HttpClient
@@ -123,7 +123,7 @@ builder.Services
 {
     httpClient.DefaultRequestHeaders.AcceptLanguage.Clear();
     httpClient.DefaultRequestHeaders.AcceptLanguage.ParseAdd(CultureInfo.DefaultThreadCurrentCulture?.TwoLetterISOLanguageName);
-    httpClient.BaseAddress = new Uri(_toolBoxApiConfig.Url + _toolBoxApiConfig.Port);
+    httpClient.BaseAddress = new Uri(_CoolWebApiConfig.Url + _CoolWebApiConfig.Port);
 })
 .AddHttpMessageHandler<AuthenticationHeaderHandler>();
 builder.Services.AddHttpClientInterceptor();

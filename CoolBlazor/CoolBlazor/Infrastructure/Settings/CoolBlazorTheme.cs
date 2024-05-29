@@ -123,8 +123,7 @@ namespace CoolBlazor.Infrastructure.Settings
                 Background = Colors.Grey.Lighten5,
                 DrawerBackground = "#FFF",
                 DrawerText = "rgba(0,0,0, 0.7)",
-                DrawerIcon = "rgb(255, 238, 88)",
-                Tertiary = "#FFEE58"
+                DrawerIcon = "rgb(255, 238, 88)"
             },
             Typography = DefaultTypography,
             LayoutProperties = DefaultLayoutProperties
@@ -136,6 +135,7 @@ namespace CoolBlazor.Infrastructure.Settings
             {
                 Primary = "#6585e0",
                 Secondary = "#4F6C96",
+                Tertiary = "#078691",
                 Info = "#a4c2dd",
                 Success = "#2ECC40",
                 Warning = "#dc2d7e",
