@@ -26,6 +26,8 @@ Including:
 ![img](https://github.com/UMkashingHui/CoolBlazor/blob/master/CoolBlazor/CoolBlazor/wwwroot/images/Gifs/Login_NotActive.gif)
 2.Register.
 ![img](https://github.com/UMkashingHui/CoolBlazor/blob/master/CoolBlazor/CoolBlazor/wwwroot/images/Gifs/Register.gif)
+### Authorization(Make User Active!)
+TODO
 ### Modify Personal Information (Crop Image as Avator)
 TODO
 ### User Roles Control
