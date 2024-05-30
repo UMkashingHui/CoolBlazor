@@ -22,7 +22,10 @@ Including:
 
 # Demonstrations
 ### Login and Register
-TODO
+1.Login without authorization.
+![img](https://github.com/UMkashingHui/CoolBlazor/blob/master/CoolBlazor/CoolBlazor/wwwroot/images/Gifs/Login_NotActive.gif)
+2.Register.
+![img](https://github.com/UMkashingHui/CoolBlazor/blob/master/CoolBlazor/CoolBlazor/wwwroot/images/Gifs/Register.gif)
 ### Modify Personal Information (Crop Image as Avator)
 TODO
 ### User Roles Control
