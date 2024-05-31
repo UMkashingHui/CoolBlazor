@@ -9,6 +9,7 @@ using Microsoft.JSInterop;
 using CoolBlazor.Infrastructure.Models.Responses.Identity;
 using CoolBlazor.Infrastructure.Constants.Permission;
 using CoolBlazor.Infrastructure.Constants.Application;
+using CoolBlazor.Shared.Dialogs;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -129,8 +130,23 @@ namespace CoolBlazor.Pages.Identity
 
         private void ManageRoles(string userId, string email)
         {
-            if (email == "mukesh@blazorhero.com") _snackBar.Add(_localizer["Not Allowed."], Severity.Error);
+            if (email == "SuperUser@163.com") _snackBar.Add(_localizer["Not Allowed."], Severity.Error);
             else _navigationManager.NavigateTo($"/identity/user-roles/{userId}");
+        }
+
+        private void Activate(string UserId, string UserName)
+        {
+            var parameters = new DialogParameters<ActivateConfirmation>();
+            parameters.Add(x => x.UserId, UserId);
+            parameters.Add(x => x.UserName, UserName);
+            var options = new DialogOptions
+            {
+                CloseButton = true,
+                MaxWidth = MaxWidth.Small,
+                FullWidth = true,
+                DisableBackdropClick = true
+            };
+            _dialogService.Show<ActivateConfirmation>(_localizer["Activate Confirmation"], parameters, options);
         }
     }
 }

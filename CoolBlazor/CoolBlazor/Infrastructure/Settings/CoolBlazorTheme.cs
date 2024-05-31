@@ -113,8 +113,8 @@ namespace CoolBlazor.Infrastructure.Settings
         {
             Palette = new Palette()
             {
-                Primary = "#1E88E5",
-                Secondary = "#634E9B",
+                Primary = "#634E9B",
+                Secondary = "#5A7E8E",
                 Info = "#978AB1",
                 Success = "#007E33",
                 Warning = "#CC2E16",

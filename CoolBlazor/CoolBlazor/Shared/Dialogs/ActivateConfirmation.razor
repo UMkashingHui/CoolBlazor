@@ -1,0 +1,27 @@
+﻿@namespace CoolBlazor.Shared.Dialogs
+@inject Microsoft.Extensions.Localization.IStringLocalizer<ActivateConfirmation> localizer
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.VerifiedUser" Class="mr-3 mb-n1" />
+            @localizer["Activate Confirmation"]
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudText>Activate User: @UserName ?</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">@localizer["Cancel"]</MudButton>
+        <MudButton Color="Color.Secondary" Variant="Variant.Filled" OnClick="Submit">@localizer["Confirm"]</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public string UserId { get; set; }
+    [Parameter] public string UserName { get; set; }
+    void Submit()
+    {
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+    void Cancel() => MudDialog.Cancel();
+}
