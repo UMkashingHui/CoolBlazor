@@ -28,5 +28,8 @@ namespace CoolWebApi.Services.Identity
         Task<IResult> ResetPasswordAsync(ResetPasswordRequest request);
 
         Task<string> ExportToExcelAsync(string searchString = "");
+
+        Task<IResult> ActivateUserAsync(ActivateUserRequest request);
+
     }
 }

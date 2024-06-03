@@ -145,6 +145,18 @@ namespace CoolWebApi.Controllers.Identity
             return Ok(data);
         }
 
+        /// <summary>
+        /// Update Roles for User
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.Users.Edit)]
+        [HttpPut("activate/{id}")]
+        public async Task<IActionResult> ActivateUserAsync(ActivateUserRequest request)
+        {
+            return Ok(await _userService.ActivateUserAsync(request));
+        }
+
 
     }
 }
