@@ -1,4 +1,5 @@
 ﻿@namespace CoolBlazor.Shared.Dialogs
+@using CoolBlazor.Infrastructure.Models.Requests.Identity
 @inject Microsoft.Extensions.Localization.IStringLocalizer<ActivateConfirmation> localizer
 <MudDialog>
     <TitleContent>
@@ -17,7 +18,6 @@
 </MudDialog>
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
-    [Parameter] public string UserId { get; set; }
     [Parameter] public string UserName { get; set; }
     void Submit()
     {

@@ -10,6 +10,7 @@ using CoolBlazor.Infrastructure.Models.Responses.Identity;
 using CoolBlazor.Infrastructure.Constants.Permission;
 using CoolBlazor.Infrastructure.Constants.Application;
 using CoolBlazor.Shared.Dialogs;
+using CoolBlazor.Infrastructure.Models.Requests.Identity;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -134,10 +135,9 @@ namespace CoolBlazor.Pages.Identity
             else _navigationManager.NavigateTo($"/identity/user-roles/{userId}");
         }
 
-        private void Activate(string UserId, string UserName)
+        private async void Activate(string UserId, string UserName)
         {
-            var parameters = new DialogParameters<ActivateConfirmation>();
-            parameters.Add(x => x.UserId, UserId);
+            var parameters = new DialogParameters<Shared.Dialogs.ActivateConfirmation>();
             parameters.Add(x => x.UserName, UserName);
             var options = new DialogOptions
             {
@@ -146,7 +146,27 @@ namespace CoolBlazor.Pages.Identity
                 FullWidth = true,
                 DisableBackdropClick = true
             };
-            _dialogService.Show<ActivateConfirmation>(_localizer["Activate Confirmation"], parameters, options);
+            var dialog = _dialogService.Show<Shared.Dialogs.ActivateConfirmation>(_localizer["Activate Confirmation"], parameters, options);
+            var result = await dialog.Result;
+            if (!result.Cancelled)
+            {
+                ActivateUserRequest request = new ActivateUserRequest();
+                request.UserId = UserId;
+                request.UserName = UserName;
+                var response = await _userManager.ActivateUserAsync(request);
+                if (response.Succeeded)
+                {
+                    _navigationManager.NavigateTo("/users", true);
+                    _snackBar.Add(_localizer["Done!"], Severity.Success);
+                }
+                else
+                {
+                    foreach (var message in response.Messages)
+                    {
+                        _snackBar.Add(message, Severity.Error);
+                    }
+                }
+            }
         }
     }
 }

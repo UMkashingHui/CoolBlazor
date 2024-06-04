@@ -73,5 +73,12 @@ namespace CoolBlazor.Infrastructure.Managers.Identity.Users
             var data = await response.Content.ReadAsStringAsync();
             return data;
         }
+
+        public async Task<IResult> ActivateUserAsync(ActivateUserRequest request)
+        {
+            var response = await _httpClient.PutAsJsonAsync(Routes.UserEndpoints.ActivateUser(request.UserId), request);
+            return await response.ToResult();
+        }
+
     }
 }

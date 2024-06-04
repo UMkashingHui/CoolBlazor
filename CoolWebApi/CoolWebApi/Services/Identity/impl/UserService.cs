@@ -310,13 +310,13 @@ namespace CoolWebApi.Services.Identity.impl
         public async Task<IResult> ActivateUserAsync(ActivateUserRequest request)
         {
             var user = await _userManager.FindByIdAsync(request.UserId);
-            if (user.IsActive == true)
+            if (user.IsActive)
             {
                 return await Result.FailAsync(string.Format(_localizer["User {0} is already activated."], request.UserName));
             }
             user.IsActive = true;
-            var result = _userManager.UpdateAsync(user);
-            if (result.IsCompleted)
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
             {
                 return await Result.SuccessAsync(_localizer["User has been activated Successful!"]);
             }

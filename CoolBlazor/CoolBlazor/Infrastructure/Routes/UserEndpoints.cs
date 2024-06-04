@@ -25,5 +25,9 @@
         public static string ToggleUserStatus = "api/identity/user/toggle-status";
         public static string ForgotPassword = "api/identity/user/forgot-password";
         public static string ResetPassword = "api/identity/user/reset-password";
+        public static string ActivateUser(string userId)
+        {
+            return $"api/identity/user/activate/{userId}/";
+        }
     }
 }

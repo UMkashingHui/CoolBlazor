@@ -24,5 +24,7 @@ namespace CoolBlazor.Infrastructure.Managers.Identity.Users
         Task<IResult> UpdateRolesAsync(UpdateUserRolesRequest request);
 
         Task<string> ExportToExcelAsync(string searchString = "");
+
+        Task<IResult> ActivateUserAsync(ActivateUserRequest request);
     }
 }
