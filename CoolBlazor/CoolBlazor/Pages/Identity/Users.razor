@@ -80,7 +80,7 @@ else
                     @if (_canViewRoles)
                         {
                         <MudMenuItem OnClick="(()=>ManageRoles(context.Id, context.Email))">@_localizer["Manage Roles"]</MudMenuItem>
-                        <MudMenuItem OnClick="(()=>Activate(context.Id, context.UserName))">@_localizer["Activate"]</MudMenuItem>
+                        <MudMenuItem OnClick="(()=>Activate(context.Id, context.UserName, context.IsActive))">@_localizer["Activate/Deactivate"]</MudMenuItem>
                         }
                 </MudMenu>
             </MudTd>

@@ -7,7 +7,7 @@ using CoolWebApi.Services.Identity;
 
 namespace CoolWebApi.Controllers.Identity
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/identity/account")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -63,9 +63,9 @@ namespace CoolWebApi.Controllers.Identity
         /// <param name="request"></param>
         /// <returns>Status 200 OK</returns>
         [HttpPost("profile-picture/{userId}")]
-        public async Task<IActionResult> UpdateProfilePictureAsync(UpdateProfilePictureRequest request)
+        public async Task<IActionResult> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string userId)
         {
-            return Ok(await _accountService.UpdateProfilePictureAsync(request, _currentUser.UserId));
+            return Ok(await _accountService.UpdateProfilePictureAsync(request, userId));
         }
     }
 }

@@ -8,6 +8,7 @@ using CoolWebApi.Models.Requests.Identity;
 using CoolWebApi.Utils.Wrapper;
 using IResult = CoolWebApi.Utils.Wrapper.IResult;
 using CoolWebApi.Services.FileOperation;
+using CoolWebApi.Services.Identity;
 
 namespace CoolWebApi.Services.Account.impl
 {
@@ -17,7 +18,6 @@ namespace CoolWebApi.Services.Account.impl
         private readonly SignInManager<CoolBlazorUser> _signInManager;
         private readonly IUploadService _uploadService;
         private readonly IStringLocalizer<AccountService> _localizer;
-
         public AccountService(
             UserManager<CoolBlazorUser> userManager,
             SignInManager<CoolBlazorUser> signInManager,
@@ -94,9 +94,9 @@ namespace CoolWebApi.Services.Account.impl
             return await Result<string>.SuccessAsync(data: user.ProfilePictureDataUrl);
         }
 
-        public async Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string userId)
+        public async Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string UserId)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(UserId);
             if (user == null) return await Result<string>.FailAsync(message: _localizer["User Not Found"]);
             var filePath = await _uploadService.UploadAsync(request);
             user.ProfilePictureDataUrl = filePath;

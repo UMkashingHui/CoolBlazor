@@ -37,7 +37,7 @@ namespace CoolBlazor.Infrastructure.Managers.Interceptors
         public async Task InterceptBeforeHttpAsync(object sender, HttpClientInterceptorEventArgs e)
         {
             var absPath = e.Request.RequestUri.AbsolutePath;
-            if (!absPath.Contains("token") && !absPath.Contains("account"))
+            if (!absPath.Contains("token") && !absPath.Contains("accounts"))
             {
                 try
                 {

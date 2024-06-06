@@ -34,9 +34,6 @@ namespace CoolWebApi.Utils.Contexts
             _userClaimsCollectionName = _config.Value.UserClaimsCollectionName;
         }
 
-        public IMongoCollection<CoolBlazorUser> ToolBoxUsers =>
-        _db.GetCollection<CoolBlazorUser>(_usersCollectionName);
-
         public IMongoCollection<CoolBlazorRoleClaim> RoleClaims =>
         _db.GetCollection<CoolBlazorRoleClaim>(_roleClaimsCollectionName);
 

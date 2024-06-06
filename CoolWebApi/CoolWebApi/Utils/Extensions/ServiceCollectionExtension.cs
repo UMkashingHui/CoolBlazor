@@ -47,7 +47,7 @@ namespace CoolWebApi.Utils.Extensions
             // MongoDB with Identity
             var mongoDbConfig = _configuration.GetSection("MongoDbConfiguration").Get<MongoDbConfiguration>() ?? throw new InvalidOperationException("Connection string 'MongoDbConfiguration' not found.");
             var mongoDbConnectionString = mongoDbConfig.ConnectionString;
-            var mongoDbDatabase = mongoDbConfig.DatabaseName;
+            var mongoDbDatabaseName = mongoDbConfig.DatabaseName;
             var mongoDbUsersCollection = mongoDbConfig.UsersCollectionName;
             var mongoDbRolesCollection = mongoDbConfig.RolesCollectionName;
 
@@ -84,7 +84,6 @@ namespace CoolWebApi.Utils.Extensions
             )
             .AddEntityFrameworkStores<CoolBlazorDbContext>()
             .AddDefaultTokenProviders();
-
             return services;
         }
 
@@ -105,7 +104,7 @@ namespace CoolWebApi.Utils.Extensions
             => services
             .AddTransient<IDatabaseSeeder, DatabaseSeeder>()
                 .AddDbContext<CoolBlazorDbContext>(options => options
-                    .UseMongoDB(new MongoClient(mongoConnection), "my_blazor_app"));
+                    .UseMongoDB(new MongoClient(mongoConnection), "cool_blazor_app"));
 
 
         internal static void RegisterSwagger(this IServiceCollection services)

@@ -9,7 +9,7 @@
         </MudText>
     </TitleContent>
     <DialogContent>
-        <MudText>Activate User: @UserName ?</MudText>
+        <MudText>@ContentText</MudText>
     </DialogContent>
     <DialogActions>
         <MudButton OnClick="Cancel">@localizer["Cancel"]</MudButton>
@@ -18,7 +18,7 @@
 </MudDialog>
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
-    [Parameter] public string UserName { get; set; }
+    [Parameter] public string ContentText { get; set; }
     void Submit()
     {
         MudDialog.Close(DialogResult.Ok(true));

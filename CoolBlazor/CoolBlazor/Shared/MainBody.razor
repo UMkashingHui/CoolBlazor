@@ -37,8 +37,11 @@
                 OnClick="@((e) => ToggleDarkMode())" />
         </MudTooltip>
         <MudTooltip Text="@_localizer["Fork Repository"]">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit"
+                Link="https://github.com/UMkashingHui/CoolBlazor" Target="_blank" />
             <MudIconButton Icon="@CoolBlazor.Static.Icons.CustomIcons.Gitee" Color="Color.Inherit"
-                Link="https://gitee.com/kashinghui" Target="_blank" />
+                Link="https://gitee.com/kashinghui/CoolBlazor" Target="_blank" />
+
         </MudTooltip>
     </MudHidden>
     <MudHidden Breakpoint="Breakpoint.SmAndDown" Invert="true">
@@ -47,8 +50,10 @@
             <div class="px-2">
                 <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit"
                     OnClick="@((e) => ToggleDarkMode())" />
-                <MudIconButton Icon="@CustomIcons.Gitee" Color="Color.Inherit" Link="https://gitee.com/kashinghui"
-                    Target="_blank" />
+                <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit"
+                    Link="https://github.com/UMkashingHui/CoolBlazor" Target="_blank" />
+                <MudIconButton Icon="@CustomIcons.Gitee" Color="Color.Inherit"
+                    Link="https://gitee.com/kashinghui/CoolBlazor" Target="_blank" />
             </div>
             <MudText Typo="Typo.body2" Class="px-4 py-2"><b>@_localizer["Community"]</b></MudText>
             <MudMenuItem Link="https://www.facebook.com/codewithmukesh" Target="_blank">@_localizer["Facebook Page"]
@@ -63,14 +68,13 @@
     </MudHidden>
     <MudMenu AnchorOrigin="_rightToLeft ? Origin.TopRight : Origin.TopLeft" Dense="true" Class="mt-1 ml-4">
         <ActivatorContent>
-            @if (string.IsNullOrEmpty(ImageDataUrl))
+            @if (!string.IsNullOrEmpty(ImageDataUrl))
             {
-                <MudAvatar Color="Color.Tertiary">@FirstLetterOfFirstName
-                </MudAvatar>
+                <MudAvatar Image="@ImageDataUrl" Style="height:50px; width:50px;"> </MudAvatar>
             }
             else
             {
-                <MudAvatar Image="@ImageDataUrl" Style="height:50px; width:50px;"> </MudAvatar>
+                <MudAvatar Color="Color.Tertiary">@FirstLetterOfFirstName</MudAvatar>
             }
         </ActivatorContent>
         <ChildContent>

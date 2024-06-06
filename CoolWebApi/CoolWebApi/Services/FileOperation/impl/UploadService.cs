@@ -8,7 +8,7 @@ namespace CoolWebApi.Services.FileOperation.impl
     {
         public async Task<string> UploadAsync(UploadRequest request)
         {
-            if (request.Data == null) return string.Empty;
+            if (request.Data == null || string.IsNullOrEmpty(request.PathToSave)) return null;
             var streamData = new MemoryStream(request.Data);
             if (streamData.Length > 0)
             {

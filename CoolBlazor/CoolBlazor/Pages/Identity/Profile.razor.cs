@@ -14,6 +14,7 @@ using Blazored.LocalStorage;
 using Cropper.Blazor.Models;
 using CoolBlazor.Infrastructure.Models.Requests.Upload;
 using CoolBlazor.Pages.Identity.Dialogs;
+using System.Text;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -28,7 +29,6 @@ namespace CoolBlazor.Pages.Identity
         public string CropImagePath { get; set; }
         public string CropImageName { get; set; }
         public string CropImageUrl { get; set; }
-
         public string UserId { get; set; }
 
         private async Task UpdateProfileAsync()
@@ -104,9 +104,9 @@ namespace CoolBlazor.Pages.Identity
             UploadImageRequest request = new UploadImageRequest();
             request.File = e;
             var extension = Path.GetExtension(e.Name);
+            request.UserId = userId;
             request.FileName = $"{request.UserId}-{Guid.NewGuid()}{extension}";
             request.IsReplace = false;
-            request.UserId = userId;
             request.Extension = extension;
             var result = await _imageManager.UploadImage(request);
             if (result.Succeeded)
@@ -134,22 +134,24 @@ namespace CoolBlazor.Pages.Identity
             var result = await dialog.Result;
             if (!result.Cancelled)
             {
-                var request = new UpdateProfilePictureRequest { Data = null, FileName = string.Empty, UploadType = Infrastructure.Constants.Enums.UploadType.ProfilePicture };
+                var request = new UpdateProfilePictureRequest { Data = new byte[1], FileName = string.Empty, UploadType = Infrastructure.Constants.Enums.UploadType.ProfilePicture, PathToSave = string.Empty, Extension = string.Empty };
                 var data = await _accountManager.UpdateProfilePictureAsync(request, UserId);
                 if (data.Succeeded)
                 {
                     await _localStorage.RemoveItemAsync(StorageConstants.Local.UserImageURL);
                     ImageDataUrl = string.Empty;
                     _snackBar.Add(_localizer["Profile picture deleted."], Severity.Success);
-                    _navigationManager.NavigateTo("/account", true);
+                    _navigationManager.NavigateTo("/account", false);
                 }
                 else
                 {
+                    _snackBar.Add(_localizer["Profile picture delete fail."], Severity.Error);
                     foreach (var error in data.Messages)
                     {
                         _snackBar.Add(error, Severity.Error);
                     }
                 }
+
             }
         }
     }

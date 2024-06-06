@@ -135,10 +135,12 @@ namespace CoolBlazor.Pages.Identity
             else _navigationManager.NavigateTo($"/identity/user-roles/{userId}");
         }
 
-        private async void Activate(string UserId, string UserName)
+        private async void Activate(string UserId, string UserName, bool IsActive)
         {
-            var parameters = new DialogParameters<Shared.Dialogs.ActivateConfirmation>();
-            parameters.Add(x => x.UserName, UserName);
+            var parameters = new DialogParameters
+            {
+                {nameof(Shared.Dialogs.ActivateConfirmation.ContentText), IsActive == true ? $"{string.Format(_localizer["Do you want to deactivate user {0}"], UserName)}?" : $"{string.Format(_localizer["Do you want to activate user {0}"], UserName)}?"}
+            };
             var options = new DialogOptions
             {
                 CloseButton = true,
@@ -153,11 +155,12 @@ namespace CoolBlazor.Pages.Identity
                 ActivateUserRequest request = new ActivateUserRequest();
                 request.UserId = UserId;
                 request.UserName = UserName;
+                request.IsActive = IsActive;
                 var response = await _userManager.ActivateUserAsync(request);
                 if (response.Succeeded)
                 {
-                    _navigationManager.NavigateTo("/users", true);
                     _snackBar.Add(_localizer["Done!"], Severity.Success);
+                    _navigationManager.NavigateTo("/identity/users", true);
                 }
                 else
                 {

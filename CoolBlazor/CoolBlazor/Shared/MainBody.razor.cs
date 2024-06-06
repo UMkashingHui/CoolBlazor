@@ -147,7 +147,6 @@ namespace CoolBlazor.Shared
             if (firstRender)
             {
                 await LoadDataAsync();
-                StateHasChanged();
             }
         }
 
@@ -202,16 +201,16 @@ namespace CoolBlazor.Shared
         {
             var parameters = new DialogParameters
             {
-                {nameof(Dialogs.Logout.ContentText), $"{_localizer["Logout Confirmation"]}"},
-                {nameof(Dialogs.Logout.ButtonText), $"{_localizer["Logout"]}"},
-                {nameof(Dialogs.Logout.Color), Color.Error},
-                {nameof(Dialogs.Logout.CurrentUserId), CurrentUserId},
+                {nameof(Shared.Dialogs.Logout.ContentText), $"{_localizer["Logout Confirmation"]}"},
+                {nameof(Shared.Dialogs.Logout.ButtonText), $"{_localizer["Logout"]}"},
+                {nameof(Shared.Dialogs.Logout.Color), Color.Error},
+                {nameof(Shared.Dialogs.Logout.CurrentUserId), CurrentUserId},
                 // {nameof(Dialogs.Logout.HubConnection), hubConnection}
             };
 
             var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true };
 
-            _dialogService.Show<Dialogs.Logout>(_localizer["Logout"], parameters, options);
+            _dialogService.Show<Shared.Dialogs.Logout>(_localizer["Logout"], parameters, options);
         }
 
 
