@@ -73,7 +73,7 @@ namespace CoolBlazor.Pages.Identity.Dialogs
                 // await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, result.Data);
                 // var localImageUrl = await _localStorage.GetItemAsStringAsync(StorageConstants.Local.UserImageURL);
                 _snackBar.Add(_localizer["Profile picture added."], Severity.Success);
-                _navigationManager.NavigateTo("/account", false);
+                _navigationManager.NavigateTo("/account", true);
             }
             else
             {

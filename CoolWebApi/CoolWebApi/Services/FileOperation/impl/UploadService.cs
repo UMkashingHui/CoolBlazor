@@ -14,8 +14,6 @@ namespace CoolWebApi.Services.FileOperation.impl
             {
                 // Macos Test Only
                 var folder = request.UploadType.ToDescriptionString().Replace('\\', '/');
-                // var folderName = Path.Combine("wwwroot", folder);
-                // var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
                 bool exists = Directory.Exists(request.PathToSave);
                 if (!exists)
                     Directory.CreateDirectory(request.PathToSave);
@@ -60,8 +58,6 @@ namespace CoolWebApi.Services.FileOperation.impl
         private static string GetNextFilename(string pattern)
         {
             string tmp = string.Format(pattern, 1);
-            //if (tmp == pattern)
-            //throw new ArgumentException("The pattern must include an index place-holder", "pattern");
 
             if (!File.Exists(tmp))
                 return tmp; // short-circuit if no matches
