@@ -188,7 +188,7 @@ namespace CoolWebApi.Services.Identity.impl
             // {
             //     return await Result.FailAsync(_localizer["Not Allowed."]);
             // }
-            var userId = CurrentUser.UserId;
+            var userId = _currentUserService.UserId;
             var roles = await _userManager.GetRolesAsync(user);
             var selectedRoles = request.UserRoles.Where(x => x.Selected).ToList();
             var currentUser = await _userManager.FindByIdAsync(userId);
