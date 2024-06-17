@@ -20,19 +20,20 @@ namespace CoolBlazor.Pages.Identity
 
         private async Task SubmitAsync()
         {
-            var response = await _userManager.RegisterUserAsync(_registerUserModel);
-            if (response.Succeeded)
-            {
-                _snackBar.Add(response.Messages[0], Severity.Success);
-                MudDialog.Close();
-            }
-            else
-            {
-                foreach (var message in response.Messages)
-                {
-                    _snackBar.Add(message, Severity.Error);
-                }
-            }
+            _snackBar.Add("Demo site can not register user.", Severity.Error);
+            // var response = await _userManager.RegisterUserAsync(_registerUserModel);
+            // if (response.Succeeded)
+            // {
+            //     _snackBar.Add(response.Messages[0], Severity.Success);
+            //     MudDialog.Close();
+            // }
+            // else
+            // {
+            //     foreach (var message in response.Messages)
+            //     {
+            //         _snackBar.Add(message, Severity.Error);
+            //     }
+            // }
         }
 
         private bool _passwordVisibility;

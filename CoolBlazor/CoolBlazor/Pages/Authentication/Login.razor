@@ -34,12 +34,18 @@
             </div>
         </MudItem>
         <MudItem xs="12">
-            <MudTextField T="string" Label="@_localizer["E-mail"]" Variant="Variant.Outlined"
-                @bind-Value="_tokenModel.Email" For="@(() => _tokenModel.Email)" />
+            @* <MudTextField T="string" Label="@_localizer["E-mail"]" Variant="Variant.Outlined"
+            @bind-Value="_tokenModel.Email" For="@(() => _tokenModel.Email)" /> *@
+            <MudTextField T="string" Label="@_localizer["E-mail"]" @bind-Value="ReadOnlyEmail" 
+                ReadOnly="true" Variant="Variant.Outlined" />
         </MudItem>
         <MudItem xs="12">
-            <MudTextField Label="@_localizer["Password"]" Variant="Variant.Outlined" @bind-Value="_tokenModel.Password"
-                For="@(() => _tokenModel.Password)" InputType="@_passwordInput" Adornment="Adornment.End"
+            @* <MudTextField Label="@_localizer["Password"]" Variant="Variant.Outlined"
+            @bind-Value="_tokenModel.Password"
+            For="@(() => _tokenModel.Password)" InputType="@_passwordInput" Adornment="Adornment.End"
+            AdornmentIcon="@_passwordInputIcon" OnAdornmentClick="TogglePasswordVisibility" /> *@
+            <MudTextField Label="@_localizer["Password"]" Variant="Variant.Outlined" @bind-Value="ReadOnlyPWD"
+                 ReadOnly="true" InputType="@_passwordInput" Adornment="Adornment.End"
                 AdornmentIcon="@_passwordInputIcon" OnAdornmentClick="TogglePasswordVisibility" />
         </MudItem>
         <MudItem xs="12" Class="d-flex justify-space-between align-center">

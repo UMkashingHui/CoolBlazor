@@ -16,7 +16,8 @@ namespace CoolBlazor.Pages.Authentication
         private bool _passwordVisibility;
         private InputType _passwordInput = InputType.Password;
         private string _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
-
+        public string ReadOnlyEmail { get; set; } = "SuperUser@163.com";
+        public string ReadOnlyPWD { get; set; } = "123Pa$$word!";
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
@@ -33,6 +34,8 @@ namespace CoolBlazor.Pages.Authentication
 
         private async Task SubmitAsync()
         {
+            _tokenModel.Email = ReadOnlyEmail;
+            _tokenModel.Password = ReadOnlyPWD;
             var result = await _authenticationManager.Login(_tokenModel);
             if (!result.Succeeded)
             {
