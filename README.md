@@ -13,7 +13,7 @@ Including:
 5. A markdown blog and article display platform. (TODO)
 
 # Live Demo
-[coolblazor.space](coolblazor.space)
+[coolblazor.space](https://www.coolblazor.space)
 
 # Development Setup
 - Microsoft Visual Studio Code
