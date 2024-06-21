@@ -90,6 +90,9 @@ namespace CoolWebApi
 
             // AutoMapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            // Aws S3
+            services.AddAwsS3(_configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IStringLocalizer<Startup> localizer)

@@ -36,6 +36,7 @@ using CoolWebApi.Services.Account.impl;
 using CoolWebApi.Services.FileOperation.impl;
 using CoolWebApi.Services.FileOperation;
 using CoolWebApi.Services.Mail.impl;
+using Amazon.S3;
 
 namespace CoolWebApi.Utils.Extensions
 {
@@ -349,6 +350,14 @@ namespace CoolWebApi.Utils.Extensions
                 options.AccessDeniedPath = "/AccessDenied";
                 options.SlidingExpiration = true;
             });
+            return services;
+        }
+
+        internal static IServiceCollection AddAwsS3(
+            this IServiceCollection services, IConfiguration _configuration)
+        {
+            services.AddDefaultAWSOptions(_configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonS3>();
             return services;
         }
 
