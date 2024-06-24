@@ -42,32 +42,5 @@ namespace CoolWebApi.Services.AWS.impl
             return await Result.SuccessAsync($"File {prefix}/{file.FileName} uploaded to S3 successfully!");
         }
 
-        public async Task<IResult> GetAllFilesAsync(string bucketName, string? prefix)
-        {
-            var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
-            if (!bucketExists) return await Result.FailAsync($"Bucket {bucketName} does not exist.");
-            var request = new ListObjectsV2Request()
-            {
-                BucketName = bucketName,
-                Prefix = prefix
-            };
-            var result = await _s3Client.ListObjectsV2Async(request);
-            var s3Objects = result.S3Objects.Select(s =>
-            {
-                var urlRequest = new GetPreSignedUrlRequest()
-                {
-                    BucketName = bucketName,
-                    Key = s.Key,
-                    Expires = DateTime.UtcNow.AddMinutes(1)
-                };
-                return new S3ObjectDto()
-                {
-                    Name = s.Key.ToString(),
-                    PresignedUrl = _s3Client.GetPreSignedURL(urlRequest),
-                };
-            });
-            return await Result.SuccessAsync("Get S3 files success.", s3Objects);
-        }
-
     }
 }
