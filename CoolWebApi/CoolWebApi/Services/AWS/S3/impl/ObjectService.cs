@@ -17,17 +17,17 @@ using IResult = CoolWebApi.Utils.Wrapper.IResult;
 
 namespace CoolWebApi.Services.AWS.impl
 {
-    public class S3Service : IS3Service
+    public class ObjectService : IObjectService
     {
 
         private readonly IAmazonS3 _s3Client;
 
-        public S3Service(IAmazonS3 s3Client)
+        public ObjectService(IAmazonS3 s3Client)
         {
             _s3Client = s3Client;
         }
 
-        public async Task<IResult> UploadFileAsync(IFormFile file, string bucketName, string? prefix)
+        public async Task<IResult> UploadAsync(IFormFile file, string bucketName, string? prefix)
         {
             var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
             if (!bucketExists) return await Result.FailAsync($"Bucket {bucketName} does not exist.");

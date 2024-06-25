@@ -5,9 +5,9 @@ using IResult = CoolWebApi.Utils.Wrapper.IResult;
 
 namespace CoolWebApi.Services.AWS
 {
-    public interface IS3Service : IService
+    public interface IObjectService : IService
     {
-        Task<IResult> UploadFileAsync(IFormFile file, string bucketName, string? prefix);
+        Task<IResult> UploadAsync(IFormFile file, string bucketName, string? prefix);
 
     }
 }
