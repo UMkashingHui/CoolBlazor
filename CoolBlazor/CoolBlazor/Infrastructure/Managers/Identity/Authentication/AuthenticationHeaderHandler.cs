@@ -1,6 +1,7 @@
 ﻿using Blazored.LocalStorage;
 using CoolBlazor.Infrastructure.Constants.Storage;
 using Microsoft.JSInterop;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
@@ -21,6 +22,7 @@ namespace CoolBlazor.Infrastructure.Managers.Identity.Authentication
             HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
+            // request.Version = HttpVersion.Version10;
 
             if (request.Headers.Authorization?.Scheme != "Bearer")
             {

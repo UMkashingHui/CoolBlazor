@@ -15,6 +15,7 @@ using Cropper.Blazor.Models;
 using CoolBlazor.Infrastructure.Models.Requests.Upload;
 using CoolBlazor.Pages.Identity.Dialogs;
 using System.Text;
+using CoolBlazor.Infrastructure.Constants.Enums;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -30,24 +31,6 @@ namespace CoolBlazor.Pages.Identity
         public string CropImageName { get; set; }
         public string CropImageUrl { get; set; }
         public string UserId { get; set; }
-
-        private async Task UpdateProfileAsync()
-        {
-            var response = await _accountManager.UpdateProfileAsync(_profileModel);
-            if (response.Succeeded)
-            {
-                await _authenticationManager.Logout();
-                _snackBar.Add(_localizer["Your Profile has been updated. Please Login to Continue."], Severity.Success);
-                _navigationManager.NavigateTo("/home");
-            }
-            else
-            {
-                foreach (var message in response.Messages)
-                {
-                    _snackBar.Add(message, Severity.Error);
-                }
-            }
-        }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
@@ -71,23 +54,40 @@ namespace CoolBlazor.Pages.Identity
             _profileModel.FirstName = user.GetFirstName();
             _profileModel.LastName = user.GetLastName();
             _profileModel.PhoneNumber = user.GetPhoneNumber();
-
             UserId = user.GetUserId();
             var data = await _accountManager.GetProfilePictureAsync(UserId);
             if (data.Succeeded)
             {
                 ImageDataUrl = data.Data;
             }
-            if (_profileModel.FirstName.Length > 0)
+            else if (_profileModel.FirstName.Length > 0)
             {
                 _firstLetterOfName = _profileModel.FirstName[0];
+            }
+        }
+
+        private async Task UpdateProfileAsync()
+        {
+            var response = await _accountManager.UpdateProfileAsync(_profileModel);
+            if (response.Succeeded)
+            {
+                await _authenticationManager.Logout();
+                _snackBar.Add(_localizer["Your Profile has been updated. Please Login to Continue."], Severity.Success);
+                _navigationManager.NavigateTo("/home");
+            }
+            else
+            {
+                foreach (var message in response.Messages)
+                {
+                    _snackBar.Add(message, Severity.Error);
+                }
             }
         }
 
 
         private async Task InvokeModal(IBrowserFile e)
         {
-            await UploadToCrop(e, UserId);
+            var dbPath = await SaveImageLocally(e, UserId);
             var parameters = new DialogParameters<ImageResizorModal>();
             parameters.Add(x => x.CropImageName, CropImageName);
             parameters.Add(x => x.CropImageUrl, CropImageUrl);
@@ -96,31 +96,62 @@ namespace CoolBlazor.Pages.Identity
                 CloseButton = true,
                 MaxWidth = MaxWidth.Large
             };
-            _dialogService.Show<ImageResizorModal>(_localizer["Resize Image"], parameters, options);
+            var dialog = _dialogService.Show<ImageResizorModal>(_localizer["Resize Image"], parameters, options);
+            var result = await dialog.Result;
         }
 
-        private async Task UploadToCrop(IBrowserFile e, string userId)
+        private async Task<object> SaveImageLocally(IBrowserFile e, string userId)
         {
-            UploadImageRequest request = new UploadImageRequest();
-            request.File = e;
             var extension = Path.GetExtension(e.Name);
-            request.UserId = userId;
-            request.FileName = $"{request.UserId}-{Guid.NewGuid()}{extension}";
-            request.IsReplace = false;
-            request.Extension = extension;
-            var result = await _imageManager.UploadImage(request);
-            if (result.Succeeded)
+            var _file = e;
+            var fileName = $"{UserId}-{Guid.NewGuid()}{extension}";
+            if (_file != null)
             {
-                CropImageName = request.FileName;
-                CropImageUrl = "images/ProfilePictures/" + CropImageName;
-            }
-            else
-            {
-                foreach (var error in result.Messages)
+                // Change IBrowerFile to byte[]
+                var pathToSave = _imageManager.FullPathGenerator();
+                var format = "image/jpg";
+                var imageFile = await _file.RequestImageFileAsync(format, 400, 400);
+                long maxFileSize = 1024 * 1024 * 3; // 5 MB or whatever, don't just use max int
+                var readStream = imageFile.OpenReadStream(maxFileSize);
+                var buf = new byte[readStream.Length];
+                var ms = new MemoryStream(buf);
+                await readStream.CopyToAsync(ms);
+                var buffer = ms.ToArray();
+
+                // Save image
+                if (string.IsNullOrEmpty(pathToSave)) return null;
+                var streamData = new MemoryStream(buffer);
+                if (streamData.Length > 0)
                 {
-                    _snackBar.Add(error, Severity.Error);
+                    // Macos/Linux Only
+                    var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
+                    // Macos/Linux Only
+                    bool exists = Directory.Exists(pathToSave);
+                    if (!exists)
+                        Directory.CreateDirectory(pathToSave);
+                    var fullPath = Path.Combine(pathToSave, fileName);
+                    var dbPath = Path.Combine(folder, fileName);
+                    if (System.IO.File.Exists(fullPath))
+                        System.IO.File.Delete(fullPath);
+                    if (File.Exists(fullPath))
+                    {
+                        dbPath = _imageManager.NextAvailableFilename(dbPath);
+                        fullPath = _imageManager.NextAvailableFilename(fullPath);
+                    }
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        streamData.CopyTo(stream);
+                    }
+                    CropImageName = fileName;
+                    CropImageUrl = "images/ProfilePictures/" + CropImageName;
+                    return dbPath;
+                }
+                else
+                {
+                    return string.Empty;
                 }
             }
+            return string.Empty;
         }
 
         private async Task DeleteAsync()

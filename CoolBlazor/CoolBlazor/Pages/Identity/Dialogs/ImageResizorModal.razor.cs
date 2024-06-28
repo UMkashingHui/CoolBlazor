@@ -4,6 +4,7 @@ using Cropper.Blazor.Components;
 using Cropper.Blazor.Extensions;
 using Cropper.Blazor.Models;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
 using MudBlazor;
 
 namespace CoolBlazor.Pages.Identity.Dialogs
@@ -50,6 +51,7 @@ namespace CoolBlazor.Pages.Identity.Dialogs
             SetDataOptions = setDataOptions,
             Preview = ".img-example-preview"
         };
+
 
         public async Task GetCroppedCanvasDataURLAsync()
         {

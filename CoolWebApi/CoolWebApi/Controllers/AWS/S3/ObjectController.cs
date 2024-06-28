@@ -28,6 +28,7 @@ namespace CoolWebApi.Controllers.AWS.S3
             var request = new PutObjectRequest()
             {
                 BucketName = bucketName,
+                // FilePath = filePath,
                 Key = string.IsNullOrEmpty(prefix) ? file.FileName : $"{prefix?.TrimEnd('/')}/{file.FileName}",
                 InputStream = file.OpenReadStream()
             };
