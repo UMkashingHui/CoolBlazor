@@ -10,7 +10,7 @@ using CoolWebApi.Services.Identity;
 using CoolWebApi.Utils.Wrapper;
 using CoolWebApi.Models.Identity;
 using MongoDB.Driver;
-using CoolWebApi.Utils.Contexts;
+using CoolWebApi.Data.Contexts;
 using AspNetCore.Identity.Mongo.Mongo;
 using Microsoft.AspNetCore.Identity;
 

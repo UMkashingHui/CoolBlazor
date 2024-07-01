@@ -1,6 +1,6 @@
 using CoolWebApi;
 using CoolWebApi.Config;
-using CoolWebApi.Utils.Data;
+using CoolWebApi.Data.Seeder;
 
 namespace MyBlazorApp.Server.Extensions
 {

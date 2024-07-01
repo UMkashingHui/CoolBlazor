@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CoolWebApi.Services.AppTime;
 using CoolWebApi.Services.Identity;
-using CoolWebApi.Utils.Contexts;
+using CoolWebApi.Data.Contexts;
 using CoolWebApi.Utils.Entities.Contracts;
 
 namespace CoolWebApi.Utils.Repositories.impl

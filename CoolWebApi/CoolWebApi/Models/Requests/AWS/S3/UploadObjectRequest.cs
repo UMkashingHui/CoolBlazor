@@ -1,10 +1,9 @@
-﻿
-using CoolBlazor.Infrastructure.Constants.Enums;
-using Microsoft.AspNetCore.Components.Forms;
 
-namespace CoolBlazor.Infrastructure.Models.Requests.Upload
+using CoolWebApi.Utils.Constants.Enums;
+
+namespace CoolWebApi.Models.Requests.AWS.S3
 {
-    public class UploadImageRequest
+    public class UploadObjectRequest
     {
         public string BucketName { get; set; }
         public string FileName { get; set; }

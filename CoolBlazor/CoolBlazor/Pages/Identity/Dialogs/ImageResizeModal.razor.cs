@@ -1,3 +1,4 @@
+using System.Text;
 using CoolBlazor.Infrastructure.Extensions;
 using CoolBlazor.Infrastructure.Models.Requests.Upload;
 using Cropper.Blazor.Components;
@@ -9,7 +10,7 @@ using MudBlazor;
 
 namespace CoolBlazor.Pages.Identity.Dialogs
 {
-    public partial class ImageResizorModal
+    public partial class ImageResizeModal
     {
         [CascadingParameter] MudDialogInstance MudDialog { get; set; }
         [Parameter] public string CropImageName { get; set; }
@@ -55,7 +56,7 @@ namespace CoolBlazor.Pages.Identity.Dialogs
 
         public async Task GetCroppedCanvasDataURLAsync()
         {
-            UploadImageDataRequest request = new UploadImageDataRequest();
+            SaveImageDataRequest request = new SaveImageDataRequest();
             GetCroppedCanvasOptions getCroppedCanvasOptions = new GetCroppedCanvasOptions
             {
                 MaxHeight = 4096,
@@ -63,12 +64,16 @@ namespace CoolBlazor.Pages.Identity.Dialogs
                 ImageSmoothingQuality = ImageSmoothingQuality.High.ToEnumString()
             };
             // Get a reference to a JavaScript cropped canvas object.
-            CroppedCanvas croppedCanvas = await cropperComponent!.GetCroppedCanvasAsync(getCroppedCanvasOptions);
+            // CroppedCanvas croppedCanvas = await cropperComponent!.GetCroppedCanvasAsync(getCroppedCanvasOptions);
             string croppedData = await cropperComponent.GetCroppedCanvasDataURLAsync(getCroppedCanvasOptions);
-            request.FileData = croppedData.Decode().base64ImageData;
+
+            // request.FileData = croppedData.Decode().base64ImageData;
+            byte[] byteArray = Encoding.ASCII.GetBytes(croppedData);
+            MemoryStream stream = new MemoryStream(byteArray);
+            request.FileData = stream;
             request.FileName = CropImageName;
             request.UserId = UserId;
-            var result = await _imageManager.UploadImageByData(request);
+            var result = await _imageManager.SaveImageByStreamLocally(request);
             if (result.Succeeded)
             {
                 // It seems that _localStorage cannot access except in OnAfterAsync method.

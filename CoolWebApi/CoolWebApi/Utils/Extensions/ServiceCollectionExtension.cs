@@ -14,8 +14,8 @@ using System.Security.Claims;
 using Newtonsoft.Json;
 using System.Net;
 using CoolWebApi.Utils.Wrapper;
-using CoolWebApi.Utils.Data;
-using CoolWebApi.Utils.Contexts;
+using CoolWebApi.Data.Seeder;
+using CoolWebApi.Data.Contexts;
 using CoolWebApi.Utils.Constants.Application;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
@@ -37,6 +37,8 @@ using CoolWebApi.Services.FileOperation.impl;
 using CoolWebApi.Services.FileOperation;
 using CoolWebApi.Services.Mail.impl;
 using Amazon.S3;
+using CoolWebApi.Services.AWS;
+using CoolWebApi.Services.AWS.impl;
 
 namespace CoolWebApi.Utils.Extensions
 {
@@ -358,6 +360,8 @@ namespace CoolWebApi.Utils.Extensions
         {
             services.AddDefaultAWSOptions(_configuration.GetAWSOptions());
             services.AddAWSService<IAmazonS3>();
+            services.AddScoped<IObjectService, ObjectService>();
+            services.AddScoped<IBucketService, BucketService>();
             return services;
         }
 

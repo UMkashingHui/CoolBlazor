@@ -88,7 +88,7 @@ namespace CoolBlazor.Pages.Identity
         private async Task InvokeModal(IBrowserFile e)
         {
             var dbPath = await SaveImageLocally(e, UserId);
-            var parameters = new DialogParameters<ImageResizorModal>();
+            var parameters = new DialogParameters<ImageResizeModal>();
             parameters.Add(x => x.CropImageName, CropImageName);
             parameters.Add(x => x.CropImageUrl, CropImageUrl);
             var options = new DialogOptions
@@ -96,62 +96,23 @@ namespace CoolBlazor.Pages.Identity
                 CloseButton = true,
                 MaxWidth = MaxWidth.Large
             };
-            var dialog = _dialogService.Show<ImageResizorModal>(_localizer["Resize Image"], parameters, options);
+            var dialog = _dialogService.Show<ImageResizeModal>(_localizer["Resize Image"], parameters, options);
             var result = await dialog.Result;
         }
 
-        private async Task<object> SaveImageLocally(IBrowserFile e, string userId)
+        private async Task<string> SaveImageLocally(IBrowserFile e, string UserId)
         {
-            var extension = Path.GetExtension(e.Name);
-            var _file = e;
-            var fileName = $"{UserId}-{Guid.NewGuid()}{extension}";
-            if (_file != null)
-            {
-                // Change IBrowerFile to byte[]
-                var pathToSave = _imageManager.FullPathGenerator();
-                var format = "image/jpg";
-                var imageFile = await _file.RequestImageFileAsync(format, 400, 400);
-                long maxFileSize = 1024 * 1024 * 3; // 5 MB or whatever, don't just use max int
-                var readStream = imageFile.OpenReadStream(maxFileSize);
-                var buf = new byte[readStream.Length];
-                var ms = new MemoryStream(buf);
-                await readStream.CopyToAsync(ms);
-                var buffer = ms.ToArray();
-
-                // Save image
-                if (string.IsNullOrEmpty(pathToSave)) return null;
-                var streamData = new MemoryStream(buffer);
-                if (streamData.Length > 0)
-                {
-                    // Macos/Linux Only
-                    var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
-                    // Macos/Linux Only
-                    bool exists = Directory.Exists(pathToSave);
-                    if (!exists)
-                        Directory.CreateDirectory(pathToSave);
-                    var fullPath = Path.Combine(pathToSave, fileName);
-                    var dbPath = Path.Combine(folder, fileName);
-                    if (System.IO.File.Exists(fullPath))
-                        System.IO.File.Delete(fullPath);
-                    if (File.Exists(fullPath))
-                    {
-                        dbPath = _imageManager.NextAvailableFilename(dbPath);
-                        fullPath = _imageManager.NextAvailableFilename(fullPath);
-                    }
-                    using (var stream = new FileStream(fullPath, FileMode.Create))
-                    {
-                        streamData.CopyTo(stream);
-                    }
-                    CropImageName = fileName;
-                    CropImageUrl = "images/ProfilePictures/" + CropImageName;
-                    return dbPath;
-                }
-                else
-                {
-                    return string.Empty;
-                }
-            }
-            return string.Empty;
+            SaveImageDataRequest request = new SaveImageDataRequest();
+            // var pathToSave = _imageManager.FullPathGenerator();
+            var Extension = Path.GetExtension(e.Name);
+            request.FileData = _imageManager.IBrowerFile2Stream(e).Result;
+            request.UserId = UserId;
+            var FileName = $"{UserId}-{Guid.NewGuid()}{Extension}";
+            request.FileName = FileName;
+            CropImageName = FileName;
+            CropImageUrl = "images/ProfilePictures/" + CropImageName;
+            var result = await _imageManager.SaveImageByStreamLocally(request);
+            return result.Data;
         }
 
         private async Task DeleteAsync()

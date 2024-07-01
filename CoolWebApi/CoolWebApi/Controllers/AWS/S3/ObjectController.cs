@@ -1,6 +1,11 @@
 using Amazon.S3;
 using Amazon.S3.Model;
 using CoolWebApi.Models.DTO.AWS;
+using CoolWebApi.Models.Requests.AWS.S3;
+using CoolWebApi.Models.Responses.Identity;
+using CoolWebApi.Services.AWS;
+using CoolWebApi.Services.AWS.impl;
+using CoolWebApi.Utils.Wrapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
@@ -15,29 +20,25 @@ namespace CoolWebApi.Controllers.AWS.S3
     {
         private readonly IAmazonS3 _s3Client;
 
-        public ObjectController(IAmazonS3 s3Client)
+        private readonly IObjectService _objectService;
+
+        public ObjectController(IAmazonS3 s3Client, IObjectService objectService)
         {
             _s3Client = s3Client;
+            _objectService = objectService;
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> UploadFileAsync(IFormFile file, string bucketName, string? prefix)
+        public async Task<Result<UploadObjectResponse>> UploadFileAsync(UploadObjectRequest request)
         {
-            var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
-            if (!bucketExists) return NotFound($"Bucket {bucketName} does not exist.");
-            var request = new PutObjectRequest()
-            {
-                BucketName = bucketName,
-                // FilePath = filePath,
-                Key = string.IsNullOrEmpty(prefix) ? file.FileName : $"{prefix?.TrimEnd('/')}/{file.FileName}",
-                InputStream = file.OpenReadStream()
-            };
-            request.Metadata.Add("Content-Type", file.ContentType);
-            await _s3Client.PutObjectAsync(request);
-            return Ok($"File {prefix}/{file.FileName} uploaded to S3 successfully!");
+            return await _objectService.UploadObjectAsync(request);
         }
 
-        [HttpGet("get-all")]
+        /// <summary>
+        /// Get All Objects
+        /// </summary>
+        /// <returns>Status 200 OK</returns>
+        [HttpGet]
         public async Task<IActionResult> GetAllFilesAsync(string bucketName, string? prefix)
         {
             var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
@@ -65,8 +66,14 @@ namespace CoolWebApi.Controllers.AWS.S3
             return Ok(s3Objects);
         }
 
+        /// <summary>
+        /// Get Object By Key
+        /// </summary>
+        /// <param name="bucketName"></param>
+        /// <param name="key"></param>
+        /// <returns>Status 200 Ok</returns>
         [HttpGet("get-by-key")]
-        public async Task<IActionResult> GetFileByKeyAsync(string bucketName, string key)
+        public async Task<IActionResult> GetFileByKeyAsync([FromQuery] string bucketName, [FromQuery] string key)
         {
             var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
             if (!bucketExists) return NotFound($"Bucket {bucketName} does not exist.");
@@ -74,7 +81,13 @@ namespace CoolWebApi.Controllers.AWS.S3
             return File(s3Object.ResponseStream, s3Object.Headers.ContentType);
         }
 
-        [HttpDelete("delete")]
+        /// <summary>
+        /// Delete an Object
+        /// </summary>
+        /// <param name="bucketName"></param>
+        /// <param name="key"></param>
+        /// <returns>Status 200 OK</returns>
+        [HttpDelete]
         public async Task<IActionResult> DeleteFileAsync(string bucketName, string key)
         {
             var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);

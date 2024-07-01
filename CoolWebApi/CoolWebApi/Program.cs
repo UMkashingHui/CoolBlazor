@@ -1,4 +1,4 @@
-﻿using CoolWebApi.Utils.Contexts;
+﻿using CoolWebApi.Data.Contexts;
 
 namespace CoolWebApi
 {

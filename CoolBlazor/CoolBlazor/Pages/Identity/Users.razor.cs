@@ -9,8 +9,8 @@ using Microsoft.JSInterop;
 using CoolBlazor.Infrastructure.Models.Responses.Identity;
 using CoolBlazor.Infrastructure.Constants.Permission;
 using CoolBlazor.Infrastructure.Constants.Application;
-using CoolBlazor.Shared.Dialogs;
 using CoolBlazor.Infrastructure.Models.Requests.Identity;
+using CoolBlazor.Identity.Dialogs;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -139,7 +139,7 @@ namespace CoolBlazor.Pages.Identity
         {
             var parameters = new DialogParameters
             {
-                {nameof(Shared.Dialogs.ActivateConfirmation.ContentText), IsActive == true ? $"{string.Format(_localizer["Do you want to deactivate user {0}"], UserName)}?" : $"{string.Format(_localizer["Do you want to activate user {0}"], UserName)}?"}
+                {nameof(ActivateConfirmation.ContentText), IsActive == true ? $"{string.Format(_localizer["Do you want to deactivate user {0}"], UserName)}?" : $"{string.Format(_localizer["Do you want to activate user {0}"], UserName)}?"}
             };
             var options = new DialogOptions
             {
@@ -148,7 +148,7 @@ namespace CoolBlazor.Pages.Identity
                 FullWidth = true,
                 DisableBackdropClick = true
             };
-            var dialog = _dialogService.Show<Shared.Dialogs.ActivateConfirmation>(_localizer["Activate Confirmation"], parameters, options);
+            var dialog = _dialogService.Show<ActivateConfirmation>(_localizer["Activate Confirmation"], parameters, options);
             var result = await dialog.Result;
             if (!result.Cancelled)
             {

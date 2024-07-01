@@ -6,11 +6,11 @@ using CoolWebApi.Utils.Constants.Identity;
 using CoolWebApi.Utils.Constants.Permission;
 using CoolWebApi.Utils.Extensions;
 using MongoDB.Driver;
-using CoolWebApi.Utils.Contexts;
+using CoolWebApi.Data.Contexts;
 using CoolWebApi.Models.Requests.Identity;
 using CoolWebApi.Services.Identity.impl;
 
-namespace CoolWebApi.Utils.Data
+namespace CoolWebApi.Data.Seeder
 {
     public class DatabaseSeeder : IDatabaseSeeder
     {

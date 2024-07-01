@@ -8,16 +8,22 @@ using CoolBlazor.Infrastructure.Utils.Wrapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Components.Forms;
 using System.IO;
+using CoolBlazor.Infrastructure.Constants.Enums;
+using IResult = CoolBlazor.Infrastructure.Utils.Wrapper.IResult;
+using CoolBlazor.Infrastructure.Extensions;
 
 namespace CoolBlazor.Infrastructure.Managers.File
 {
     public class ImageManager
     {
         private IAccountManager _accountManager;
+        private readonly HttpClient _httpClient = new HttpClient();
 
-        public ImageManager(IAccountManager accountManager)
+
+        public ImageManager(IAccountManager accountManager, HttpClient httpClient)
         {
             _accountManager = accountManager;
+            _httpClient = httpClient;
         }
 
         public string FullPathGenerator()
@@ -27,61 +33,105 @@ namespace CoolBlazor.Infrastructure.Managers.File
             return Path.Combine(Directory.GetCurrentDirectory(), folder);
         }
 
-        public async Task<Result<string>> UploadImage(UploadImageRequest request)
+        public async Task<IResult> UploadImageToS3(UploadImageRequest request)
         {
-            var _file = request.File;
-            if (_file != null)
+            var response = await _httpClient.PostAsJsonAsync(Routes.AWS.S3.ObjectEndpoints.Upload, request);
+            return await response.ToResult();
+        }
+
+        public async Task<IResult<string>> SaveImageByStreamLocally(SaveImageDataRequest request)
+        {
+            var streamData = request.FileData;
+            var fileName = request.FileName;
+            if (streamData != null)
             {
                 var pathToSave = FullPathGenerator();
-                var format = "image/jpg";
-                var imageFile = await _file.RequestImageFileAsync(format, 400, 400);
-                // if (request.IsReplace && request.FileName != null)
-                // {
-
-                // }
-                long maxFileSize = 1024 * 1024 * 3; // 5 MB or whatever, don't just use max int
-                var readStream = imageFile.OpenReadStream(maxFileSize);
-                var buf = new byte[readStream.Length];
-                var ms = new MemoryStream(buf);
-                await readStream.CopyToAsync(ms);
-                var buffer = ms.ToArray();
-
-                var updateRequest = new UpdateProfilePictureRequest { Data = buffer, FileName = request.FileName, Extension = request.Extension, UploadType = Infrastructure.Constants.Enums.UploadType.ProfilePicture, PathToSave = pathToSave };
-                var result = await _accountManager.UpdateProfilePictureAsync(updateRequest, request.UserId);
-
-                if (result.Succeeded)
+                // Save image
+                if (string.IsNullOrEmpty(pathToSave)) return null;
+                if (streamData.Length > 0)
                 {
-                    return await Result<string>.SuccessAsync();
+                    // Macos/Linux Only
+                    var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
+                    // Macos/Linux Only
+                    bool exists = Directory.Exists(pathToSave);
+                    if (!exists)
+                        Directory.CreateDirectory(pathToSave);
+                    var fullPath = Path.Combine(pathToSave, fileName);
+                    if (System.IO.File.Exists(fullPath))
+                        System.IO.File.Delete(fullPath);
+                    if (System.IO.File.Exists(fullPath))
+                    {
+                        fullPath = NextAvailableFilename(fullPath);
+                    }
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        streamData.CopyTo(stream);
+                    }
+                    return await Result<string>.SuccessAsync(fullPath);
                 }
                 else
                 {
-                    return await Result<string>.FailAsync();
+                    return await Result<string>.FailAsync(string.Empty);
                 }
             }
             else
             {
-                return await Result<string>.FailAsync();
+                return await Result<string>.FailAsync(string.Empty);
             }
         }
 
-        public async Task<IResult<string>> UploadImageByData(UploadImageDataRequest request)
-        {
-            var _fileData = request.FileData;
-            if (_fileData != null)
-            {
-                var pathToSave = FullPathGenerator();
-                byte[] b = Convert.FromBase64String(_fileData);
-                MemoryStream ms = new MemoryStream(b);
-                var buffer = ms.ToArray();
-                var updateRequest = new UpdateProfilePictureRequest { Data = buffer, FileName = request.FileName, Extension = ".jpg", UploadType = Infrastructure.Constants.Enums.UploadType.ProfilePicture, PathToSave = pathToSave };
-                var result = await _accountManager.UpdateProfilePictureAsync(updateRequest, request.UserId);
-                return result;
-            }
-            else
-            {
-                return await Result<string>.FailAsync();
-            }
-        }
+        // private async Task<object> SaveImageByDataLocally(SaveImageDataRequest request, string UserId)
+        // {
+        //     var extension = Path.GetExtension(e.Name);
+        //     var _file = e;
+        //     var fileName = $"{UserId}-{Guid.NewGuid()}{extension}";
+        //     if (_file != null)
+        //     {
+        //         // Change IBrowerFile to byte[]
+        //         var pathToSave = FullPathGenerator();
+        //         var format = "image/jpg";
+        //         var imageFile = await _file.RequestImageFileAsync(format, 400, 400);
+        //         long maxFileSize = 1024 * 1024 * 3; // 5 MB or whatever, don't just use max int
+        //         var readStream = imageFile.OpenReadStream(maxFileSize);
+        //         var buf = new byte[readStream.Length];
+        //         var ms = new MemoryStream(buf);
+        //         await readStream.CopyToAsync(ms);
+        //         var buffer = ms.ToArray();
+
+        //         // Save image
+        //         if (string.IsNullOrEmpty(pathToSave)) return null;
+        //         var streamData = new MemoryStream(buffer);
+        //         if (streamData.Length > 0)
+        //         {
+        //             // Macos/Linux Only
+        //             var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
+        //             // Macos/Linux Only
+        //             bool exists = Directory.Exists(pathToSave);
+        //             if (!exists)
+        //                 Directory.CreateDirectory(pathToSave);
+        //             var fullPath = Path.Combine(pathToSave, fileName);
+        //             // var dbPath = Path.Combine(folder, fileName);
+        //             if (System.IO.File.Exists(fullPath))
+        //                 System.IO.File.Delete(fullPath);
+        //             if (System.IO.File.Exists(fullPath))
+        //             {
+        //                 // dbPath = _imageManager.NextAvailableFilename(dbPath);
+        //                 fullPath = _imageManager.NextAvailableFilename(fullPath);
+        //             }
+        //             using (var stream = new FileStream(fullPath, FileMode.Create))
+        //             {
+        //                 streamData.CopyTo(stream);
+        //             }
+        //             return fullPath;
+        //             // return dbPath;
+        //         }
+        //         else
+        //         {
+        //             return string.Empty;
+        //         }
+        //     }
+        //     return string.Empty;
+        // }
 
         private static string numberPattern = " ({0})";
 
@@ -126,7 +176,16 @@ namespace CoolBlazor.Infrastructure.Managers.File
             return string.Format(pattern, max);
         }
 
-
+        public async Task<Stream> IBrowerFile2Stream(IBrowserFile e)
+        {
+            // Change IBrowerFile to Stream
+            var format = "image/jpg";
+            var imageFile = await e.RequestImageFileAsync(format, 400, 400);
+            long maxFileSize = 1024 * 1024 * 3; // 5 MB or whatever, don't just use max int
+            var readStream = imageFile.OpenReadStream(maxFileSize);
+            var buf = new byte[readStream.Length];
+            return new MemoryStream(buf);
+        }
     }
 
 }

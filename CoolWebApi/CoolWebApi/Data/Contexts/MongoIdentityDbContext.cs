@@ -10,7 +10,7 @@ using CoolWebApi.Models.Identity;
 using CoolWebApi.Services.Identity;
 using CoolWebApi.Utils.Entities.Contracts;
 
-namespace CoolWebApi.Utils.Contexts
+namespace CoolWebApi.Data.Contexts
 {
     public class MongoIdentityDbContext
     {

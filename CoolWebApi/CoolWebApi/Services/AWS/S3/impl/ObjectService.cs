@@ -14,6 +14,8 @@ using Amazon.S3.Model;
 using Microsoft.AspNetCore.Mvc;
 using CoolWebApi.Models.DTO.AWS;
 using IResult = CoolWebApi.Utils.Wrapper.IResult;
+using CoolWebApi.Models.Requests.AWS.S3;
+using CoolWebApi.Models.Responses.Identity;
 
 namespace CoolWebApi.Services.AWS.impl
 {
@@ -21,25 +23,35 @@ namespace CoolWebApi.Services.AWS.impl
     {
 
         private readonly IAmazonS3 _s3Client;
+        private readonly IStringLocalizer<ObjectService> _localizer;
 
-        public ObjectService(IAmazonS3 s3Client)
+
+        public ObjectService(
+            IAmazonS3 s3Client,
+            IStringLocalizer<ObjectService> localizer)
         {
             _s3Client = s3Client;
+            _localizer = localizer;
         }
 
-        public async Task<IResult> UploadAsync(IFormFile file, string bucketName, string? prefix)
+        public async Task<Result<UploadObjectResponse>> UploadObjectAsync(UploadObjectRequest request)
         {
-            var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
-            if (!bucketExists) return await Result.FailAsync($"Bucket {bucketName} does not exist.");
-            var request = new PutObjectRequest()
+            var _bucketName = request.BucketName;
+            var _filePath = request.FilePath;
+            var _fileName = request.FileName;
+            var _prefix = request.Prefix;
+            var bucketExists = await _s3Client.DoesS3BucketExistAsync(_bucketName);
+            if (!bucketExists) return await Result<UploadObjectResponse>.FailAsync(_localizer["Bucket {_bucketName} does not exist."]);
+            var putObjectRequest = new PutObjectRequest()
             {
-                BucketName = bucketName,
-                Key = string.IsNullOrEmpty(prefix) ? file.FileName : $"{prefix?.TrimEnd('/')}/{file.FileName}",
-                InputStream = file.OpenReadStream()
+                BucketName = _bucketName,
+                FilePath = _filePath,
+                Key = string.IsNullOrEmpty(_prefix) ? _fileName : $"{_prefix?.TrimEnd('/')}/{_fileName}",
+                ServerSideEncryptionMethod = ServerSideEncryptionMethod.AES256
             };
-            request.Metadata.Add("Content-Type", file.ContentType);
-            await _s3Client.PutObjectAsync(request);
-            return await Result.SuccessAsync($"File {prefix}/{file.FileName} uploaded to S3 successfully!");
+            var putResponse = await _s3Client.PutObjectAsync(putObjectRequest);
+            UploadObjectResponse response = new UploadObjectResponse();
+            return await Result<UploadObjectResponse>.SuccessAsync(_localizer[$"File {_prefix}/{_fileName} uploaded to S3 successfully!"]);
         }
 
     }

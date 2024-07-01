@@ -14,7 +14,7 @@ using CoolWebApi.Utils.Entities.Contracts;
 using CoolWebApi.Utils.Entities.ExtendedAttributes;
 using CoolWebApi.Utils.Entities.Misc;
 
-namespace CoolWebApi.Utils.Contexts
+namespace CoolWebApi.Data.Contexts
 {
     public class CoolBlazorDbContext : DbContext
     {

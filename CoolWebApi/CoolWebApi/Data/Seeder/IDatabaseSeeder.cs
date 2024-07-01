@@ -1,4 +1,4 @@
-﻿namespace CoolWebApi.Utils.Data
+﻿namespace CoolWebApi.Data.Seeder
 {
     public interface IDatabaseSeeder
     {
