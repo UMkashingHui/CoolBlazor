@@ -20,6 +20,7 @@
 @using CoolBlazor.Infrastructure.Managers.Interceptors
 @using CoolBlazor.Infrastructure.Managers.Identity.Account
 @using CoolBlazor.Infrastructure.Managers.File
+@using CoolBlazor.Infrastructure.Utils.Image
 
 @inject CoolBlazorStateProvider _stateProvider
 @inject IAuthenticationManager _authenticationManager
@@ -38,3 +39,4 @@
 @inject IJSRuntime _jsRuntime
 @inject IJSRuntime jsRuntime
 @inject ImageManager _imageManager
+@inject ImageOperator _imageOperator

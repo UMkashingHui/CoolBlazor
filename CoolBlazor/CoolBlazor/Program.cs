@@ -21,6 +21,7 @@ using Cropper.Blazor.Extensions;
 using Cropper.Blazor.ModuleOptions;
 using CoolBlazor.Infrastructure.Managers.File;
 using MudBlazor;
+using CoolBlazor.Infrastructure.Utils.Image;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -92,6 +93,7 @@ foreach (var type in types)
 
 // Register Services
 builder.Services.AddScoped<IUserManager, UserManager>();
+builder.Services.AddScoped<ImageOperator>();
 builder.Services.AddScoped<IAuthenticationManager, AuthenticationManager>();
 // builder.Services.AddScoped<AuthenticationStateProvider, CoolBlazorStateProvider>();
 builder.Services.AddScoped<CoolBlazorStateProvider>();

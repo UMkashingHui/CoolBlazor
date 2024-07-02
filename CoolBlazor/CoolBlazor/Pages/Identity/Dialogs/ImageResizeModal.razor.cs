@@ -56,7 +56,6 @@ namespace CoolBlazor.Pages.Identity.Dialogs
 
         public async Task GetCroppedCanvasDataURLAsync()
         {
-            SaveImageDataRequest request = new SaveImageDataRequest();
             GetCroppedCanvasOptions getCroppedCanvasOptions = new GetCroppedCanvasOptions
             {
                 MaxHeight = 4096,
@@ -70,10 +69,21 @@ namespace CoolBlazor.Pages.Identity.Dialogs
             // request.FileData = croppedData.Decode().base64ImageData;
             byte[] byteArray = Encoding.ASCII.GetBytes(croppedData);
             MemoryStream stream = new MemoryStream(byteArray);
+            SaveImageDataRequest request = new SaveImageDataRequest();
             request.FileData = stream;
             request.FileName = CropImageName;
             request.UserId = UserId;
-            var result = await _imageManager.SaveImageByStreamLocally(request);
+            var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
+
+            // Upload to S3
+            UploadImageRequest uploadImageRequest = new UploadImageRequest
+            {
+                FileName = CropImageName,
+                BucketName = "coolblazorbucket",
+                FilePath = fullPath,
+                Prefix = $"{UserId}/avator/"
+            };
+            var result = await _imageManager.UploadImageToS3(uploadImageRequest);
             if (result.Succeeded)
             {
                 // It seems that _localStorage cannot access except in OnAfterAsync method.

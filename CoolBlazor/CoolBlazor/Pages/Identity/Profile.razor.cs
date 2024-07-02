@@ -8,6 +8,7 @@ using Blazored.FluentValidation;
 using CoolBlazor.Infrastructure.Extensions;
 using CoolBlazor.Infrastructure.Models.Requests.Identity;
 using CoolBlazor.Infrastructure.Constants.Storage;
+using CoolBlazor.Infrastructure.Utils.Image;
 using CoolBlazor.Infrastructure.Utils.Extensions;
 using BootstrapBlazor.Components;
 using Blazored.LocalStorage;
@@ -16,6 +17,7 @@ using CoolBlazor.Infrastructure.Models.Requests.Upload;
 using CoolBlazor.Pages.Identity.Dialogs;
 using System.Text;
 using CoolBlazor.Infrastructure.Constants.Enums;
+using CoolBlazor.Infrastructure.Utils.Wrapper;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -100,19 +102,32 @@ namespace CoolBlazor.Pages.Identity
             var result = await dialog.Result;
         }
 
-        private async Task<string> SaveImageLocally(IBrowserFile e, string UserId)
+        private async Task<string> SaveImageLocally(IBrowserFile e, string userId)
         {
             SaveImageDataRequest request = new SaveImageDataRequest();
             // var pathToSave = _imageManager.FullPathGenerator();
             var Extension = Path.GetExtension(e.Name);
-            request.FileData = _imageManager.IBrowerFile2Stream(e).Result;
-            request.UserId = UserId;
-            var FileName = $"{UserId}-{Guid.NewGuid()}{Extension}";
+            // request.FileData = _imageOperator.IBrowerFile2Stream(e).Result;
+            string FileName = $"{request.UserId}-{Guid.NewGuid()}{Extension}";
+
+            // Change IBrowerFile to Stream
+            var format = "image/jpg";
+            var imageFile = await e.RequestImageFileAsync(format, 400, 400);
+            long maxFileSize = 1024 * 1024 * 3; // 5 MB or whatever, don't just use max int
+            var readStream = imageFile.OpenReadStream(maxFileSize);
+            var buf = new byte[readStream.Length];
+            var ms = new MemoryStream(buf);
+            await readStream.CopyToAsync(ms);
+            var buffer = ms.ToArray();
+            var streamData = new MemoryStream(buffer);
+
+            request.FileData = streamData;
+            request.UserId = userId;
             request.FileName = FileName;
             CropImageName = FileName;
             CropImageUrl = "images/ProfilePictures/" + CropImageName;
-            var result = await _imageManager.SaveImageByStreamLocally(request);
-            return result.Data;
+            var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
+            return fullPath;
         }
 
         private async Task DeleteAsync()
@@ -146,5 +161,7 @@ namespace CoolBlazor.Pages.Identity
 
             }
         }
+
+
     }
 }
