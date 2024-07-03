@@ -67,6 +67,12 @@ namespace CoolBlazor.Infrastructure.Utils.Image
             }
         }
 
+        public async Task<string> DeleteImageByPathLocally(string pathToDelete){
+            if (request == null) return string.Empty;
+
+        }
+
+
         private string FullPathGenerator()
         {
             // Get the absolute path of image

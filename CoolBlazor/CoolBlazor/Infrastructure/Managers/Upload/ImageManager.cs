@@ -26,7 +26,7 @@ namespace CoolBlazor.Infrastructure.Managers.File
             _httpClient = httpClient;
         }
 
-        
+
 
         public async Task<IResult> UploadImageToS3(UploadImageRequest request)
         {
@@ -34,7 +34,13 @@ namespace CoolBlazor.Infrastructure.Managers.File
             return await response.ToResult();
         }
 
-        
+        public async Task<IResult> GetImageByKeyFromS3(string bucketName, string key)
+        {
+            var response = await _httpClient.GetAsync(Routes.AWS.S3.ObjectEndpoints.GetByKey(bucketName, key));
+            return await response.ToResult();
+        }
+
+
 
         // private async Task<object> SaveImageByDataLocally(SaveImageDataRequest request, string UserId)
         // {
@@ -89,11 +95,11 @@ namespace CoolBlazor.Infrastructure.Managers.File
         //     return string.Empty;
         // }
 
-        
 
-        
 
-        
+
+
+
     }
 
 }

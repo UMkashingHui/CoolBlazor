@@ -93,6 +93,8 @@ namespace CoolBlazor.Pages.Identity.Dialogs
                 // It seems that _localStorage cannot access except in OnAfterAsync method.
                 // await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, result.Data);
                 // var localImageUrl = await _localStorage.GetItemAsStringAsync(StorageConstants.Local.UserImageURL);
+                if (System.IO.File.Exists(fullPath))
+                    System.IO.File.Delete(fullPath);
                 _snackBar.Add(_localizer["Profile picture added."], Severity.Success);
                 _navigationManager.NavigateTo("/account", true);
             }
