@@ -67,14 +67,18 @@ namespace CoolBlazor.Pages.Identity.Dialogs
             string croppedData = await cropperComponent.GetCroppedCanvasDataURLAsync(getCroppedCanvasOptions);
 
             // request.FileData = croppedData.Decode().base64ImageData;
-            byte[] byteArray = Encoding.ASCII.GetBytes(croppedData);
-            MemoryStream stream = new MemoryStream(byteArray);
+            // byte[] byteArray = Encoding.UTF8.GetBytes(croppedData);
+            // MemoryStream stream = new MemoryStream(byteArray);
+
+            Stream memStream = new MemoryStream(Convert.FromBase64String(croppedData.Decode().base64ImageData));
+
             SaveImageDataRequest request = new SaveImageDataRequest();
-            request.FileData = stream;
+            request.FileData = memStream;
+            // byte[] byteArray = Encoding.ASCII.GetBytes(croppedData.Decode().base64ImageData);
+            // MemoryStream stream = new MemoryStream(byteArray);
             request.FileName = CropImageName;
             request.UserId = UserId;
             var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
-
             // Upload to S3
             UploadImageRequest uploadImageRequest = new UploadImageRequest
             {
