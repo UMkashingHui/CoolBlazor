@@ -1,8 +1,9 @@
-﻿using CoolWebApi.Models.Requests.File;
+﻿using CoolWebApi.Models.Requests.AWS.S3;
+using CoolWebApi.Models.Requests.File;
 
 namespace CoolWebApi.Models.Requests.Identity
 {
-    public class UpdateProfilePictureRequest : UploadRequest
+    public class UpdateProfilePictureRequest : UploadObjectRequest
     {
     }
 }

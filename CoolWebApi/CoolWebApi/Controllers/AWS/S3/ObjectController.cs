@@ -9,6 +9,7 @@ using CoolWebApi.Utils.Wrapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
+using IResult = CoolWebApi.Utils.Wrapper.IResult;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace CoolWebApi.Controllers.AWS.S3
@@ -29,7 +30,7 @@ namespace CoolWebApi.Controllers.AWS.S3
         }
 
         [HttpPost("upload")]
-        public async Task<Result<UploadObjectResponse>> UploadFileAsync(UploadObjectRequest request)
+        public async Task<IResult> UploadFileAsync(UploadObjectRequest request)
         {
             return await _objectService.UploadObjectAsync(request);
         }

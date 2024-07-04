@@ -32,9 +32,9 @@ namespace CoolBlazor.Infrastructure.Managers.Identity.Account
             return await response.ToResult<string>();
         }
 
-        public async Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string userId)
+        public async Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request)
         {
-            var response = await _httpClient.PostAsJsonAsync(Routes.AccountEndpoints.UpdateProfilePicture(userId), request);
+            var response = await _httpClient.PostAsJsonAsync(Routes.AccountEndpoints.UpdateProfilePicture, request);
             return await response.ToResult<string>();
         }
     }

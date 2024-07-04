@@ -13,11 +13,14 @@ using CoolBlazor.Infrastructure.Utils.Extensions;
 using BootstrapBlazor.Components;
 using Blazored.LocalStorage;
 using Cropper.Blazor.Models;
-using CoolBlazor.Infrastructure.Models.Requests.Upload;
-using CoolBlazor.Pages.Identity.Dialogs;
+using CoolBlazor.Infrastructure.Models.Requests.Identity;
 using System.Text;
 using CoolBlazor.Infrastructure.Constants.Enums;
 using CoolBlazor.Infrastructure.Utils.Wrapper;
+using Cropper.Blazor.Components;
+using CoolBlazor.Infrastructure.Models.Requests.AWS.S3;
+using Cropper.Blazor.Extensions;
+using Users.kevin.WorkPlace.PersonalProjects.cool_blazor.CoolBlazor.CoolBlazor.Pages.Identity.Dialogs;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -33,6 +36,7 @@ namespace CoolBlazor.Pages.Identity
         public string CropImageName { get; set; }
         public string CropImageUrl { get; set; }
         public string UserId { get; set; }
+        
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
@@ -57,10 +61,11 @@ namespace CoolBlazor.Pages.Identity
             _profileModel.LastName = user.GetLastName();
             _profileModel.PhoneNumber = user.GetPhoneNumber();
             UserId = user.GetUserId();
-            var data = await _accountManager.GetProfilePictureAsync(UserId);
-            if (data.Succeeded)
+            var imageResponse = await _accountManager.GetProfilePictureAsync(UserId);
+            if (imageResponse.Succeeded)
             {
-                ImageDataUrl = data.Data;
+                // var imageResult = await _imageManager.GetImageByKeyFromS3("coolblazorbucket", result.Data);
+                ImageDataUrl = "https://coolblazorbucket.s3.ap-southeast-1.amazonaws.com/" + imageResponse.Data;
             }
             else if (_profileModel.FirstName.Length > 0)
             {
@@ -87,7 +92,7 @@ namespace CoolBlazor.Pages.Identity
         }
 
 
-        private async Task InvokeModal(IBrowserFile e)
+        private async Task UploadAvatar(IBrowserFile e)
         {
             var dbPath = await SaveImageLocally(e, UserId);
             var parameters = new DialogParameters<ImageResizeModal>();
@@ -100,6 +105,81 @@ namespace CoolBlazor.Pages.Identity
             };
             var dialog = _dialogService.Show<ImageResizeModal>(_localizer["Resize Image"], parameters, options);
             var result = await dialog.Result;
+            if (!result.Cancelled)
+            {
+                await CropAndUpload();
+            }
+
+
+        }
+
+
+        public async Task CropAndUpload()
+        {
+            GetCroppedCanvasOptions getCroppedCanvasOptions = new GetCroppedCanvasOptions
+            {
+                MaxHeight = 4096,
+                MaxWidth = 4096,
+                ImageSmoothingQuality = ImageSmoothingQuality.High.ToEnumString()
+            };
+            // Get a reference to a JavaScript cropped canvas object.
+            string croppedData = await cropperComponent.GetCroppedCanvasDataURLAsync(getCroppedCanvasOptions);
+            // Base64 data to stream
+            Stream memStream = new MemoryStream(Convert.FromBase64String(croppedData.Decode().base64ImageData));
+            SaveImageDataRequest request = new SaveImageDataRequest
+            {
+                FileData = memStream,
+                FileName = CropImageName,
+                UserId = UserId
+            };
+            var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
+            // Upload to S3
+            UploadObjectRequest uploadObjectRequest = new UploadObjectRequest
+            {
+                FileName = CropImageName,
+                BucketName = "coolblazorbucket",
+                FilePath = fullPath,
+                Prefix = $"{UserId}/avatar/",
+                UserId = UserId
+            };
+            var uploadToS3Result = await _imageManager.UploadImageToS3(uploadObjectRequest);
+            if (uploadToS3Result.Succeeded)
+            {
+                UpdateProfilePictureRequest updateProfilePictureRequest = new()
+                {
+                    Prefix = uploadObjectRequest.Prefix,
+                    FilePath = string.Empty,
+                    BucketName = string.Empty,
+                    FileName = CropImageName,
+                    UserId = UserId
+                };
+                var updateProfilePictureResult = await _accountManager.UpdateProfilePictureAsync(updateProfilePictureRequest);
+                if (updateProfilePictureResult.Succeeded)
+                {
+                    if (System.IO.File.Exists(fullPath))
+                        System.IO.File.Delete(fullPath);
+                    _snackBar.Add(_localizer["Profile picture added."], Severity.Success);
+                    _navigationManager.NavigateTo("/account");
+                }
+                else
+                {
+                    foreach (var error in updateProfilePictureResult.Messages)
+                    {
+                        _snackBar.Add(error, Severity.Error);
+                    }
+                    _navigationManager.NavigateTo("/account");
+                }
+                // It seems that _localStorage cannot access except in OnAfterAsync method.
+                // await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, result.Data);
+                // var localImageUrl = await _localStorage.GetItemAsStringAsync(StorageConstants.Local.UserImageURL);
+            }
+            else
+            {
+                foreach (var error in uploadToS3Result.Messages)
+                {
+                    _snackBar.Add(error, Severity.Error);
+                }
+            }
         }
 
         private async Task<string> SaveImageLocally(IBrowserFile e, string userId)
@@ -141,8 +221,8 @@ namespace CoolBlazor.Pages.Identity
             var result = await dialog.Result;
             if (!result.Cancelled)
             {
-                var request = new UpdateProfilePictureRequest { Data = new byte[1], FileName = string.Empty, UploadType = Infrastructure.Constants.Enums.UploadType.ProfilePicture, PathToSave = string.Empty, Extension = string.Empty };
-                var data = await _accountManager.UpdateProfilePictureAsync(request, UserId);
+                var request = new UpdateProfilePictureRequest { BucketName = string.Empty, FileName = string.Empty, Prefix = string.Empty, FilePath = string.Empty, UserId = UserId };
+                var data = await _accountManager.UpdateProfilePictureAsync(request);
                 if (data.Succeeded)
                 {
                     await _localStorage.RemoveItemAsync(StorageConstants.Local.UserImageURL);

@@ -9,5 +9,6 @@ namespace CoolWebApi.Models.Requests.AWS.S3
         public string FileName { get; set; }
         public string Prefix { get; set; }
         public string FilePath { get; set; }
+        public string UserId { get; set; }
     }
 }

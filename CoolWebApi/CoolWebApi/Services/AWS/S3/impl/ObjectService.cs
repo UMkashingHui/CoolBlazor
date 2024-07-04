@@ -34,14 +34,14 @@ namespace CoolWebApi.Services.AWS.impl
             _localizer = localizer;
         }
 
-        public async Task<Result<UploadObjectResponse>> UploadObjectAsync(UploadObjectRequest request)
+        public async Task<Result<string>> UploadObjectAsync(UploadObjectRequest request)
         {
             var _bucketName = request.BucketName;
             var _filePath = request.FilePath;
             var _fileName = request.FileName;
             var _prefix = request.Prefix;
             var bucketExists = await _s3Client.DoesS3BucketExistAsync(_bucketName);
-            if (!bucketExists) return await Result<UploadObjectResponse>.FailAsync(_localizer["Bucket {_bucketName} does not exist."]);
+            if (!bucketExists) return await Result<string>.FailAsync(_localizer["Bucket {_bucketName} does not exist."]);
             var putObjectRequest = new PutObjectRequest()
             {
                 BucketName = _bucketName,
@@ -50,8 +50,7 @@ namespace CoolWebApi.Services.AWS.impl
                 ServerSideEncryptionMethod = ServerSideEncryptionMethod.AES256
             };
             var putResponse = await _s3Client.PutObjectAsync(putObjectRequest);
-            UploadObjectResponse response = new UploadObjectResponse();
-            return await Result<UploadObjectResponse>.SuccessAsync(_localizer[$"File {_prefix}/{_fileName} uploaded to S3 successfully!"]);
+            return await Result<string>.SuccessAsync(_localizer[$"File {_prefix}/{_fileName} uploaded to S3 successfully!"]);
         }
 
     }

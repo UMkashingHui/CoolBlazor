@@ -94,15 +94,15 @@ namespace CoolWebApi.Services.Account.impl
             return await Result<string>.SuccessAsync(data: user.ProfilePictureDataUrl);
         }
 
-        public async Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string UserId)
+        public async Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request)
         {
-            var user = await _userManager.FindByIdAsync(UserId);
+            var user = await _userManager.FindByIdAsync(request.UserId);
             if (user == null) return await Result<string>.FailAsync(message: _localizer["User Not Found"]);
-            var filePath = await _uploadService.UploadAsync(request);
-            user.ProfilePictureDataUrl = filePath;
+            var key = request.Prefix + request.FileName;
+            user.ProfilePictureDataUrl = key;
             var identityResult = await _userManager.UpdateAsync(user);
             var errors = identityResult.Errors.Select(e => _localizer[e.Description].ToString()).ToList();
-            return identityResult.Succeeded ? await Result<string>.SuccessAsync(data: filePath) : await Result<string>.FailAsync(errors);
+            return identityResult.Succeeded ? await Result<string>.SuccessAsync(data: key) : await Result<string>.FailAsync("Fail to update profile picture.");
         }
     }
 }

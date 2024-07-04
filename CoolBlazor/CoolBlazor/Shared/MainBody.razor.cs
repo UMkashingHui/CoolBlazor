@@ -162,14 +162,15 @@ namespace CoolBlazor.Shared
                     FirstName = user.GetFirstName();
                     CurrentUserId = user.GetUserId();
                     FirstName = user.GetFirstName();
-                    if (FirstName.Length > 0)
-                    {
-                        FirstLetterOfFirstName = FirstName[0];
-                    }
+
                     var imageResponse = await _accountManager.GetProfilePictureAsync(CurrentUserId);
                     if (imageResponse.Succeeded)
                     {
-                        ImageDataUrl = imageResponse.Data;
+                        ImageDataUrl = "https://coolblazorbucket.s3.ap-southeast-1.amazonaws.com/" + imageResponse.Data;
+                    }
+                    else if (FirstName.Length > 0)
+                    {
+                        FirstLetterOfFirstName = FirstName[0];
                     }
                     var currentUserResult = await _userManager.GetAsync(CurrentUserId);
                     if (!currentUserResult.Succeeded || currentUserResult.Data == null)

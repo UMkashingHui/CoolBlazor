@@ -2,7 +2,7 @@
 using CoolBlazor.Infrastructure.Constants.Enums;
 using Microsoft.AspNetCore.Components.Forms;
 
-namespace CoolBlazor.Infrastructure.Models.Requests.Upload
+namespace CoolBlazor.Infrastructure.Models.Requests.Identity
 {
     public class SaveImageDataRequest
     {

@@ -1,5 +1,5 @@
 using CoolBlazor.Infrastructure.Constants.Enums;
-using CoolBlazor.Infrastructure.Models.Requests.Upload;
+using CoolBlazor.Infrastructure.Models.Requests.Identity;
 using CoolBlazor.Infrastructure.Utils.Extensions;
 using CoolBlazor.Infrastructure.Utils.Wrapper;
 using Microsoft.AspNetCore.Components.Forms;
@@ -67,10 +67,6 @@ namespace CoolBlazor.Infrastructure.Utils.Image
             }
         }
 
-        public async Task<string> DeleteImageByPathLocally(string pathToDelete){
-            if (request == null) return string.Empty;
-
-        }
 
 
         private string FullPathGenerator()

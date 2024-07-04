@@ -9,6 +9,6 @@ namespace CoolWebApi.Services.AWS
 {
     public interface IObjectService : IService
     {
-        Task<Result<UploadObjectResponse>> UploadObjectAsync(UploadObjectRequest request);
+        Task<Result<string>> UploadObjectAsync(UploadObjectRequest request);
     }
 }

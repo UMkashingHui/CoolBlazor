@@ -1,6 +1,7 @@
 @inject Microsoft.Extensions.Localization.IStringLocalizer<ImageResizeModal> _localizer
-@using Cropper.Blazor
 @using Cropper.Blazor.Models;
+@using Cropper.Blazor.Components;
+@namespace CoolBlazor.Pages.Identity.Dialogs
 
 <MudDialog ContentStyle="width: 1200px;">
     <DialogContent>
@@ -45,10 +46,43 @@
     </DialogContent>
     <DialogActions>
         <MudButton OnClick="Cancel">Cancel</MudButton>
-        <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="GetCroppedCanvasDataURLAsync">Submit
+        <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="Submit">Submit
         </MudButton>
     </DialogActions>
 </MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public string CropImageName { get; set; }
+    [Parameter] public string CropImageUrl { get; set; }
+    private CropperComponent? cropperComponent = null;
+    // Minimum relative sizes
+    private static decimal minCropBoxWidth = 200;
+    private static decimal minCropBoxHeight = 200;
+    private static bool cropBoxResizable = false;
+    private static decimal height = 200;
+    private static decimal width = 200;
+    private static SetDataOptions setDataOptions = new SetDataOptions
+    {
+        Height = height,
+        Width = width
+    };
+    private Options cropperOptions = new Options
+        {
+            MinCropBoxWidth = minCropBoxWidth,
+            MinCropBoxHeight = minCropBoxHeight,
+            CropBoxResizable = cropBoxResizable,
+            // ViewMode = ViewMode.Vm2,
+            SetDataOptions = setDataOptions,
+            Preview = ".img-example-preview"
+        };
+    void Submit()
+    {
+        MudDialog.Close(DialogResult.Ok(true));
+        return cropperComponent;
+    }
+    void Cancel() => MudDialog.Cancel();
+}
 
 @* Make sure the size of the image fits perfectly into the container *@
 <style>
