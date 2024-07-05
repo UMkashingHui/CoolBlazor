@@ -20,7 +20,7 @@ using CoolBlazor.Infrastructure.Utils.Wrapper;
 using Cropper.Blazor.Components;
 using CoolBlazor.Infrastructure.Models.Requests.AWS.S3;
 using Cropper.Blazor.Extensions;
-using Users.kevin.WorkPlace.PersonalProjects.cool_blazor.CoolBlazor.CoolBlazor.Pages.Identity.Dialogs;
+using CoolBlazor.Pages.Identity.Dialogs;
 
 namespace CoolBlazor.Pages.Identity
 {
@@ -33,10 +33,9 @@ namespace CoolBlazor.Pages.Identity
         private IBrowserFile _file;
         public string ImageDataUrl { get; set; }
         public string CropImagePath { get; set; }
-        public string CropImageName { get; set; }
         public string CropImageUrl { get; set; }
         public string UserId { get; set; }
-        
+
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
@@ -92,11 +91,10 @@ namespace CoolBlazor.Pages.Identity
         }
 
 
-        private async Task UploadAvatar(IBrowserFile e)
+        private async Task CallCropAvatarDialog(IBrowserFile e)
         {
-            var dbPath = await SaveImageLocally(e, UserId);
+            var fileName = await SaveImageLocally(e, UserId);
             var parameters = new DialogParameters<ImageResizeModal>();
-            parameters.Add(x => x.CropImageName, CropImageName);
             parameters.Add(x => x.CropImageUrl, CropImageUrl);
             var options = new DialogOptions
             {
@@ -107,36 +105,27 @@ namespace CoolBlazor.Pages.Identity
             var result = await dialog.Result;
             if (!result.Cancelled)
             {
-                await CropAndUpload();
+
+                await CropAndUpload(result.Data.ToString(), fileName);
             }
-
-
         }
 
 
-        public async Task CropAndUpload()
+        public async Task CropAndUpload(string croppedData, string fileName)
         {
-            GetCroppedCanvasOptions getCroppedCanvasOptions = new GetCroppedCanvasOptions
-            {
-                MaxHeight = 4096,
-                MaxWidth = 4096,
-                ImageSmoothingQuality = ImageSmoothingQuality.High.ToEnumString()
-            };
-            // Get a reference to a JavaScript cropped canvas object.
-            string croppedData = await cropperComponent.GetCroppedCanvasDataURLAsync(getCroppedCanvasOptions);
             // Base64 data to stream
             Stream memStream = new MemoryStream(Convert.FromBase64String(croppedData.Decode().base64ImageData));
             SaveImageDataRequest request = new SaveImageDataRequest
             {
                 FileData = memStream,
-                FileName = CropImageName,
+                FileName = fileName,
                 UserId = UserId
             };
             var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
             // Upload to S3
             UploadObjectRequest uploadObjectRequest = new UploadObjectRequest
             {
-                FileName = CropImageName,
+                FileName = fileName,
                 BucketName = "coolblazorbucket",
                 FilePath = fullPath,
                 Prefix = $"{UserId}/avatar/",
@@ -150,7 +139,7 @@ namespace CoolBlazor.Pages.Identity
                     Prefix = uploadObjectRequest.Prefix,
                     FilePath = string.Empty,
                     BucketName = string.Empty,
-                    FileName = CropImageName,
+                    FileName = fileName,
                     UserId = UserId
                 };
                 var updateProfilePictureResult = await _accountManager.UpdateProfilePictureAsync(updateProfilePictureRequest);
@@ -185,10 +174,8 @@ namespace CoolBlazor.Pages.Identity
         private async Task<string> SaveImageLocally(IBrowserFile e, string userId)
         {
             SaveImageDataRequest request = new SaveImageDataRequest();
-            // var pathToSave = _imageManager.FullPathGenerator();
             var Extension = Path.GetExtension(e.Name);
-            // request.FileData = _imageOperator.IBrowerFile2Stream(e).Result;
-            string FileName = $"{request.UserId}-{Guid.NewGuid()}{Extension}";
+            string fileName = $"{request.UserId}-{Guid.NewGuid()}{Extension}";
 
             // Change IBrowerFile to Stream
             var format = "image/jpg";
@@ -203,11 +190,12 @@ namespace CoolBlazor.Pages.Identity
 
             request.FileData = streamData;
             request.UserId = userId;
-            request.FileName = FileName;
-            CropImageName = FileName;
-            CropImageUrl = "images/ProfilePictures/" + CropImageName;
+            request.FileName = fileName;
             var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
-            return fullPath;
+            CropImageUrl = fullPath;
+            int index = CropImageUrl.LastIndexOf('/');
+            fileName = CropImageUrl.Substring(index + 1);
+            return fileName;
         }
 
         private async Task DeleteAsync()

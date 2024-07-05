@@ -38,7 +38,7 @@ namespace CoolBlazor.Infrastructure.Utils.Image
                 if (streamData.Length > 0)
                 {
                     // Macos/Linux Only
-                    var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
+                    // var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
                     // Macos/Linux Only
                     bool exists = Directory.Exists(pathToSave);
                     if (!exists)
@@ -66,8 +66,6 @@ namespace CoolBlazor.Infrastructure.Utils.Image
                 return string.Empty;
             }
         }
-
-
 
         private string FullPathGenerator()
         {

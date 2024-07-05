@@ -20,7 +20,7 @@
                 <MudText Align="Align.Center">@_profileModel.Email</MudText>
             </MudCardContent>
             <MudCardActions Class="d-flex justify-center">
-                <MudFileUpload T="IBrowserFile" FilesChanged="InvokeModal">
+                <MudFileUpload T="IBrowserFile" FilesChanged="CallCropAvatarDialog">
                     <ButtonTemplate>
                         <MudButton HtmlTag="label" Variant="Variant.Text" Color="Color.Primary" Size="Size.Small"
                             StartIcon="@Icons.Filled.CloudUpload" for="@context.Id">
