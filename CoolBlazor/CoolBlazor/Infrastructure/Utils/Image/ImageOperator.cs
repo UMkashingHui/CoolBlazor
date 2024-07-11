@@ -32,29 +32,28 @@ namespace CoolBlazor.Infrastructure.Utils.Image
             var fileName = request.FileName;
             if (streamData != null)
             {
-                var pathToSave = FullPathGenerator();
+                // Macos/Linux Only
+                var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
+                // Macos/Linux Only
                 // Save image
-                if (string.IsNullOrEmpty(pathToSave)) return null;
+                if (string.IsNullOrEmpty(folder)) return null;
                 if (streamData.Length > 0)
                 {
-                    // Macos/Linux Only
-                    // var folder = UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
-                    // Macos/Linux Only
-                    bool exists = Directory.Exists(pathToSave);
+
+                    bool exists = Directory.Exists(folder);
                     if (!exists)
-                        Directory.CreateDirectory(pathToSave);
-                    var fullPath = Path.Combine(pathToSave, fileName);
-                    if (System.IO.File.Exists(fullPath))
-                        System.IO.File.Delete(fullPath);
-                    if (System.IO.File.Exists(fullPath))
+                        Directory.CreateDirectory(folder);
+                    var relativePath = Path.Combine(folder, fileName);
+                    if (System.IO.File.Exists(relativePath))
                     {
-                        fullPath = NextAvailableFilename(fullPath);
+                        relativePath = NextAvailableFilename(relativePath);
                     }
-                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    var nextFullPath = FullPathGenerator(relativePath);
+                    using (var stream = new FileStream(nextFullPath, FileMode.Create))
                     {
                         streamData.CopyTo(stream);
                     }
-                    return fullPath;
+                    return relativePath;
                 }
                 else
                 {
@@ -67,11 +66,10 @@ namespace CoolBlazor.Infrastructure.Utils.Image
             }
         }
 
-        private string FullPathGenerator()
+        public string FullPathGenerator(string relativePath)
         {
             // Get the absolute path of image
-            var folder = Infrastructure.Constants.Enums.UploadType.ProfilePicture.ToDescriptionString().Replace('\\', '/');
-            return Path.Combine(Directory.GetCurrentDirectory(), folder);
+            return Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", relativePath);
         }
 
         private static string numberPattern = " ({0})";

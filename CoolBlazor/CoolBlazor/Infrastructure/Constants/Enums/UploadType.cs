@@ -7,7 +7,7 @@ namespace CoolBlazor.Infrastructure.Constants.Enums
         [Description(@"Images\Products")]
         Product,
 
-        [Description(@"wwwroot\images\ProfilePictures")]
+        [Description(@"images\ProfilePictures")]
         ProfilePicture,
 
         [Description(@"Documents")]

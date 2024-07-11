@@ -53,5 +53,48 @@ namespace CoolWebApi.Services.AWS.impl
             return await Result<string>.SuccessAsync(_localizer[$"File {_prefix}/{_fileName} uploaded to S3 successfully!"]);
         }
 
+        public async Task<Result<string>> DeleteObjectAsync(DeleteS3ObjectRequest request)
+        {
+            var _bucketName = request.BucketName;
+            var _fileName = request.FileName;
+            var _prefix = request.Prefix;
+            var bucketExists = await _s3Client.DoesS3BucketExistAsync(_bucketName);
+            if (!bucketExists) return await Result<string>.FailAsync(_localizer["Bucket {_bucketName} does not exist."]);
+            var _key = string.IsNullOrEmpty(_prefix) ? _fileName : $"{_prefix?.TrimEnd('/')}/{_fileName}";
+            var response = await DeleteObjectNonVersionedBucketAsync(_s3Client, _bucketName, _key);
+            return await Result<string>.SuccessAsync(_localizer[$"File {_prefix}/{_fileName} is deleted successfully!"]);
+        }
+
+        /// <summary>
+        /// The DeleteObjectNonVersionedBucketAsync takes care of deleting the
+        /// desired object from the named bucket.
+        /// </summary>
+        /// <param name="client">An initialized Amazon S3 client used to delete
+        /// an object from an Amazon S3 bucket.</param>
+        /// <param name="bucketName">The name of the bucket from which the
+        /// object will be deleted.</param>
+        /// <param name="keyName">The name of the object to delete.</param>
+        public static async Task<DeleteObjectResponse> DeleteObjectNonVersionedBucketAsync(IAmazonS3 client, string bucketName, string keyName)
+        {
+            try
+            {
+                var deleteObjectRequest = new DeleteObjectRequest
+                {
+                    BucketName = bucketName,
+                    Key = keyName,
+                };
+
+                Console.WriteLine($"Deleting object: {keyName}");
+                var response = await client.DeleteObjectAsync(deleteObjectRequest);
+                Console.WriteLine($"Object: {keyName} deleted from {bucketName}.");
+                return response;
+            }
+            catch (AmazonS3Exception ex)
+            {
+                Console.WriteLine($"Error encountered on server. Message:'{ex.Message}' when deleting an object.");
+                return null;
+            }
+        }
+
     }
 }

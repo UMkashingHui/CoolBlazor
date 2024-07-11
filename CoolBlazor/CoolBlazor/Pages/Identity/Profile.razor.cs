@@ -45,11 +45,6 @@ namespace CoolBlazor.Pages.Identity
                 StateHasChanged();
             }
         }
-        // protected override async Task OnInitializedAsync()
-        // {
-        //     await LoadDataAsync();
-        //     StateHasChanged();
-        // }
 
         private async Task LoadDataAsync()
         {
@@ -94,82 +89,87 @@ namespace CoolBlazor.Pages.Identity
         private async Task CallCropAvatarDialog(IBrowserFile e)
         {
             var fileName = await SaveImageLocally(e, UserId);
-            var parameters = new DialogParameters<ImageResizeModal>();
-            parameters.Add(x => x.CropImageUrl, CropImageUrl);
+            var parameters = new DialogParameters<ImageResizeModal>
+            {
+                { x => x.CropImageUrl, CropImageUrl },
+                { x => x.FileName, fileName },
+                { x => x.UserId, UserId }
+            };
             var options = new DialogOptions
             {
                 CloseButton = true,
                 MaxWidth = MaxWidth.Large
             };
-            var dialog = _dialogService.Show<ImageResizeModal>(_localizer["Resize Image"], parameters, options);
-            var result = await dialog.Result;
-            if (!result.Cancelled)
-            {
-
-                await CropAndUpload(result.Data.ToString(), fileName);
-            }
+            // var dialog = _dialogService.Show<ImageResizeModal>(_localizer["Resize Image"], parameters, options);
+            // var result = await dialog.Result;
+            // if (!result.Cancelled)
+            // {
+            //     await CropAndUpload(result.Data.ToString(), fileName);
+            // }
+            _dialogService.Show<ImageResizeModal>(_localizer["Resize Image"], parameters, options);
         }
 
 
-        public async Task CropAndUpload(string croppedData, string fileName)
-        {
-            // Base64 data to stream
-            Stream memStream = new MemoryStream(Convert.FromBase64String(croppedData.Decode().base64ImageData));
-            SaveImageDataRequest request = new SaveImageDataRequest
-            {
-                FileData = memStream,
-                FileName = fileName,
-                UserId = UserId
-            };
-            var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
-            // Upload to S3
-            UploadObjectRequest uploadObjectRequest = new UploadObjectRequest
-            {
-                FileName = fileName,
-                BucketName = "coolblazorbucket",
-                FilePath = fullPath,
-                Prefix = $"{UserId}/avatar/",
-                UserId = UserId
-            };
-            var uploadToS3Result = await _imageManager.UploadImageToS3(uploadObjectRequest);
-            if (uploadToS3Result.Succeeded)
-            {
-                UpdateProfilePictureRequest updateProfilePictureRequest = new()
-                {
-                    Prefix = uploadObjectRequest.Prefix,
-                    FilePath = string.Empty,
-                    BucketName = string.Empty,
-                    FileName = fileName,
-                    UserId = UserId
-                };
-                var updateProfilePictureResult = await _accountManager.UpdateProfilePictureAsync(updateProfilePictureRequest);
-                if (updateProfilePictureResult.Succeeded)
-                {
-                    if (System.IO.File.Exists(fullPath))
-                        System.IO.File.Delete(fullPath);
-                    _snackBar.Add(_localizer["Profile picture added."], Severity.Success);
-                    _navigationManager.NavigateTo("/account");
-                }
-                else
-                {
-                    foreach (var error in updateProfilePictureResult.Messages)
-                    {
-                        _snackBar.Add(error, Severity.Error);
-                    }
-                    _navigationManager.NavigateTo("/account");
-                }
-                // It seems that _localStorage cannot access except in OnAfterAsync method.
-                // await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, result.Data);
-                // var localImageUrl = await _localStorage.GetItemAsStringAsync(StorageConstants.Local.UserImageURL);
-            }
-            else
-            {
-                foreach (var error in uploadToS3Result.Messages)
-                {
-                    _snackBar.Add(error, Severity.Error);
-                }
-            }
-        }
+        // public async Task CropAndUpload(string croppedData, string fileName)
+        // {
+        //     // Base64 data to stream
+        //     Stream memStream = new MemoryStream(Convert.FromBase64String(croppedData.Decode().base64ImageData));
+        //     SaveImageDataRequest request = new SaveImageDataRequest
+        //     {
+        //         FileData = memStream,
+        //         FileName = fileName,
+        //         UserId = UserId
+        //     };
+        //     string relativePath = await _imageOperator.SaveImageByStreamLocally(request);
+        //     string fullPath = _imageOperator.FullPathGenerator(relativePath);
+        //     // Upload to S3
+        //     UploadObjectRequest uploadObjectRequest = new UploadObjectRequest
+        //     {
+        //         FileName = fileName,
+        //         BucketName = "coolblazorbucket",
+        //         FilePath = fullPath,
+        //         Prefix = $"{UserId}/avatar/",
+        //         UserId = UserId
+        //     };
+        //     var uploadToS3Result = await _imageManager.UploadImageToS3(uploadObjectRequest);
+        //     if (uploadToS3Result.Succeeded)
+        //     {
+        //         UpdateProfilePictureRequest updateProfilePictureRequest = new()
+        //         {
+        //             Prefix = uploadObjectRequest.Prefix,
+        //             FilePath = string.Empty,
+        //             BucketName = string.Empty,
+        //             FileName = fileName,
+        //             UserId = UserId
+        //         };
+        //         var updateProfilePictureResult = await _accountManager.UpdateProfilePictureAsync(updateProfilePictureRequest);
+        //         if (updateProfilePictureResult.Succeeded)
+        //         {
+        //             if (System.IO.File.Exists(fullPath))
+        //                 System.IO.File.Delete(fullPath);
+        //             _snackBar.Add(_localizer["Profile picture added."], Severity.Success);
+        //             _navigationManager.NavigateTo("/account");
+        //         }
+        //         else
+        //         {
+        //             foreach (var error in updateProfilePictureResult.Messages)
+        //             {
+        //                 _snackBar.Add(error, Severity.Error);
+        //             }
+        //             _navigationManager.NavigateTo("/account");
+        //         }
+        //         // It seems that _localStorage cannot access except in OnAfterAsync method.
+        //         // await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, result.Data);
+        //         // var localImageUrl = await _localStorage.GetItemAsStringAsync(StorageConstants.Local.UserImageURL);
+        //     }
+        //     else
+        //     {
+        //         foreach (var error in uploadToS3Result.Messages)
+        //         {
+        //             _snackBar.Add(error, Severity.Error);
+        //         }
+        //     }
+        // }
 
         private async Task<string> SaveImageLocally(IBrowserFile e, string userId)
         {
@@ -191,8 +191,8 @@ namespace CoolBlazor.Pages.Identity
             request.FileData = streamData;
             request.UserId = userId;
             request.FileName = fileName;
-            var fullPath = await _imageOperator.SaveImageByStreamLocally(request);
-            CropImageUrl = fullPath;
+            var relativePath = await _imageOperator.SaveImageByStreamLocally(request);
+            CropImageUrl = relativePath;
             int index = CropImageUrl.LastIndexOf('/');
             fileName = CropImageUrl.Substring(index + 1);
             return fileName;

@@ -10,5 +10,8 @@ namespace CoolWebApi.Services.AWS
     public interface IObjectService : IService
     {
         Task<Result<string>> UploadObjectAsync(UploadObjectRequest request);
+
+        Task<Result<string>> DeleteObjectAsync(DeleteS3ObjectRequest request);
+            
     }
 }

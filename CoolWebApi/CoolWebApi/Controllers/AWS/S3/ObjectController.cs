@@ -89,12 +89,9 @@ namespace CoolWebApi.Controllers.AWS.S3
         /// <param name="key"></param>
         /// <returns>Status 200 OK</returns>
         [HttpDelete]
-        public async Task<IActionResult> DeleteFileAsync(string bucketName, string key)
+        public async Task<IResult> DeleteFileAsync(DeleteS3ObjectRequest request)
         {
-            var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
-            if (!bucketExists) return NotFound($"Bucket {bucketName} does not exist");
-            await _s3Client.DeleteObjectAsync(bucketName, key);
-            return NoContent();
+            return await _objectService.DeleteObjectAsync(request);
         }
     }
 }
