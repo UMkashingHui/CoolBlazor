@@ -1,8 +1,9 @@
 using Amazon.S3;
 using Amazon.S3.Model;
 using CoolWebApi.Models.DTO.AWS;
-using CoolWebApi.Models.Requests.AWS.S3;
+using CoolWebApi.Models.DTO.AWS.S3;
 using CoolWebApi.Models.Responses.Identity;
+using CoolWebApi.Models.VO.AWS.S3;
 using CoolWebApi.Services.AWS;
 using CoolWebApi.Services.AWS.impl;
 using CoolWebApi.Utils.Wrapper;
@@ -30,9 +31,9 @@ namespace CoolWebApi.Controllers.AWS.S3
         }
 
         [HttpPost("upload")]
-        public async Task<IResult> UploadFileAsync(UploadObjectRequest request)
+        public async Task<IResult> UploadFileAsync(UploadObjectDTO dto)
         {
-            return await _objectService.UploadObjectAsync(request);
+            return await _objectService.UploadObjectAsync(dto);
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace CoolWebApi.Controllers.AWS.S3
                     Key = s.Key,
                     Expires = DateTime.UtcNow.AddMinutes(1)
                 };
-                return new S3ObjectDto()
+                return new ObjectVO()
                 {
                     Name = s.Key.ToString(),
                     PresignedUrl = _s3Client.GetPreSignedURL(urlRequest),
@@ -89,9 +90,9 @@ namespace CoolWebApi.Controllers.AWS.S3
         /// <param name="key"></param>
         /// <returns>Status 200 OK</returns>
         [HttpDelete]
-        public async Task<IResult> DeleteFileAsync(DeleteS3ObjectRequest request)
+        public async Task<IResult> DeleteFileAsync(string bucketName, string key)
         {
-            return await _objectService.DeleteObjectAsync(request);
+            return await _objectService.DeleteObjectAsync(bucketName, key);
         }
     }
 }

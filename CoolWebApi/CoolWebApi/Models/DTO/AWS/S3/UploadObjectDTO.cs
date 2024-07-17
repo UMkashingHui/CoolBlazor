@@ -1,9 +1,9 @@
 
 using CoolWebApi.Utils.Constants.Enums;
 
-namespace CoolWebApi.Models.Requests.AWS.S3
+namespace CoolWebApi.Models.DTO.AWS.S3
 {
-    public class UploadObjectRequest
+    public class UploadObjectDTO
     {
         public string BucketName { get; set; }
         public string FileName { get; set; }

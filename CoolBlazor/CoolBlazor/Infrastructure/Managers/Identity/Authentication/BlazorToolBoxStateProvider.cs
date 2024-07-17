@@ -22,10 +22,8 @@ namespace CoolBlazor.Infrastructure.Managers.Identity.Authentication
         public CoolBlazorStateProvider(
             HttpClient httpClient,
             ILocalStorageService localStorage)
-        // public CoolBlazorStateProvider(IHttpClientFactory _httpClientFactory, ILocalStorageService localStorage)
         {
             _httpClient = httpClient;
-            // _httpClient = _httpClientFactory.CreateClient("CoolWebApi");
             _localStorage = localStorage;
         }
 

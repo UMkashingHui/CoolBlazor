@@ -100,7 +100,7 @@ builder.Services.AddScoped<CoolBlazorStateProvider>();
 builder.Services.AddScoped<IHttpInterceptorManager, HttpInterceptorManager>();
 builder.Services.AddScoped<ClientPreferenceManager>();
 builder.Services.AddScoped<IRoleManager, RoleManager>();
-builder.Services.AddScoped<ImageManager>();
+builder.Services.AddScoped<S3ObjectManager>();
 
 // Add third party libraries
 builder.Services.AddMudServices();

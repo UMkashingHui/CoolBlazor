@@ -13,21 +13,28 @@ using IResult = CoolBlazor.Infrastructure.Utils.Wrapper.IResult;
 using CoolBlazor.Infrastructure.Extensions;
 using CoolBlazor.Infrastructure.Models.Requests.AWS.S3;
 using CoolBlazor.Infrastructure.Models.Responses.Identity;
+using System.Net.Http.Json;
 
 namespace CoolBlazor.Infrastructure.Managers.File
 {
-    public class ImageManager
+    public class S3ObjectManager
     {
         private readonly HttpClient _httpClient = new HttpClient();
 
-        public ImageManager(HttpClient httpClient)
+        public S3ObjectManager(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
-        public async Task<IResult> UploadImageToS3(UploadObjectRequest request)
+        public async Task<IResult> UploadObject(UploadObjectRequest request)
         {
             var response = await _httpClient.PostAsJsonAsync(Routes.AWS.S3.ObjectEndpoints.Upload, request);
+            return await response.ToResult();
+        }
+
+        public async Task<IResult> DeleteObject(string bucketName, string key)
+        {
+            var response = await _httpClient.DeleteAsync($"{Routes.AWS.S3.ObjectEndpoints.Delete}?bucketName={bucketName}&key={key}");
             return await response.ToResult();
         }
 

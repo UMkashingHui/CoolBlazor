@@ -1,4 +1,4 @@
-using CoolWebApi.Models.Requests.AWS.S3;
+using CoolWebApi.Models.DTO.AWS.S3;
 using CoolWebApi.Models.Responses.Content;
 using CoolWebApi.Models.Responses.Identity;
 using CoolWebApi.Utils.Wrapper;
@@ -9,9 +9,9 @@ namespace CoolWebApi.Services.AWS
 {
     public interface IObjectService : IService
     {
-        Task<Result<string>> UploadObjectAsync(UploadObjectRequest request);
+        Task<Result<string>> UploadObjectAsync(UploadObjectDTO dto);
 
-        Task<Result<string>> DeleteObjectAsync(DeleteS3ObjectRequest request);
-            
+        Task<Result<string>> DeleteObjectAsync(string bucketName, string key);
+
     }
 }

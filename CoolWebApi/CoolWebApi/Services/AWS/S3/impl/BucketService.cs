@@ -9,7 +9,6 @@ using CoolWebApi.Utils.Entities.ExtendedAttributes;
 using CoolWebApi.Utils.Repositories;
 using CoolWebApi.Services.AWS;
 using Amazon.S3;
-using CoolWebApi.Models.Requests.AWS;
 using Amazon.S3.Model;
 using Microsoft.AspNetCore.Mvc;
 using CoolWebApi.Models.DTO.AWS;
