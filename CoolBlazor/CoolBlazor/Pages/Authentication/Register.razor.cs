@@ -14,20 +14,20 @@ namespace CoolBlazor.Pages.Authentication
         private async Task CreateAsync()
         {
             _snackBar.Add("Demo site can not register user.", Severity.Error);
-            // var response = await _userManager.RegisterUserAsync(_registerUserModel);
-            // if (response.Succeeded)
-            // {
-            //     _snackBar.Add(response.Messages[0], Severity.Success);
-            //     _navigationManager.NavigateTo("/login");
-            //     _registerUserModel = new RegisterRequest();
-            // }
-            // else
-            // {
-            //     foreach (var message in response.Messages)
-            //     {
-            //         _snackBar.Add(message, Severity.Error);
-            //     }
-            // }
+            var response = await _userManager.RegisterUserAsync(_registerUserModel);
+            if (response.Succeeded)
+            {
+                _snackBar.Add(response.Messages[0], Severity.Success);
+                _navigationManager.NavigateTo("/login");
+                _registerUserModel = new RegisterRequest();
+            }
+            else
+            {
+                foreach (var message in response.Messages)
+                {
+                    _snackBar.Add(message, Severity.Error);
+                }
+            }
         }
 
         private bool _passwordVisibility;

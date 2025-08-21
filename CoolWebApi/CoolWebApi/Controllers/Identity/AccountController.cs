@@ -15,11 +15,11 @@ namespace CoolWebApi.Controllers.Identity
         private readonly IAccountService _accountService;
         private readonly ICurrentUserService _currentUser;
 
-        public AccountController(IAccountService accountService, ICurrentUserService currentUser)
+       public AccountController(IAccountService accountService, ICurrentUserService currentUser)
         {
             _accountService = accountService;
             _currentUser = currentUser;
-        }
+        } 
 
         /// <summary>
         /// Update Profile

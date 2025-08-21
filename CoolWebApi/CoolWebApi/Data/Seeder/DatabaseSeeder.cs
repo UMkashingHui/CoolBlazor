@@ -161,7 +161,7 @@ namespace CoolWebApi.Data.Seeder
                     // MaxDocuments = 10,
                 });
                 _logger.LogInformation(_localizer[collectionName + "collection created!"]);
-                Console.WriteLine("RoleClaims collection created!");
+                Console.WriteLine("Collection created!");
             }
         }
 
